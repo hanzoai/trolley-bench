@@ -50,11 +50,13 @@
      "bytes": 116
     },
     "model.safetensors": {
-     "sha256": "eaca9c71ec5b25c799836e51aa47bec29e4e855ad958e532494824645fadc993",
+     "sha256": "acaef2228b134dcdc20cad4ee79219482c927ec819aa3687b9b8a575c338817f",
+     "xet_hash": "eaca9c71ec5b25c799836e51aa47bec29e4e855ad958e532494824645fadc993",
      "bytes": 3763692048
     },
     "tokenizer.json": {
-     "sha256": "777bcaa63794fa47b8f53680be9d6d176f1fcbd7ba03cdc6c3bae2b3d76b323f",
+     "sha256": "06b9509352d2af50381ab2247e083b80d32d5c0aba91c272ca9ff729b6a0e523",
+     "xet_hash": "777bcaa63794fa47b8f53680be9d6d176f1fcbd7ba03cdc6c3bae2b3d76b323f",
      "bytes": 19989325
     },
     "tokenizer_config.json": {

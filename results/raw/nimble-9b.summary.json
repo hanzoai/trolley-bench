@@ -48,19 +48,23 @@
             "bytes": 3126
           },
           "model.safetensors-00001-of-00004.safetensors": {
-            "sha256": "7bcbd85ef394b0b8b10a242bb175c4b4e672a83fb3fc46da8319460de3edacce",
+            "sha256": "db6f444b43d318c92f360a13a25561a6a65b10c0631b8ed305a426dbaa6c380e",
+            "xet_hash": "7bcbd85ef394b0b8b10a242bb175c4b4e672a83fb3fc46da8319460de3edacce",
             "bytes": 5276436216
           },
           "model.safetensors-00002-of-00004.safetensors": {
-            "sha256": "7b709e3cdec6630a3c7b151efa17f03183489d03287bf9cb97454153f4ecb873",
+            "sha256": "31c7d7e2dd5d207840b31cc59083c8f4c4718959149e0358c0364052bb9a0330",
+            "xet_hash": "7b709e3cdec6630a3c7b151efa17f03183489d03287bf9cb97454153f4ecb873",
             "bytes": 5335161512
           },
           "model.safetensors-00003-of-00004.safetensors": {
-            "sha256": "b56057d566829843f8688c32899ae599053cfb7766c2a94b3b6b2b805ad338b8",
+            "sha256": "7ec36ba3a4176a44c3c0876ad80c56a2f70c84bf008d82e9501df642f17dadec",
+            "xet_hash": "b56057d566829843f8688c32899ae599053cfb7766c2a94b3b6b2b805ad338b8",
             "bytes": 5368717440
           },
           "model.safetensors-00004-of-00004.safetensors": {
-            "sha256": "69e03ef8ea69638c0ef6360da111c81b8701efac19848c687038964a4b6ac250",
+            "sha256": "b62b0c4cd7e44edee103ee8f4fe225f246d5e768e07bfd5f25b63a8aa1fdd0c6",
+            "xet_hash": "69e03ef8ea69638c0ef6360da111c81b8701efac19848c687038964a4b6ac250",
             "bytes": 3325995712
           },
           "model.safetensors.index.json": {
@@ -95,7 +99,8 @@
             "bytes": 1296
           },
           "adapter_model.safetensors": {
-            "sha256": "7eaa7fc756f2aa76f6bb09a9ce92be63c3993159152ee4b1fc57f2212d51cf1d",
+            "sha256": "1bd126be997be6d9a0c25ce483ccf858c31b3422d480c33f02ba47b614be68ae",
+            "xet_hash": "7eaa7fc756f2aa76f6bb09a9ce92be63c3993159152ee4b1fc57f2212d51cf1d",
             "bytes": 173188512
           },
           "chat_template.jinja": {
@@ -143,7 +148,8 @@
             "bytes": 840
           },
           "tokenizer.json": {
-            "sha256": "777bcaa63794fa47b8f53680be9d6d176f1fcbd7ba03cdc6c3bae2b3d76b323f",
+            "sha256": "06b9509352d2af50381ab2247e083b80d32d5c0aba91c272ca9ff729b6a0e523",
+            "xet_hash": "777bcaa63794fa47b8f53680be9d6d176f1fcbd7ba03cdc6c3bae2b3d76b323f",
             "bytes": 19989325
           },
           "tokenizer_config.json": {

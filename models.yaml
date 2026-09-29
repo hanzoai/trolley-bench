@@ -17,13 +17,13 @@ models:
         revision: 533964dae8be954c5b5e19fa4948e48408094c1e
         bytes: 3783693401
         files:
-          "chat_template.jinja": 273d8e0e683b885071fb17e08d71e5f2a5ddfb5309756181681de4f5a1822d80
-          "config.json": 6cb8daca9fb653c61485ff7452fc068bacd5c27cbee659ecd24b47186b0d1b52
-          "decider_config.json": 6e4891f2754a1c18a10f8dadb0c04e439e7f79fab0333d56641491bd4a05e722
-          "generation_config.json": 62153eb6c69f2e1f426beaa8002b7186437e949c7588167085df14e10e9c0a73
-          "model.safetensors": eaca9c71ec5b25c799836e51aa47bec29e4e855ad958e532494824645fadc993
-          "tokenizer.json": 777bcaa63794fa47b8f53680be9d6d176f1fcbd7ba03cdc6c3bae2b3d76b323f
-          "tokenizer_config.json": 171ecbe7ddae98d11840698f7df2b8d5b4722139db0f0620d3bbf429bd656250
+          "chat_template.jinja": {sha256: 273d8e0e683b885071fb17e08d71e5f2a5ddfb5309756181681de4f5a1822d80}
+          "config.json": {sha256: 6cb8daca9fb653c61485ff7452fc068bacd5c27cbee659ecd24b47186b0d1b52}
+          "decider_config.json": {sha256: 6e4891f2754a1c18a10f8dadb0c04e439e7f79fab0333d56641491bd4a05e722}
+          "generation_config.json": {sha256: 62153eb6c69f2e1f426beaa8002b7186437e949c7588167085df14e10e9c0a73}
+          "model.safetensors": {sha256: acaef2228b134dcdc20cad4ee79219482c927ec819aa3687b9b8a575c338817f, xet_hash: eaca9c71ec5b25c799836e51aa47bec29e4e855ad958e532494824645fadc993}
+          "tokenizer.json": {sha256: 06b9509352d2af50381ab2247e083b80d32d5c0aba91c272ca9ff729b6a0e523, xet_hash: 777bcaa63794fa47b8f53680be9d6d176f1fcbd7ba03cdc6c3bae2b3d76b323f}
+          "tokenizer_config.json": {sha256: 171ecbe7ddae98d11840698f7df2b8d5b4722139db0f0620d3bbf429bd656250}
   - id: jevk5
     code: "https://github.com/allebee/jevk5"
     commit: 1e5ae1b533b9eb80c0cbe3fbd010607d0b4e26ae
@@ -37,8 +37,8 @@ models:
         revision: ec67b0bfce5119a8b11a2cdb430bb43e3fa3e82a
         bytes: 4482403710
         files:
-          "SHA256SUMS": ad21b6c0b7a21fb6cc6980495a91bb2a1c97078beacfc065d4f19e934d6d9422
-          "jevk5-4b-v0.3-Q8_0.gguf": aea433883bc7ed399f2fbd539e53d2eac7caf71a946fe6650995a413979d4a30
+          "SHA256SUMS": {sha256: ad21b6c0b7a21fb6cc6980495a91bb2a1c97078beacfc065d4f19e934d6d9422}
+          "jevk5-4b-v0.3-Q8_0.gguf": {sha256: aea433883bc7ed399f2fbd539e53d2eac7caf71a946fe6650995a413979d4a30, xet_hash: aae363b52d92b29d67ae66fa1990906162f4112373801ebff6326f5197fddc5a}
   - id: kev-4b
     code: "https://github.com/jaredpalmer/kev"
     commit: 9c41005b2180347c3c646dfc9e50c4428483ec6b
@@ -52,33 +52,33 @@ models:
         revision: 1001bb4d826a52d1f399e183466143f4da7b741b
         bytes: 9342808116
         files:
-          "config.json": ddc63e1c717afa86c865bb5e01313d89d72bb53b97ad4a8a03ba8510c0621670
-          "merges.txt": a9d356d7bdf1ef4949e3e748e95b8e10ad9d4e2e838eddc38a0a7b6b94d1db8d
-          "model.safetensors-00001-of-00002.safetensors": 712a985dcc18e3ba16651d5bfb56e9fc2a16a489e1fb66341edb030888c6550d
-          "model.safetensors-00002-of-00002.safetensors": 196f268c895c6432ec612e56eaf9f50572751940eceb6c06f4fff4922037653f
-          "model.safetensors.index.json": eae340074abb0a5f31a6621f7ae8e8248a7c1790df04a722c4e4b70c2a6d1dbb
-          "preprocessor_config.json": 27225450ac9c6529872ee1924fcb0962ff5634834f817040f444118116f4e516
-          "tokenizer.json": 59036b7ec9c1c130de9dd3716f37308a51038389ae6fb9ba62e87c246696707a
-          "tokenizer_config.json": 3891e840d7dc5fca0af33d3a25083a735e36fe06214e3f707024820cb6b9f89c
-          "video_preprocessor_config.json": d039cd7d88b3502a99edd455496b75b44ecf7dd3b3669748bafac37e6cecc085
-          "vocab.json": ce99b4cb2983d118806ce0a8b777a35b093e2000a503ebde25853284c9dfa003
+          "config.json": {sha256: ddc63e1c717afa86c865bb5e01313d89d72bb53b97ad4a8a03ba8510c0621670}
+          "merges.txt": {sha256: a9d356d7bdf1ef4949e3e748e95b8e10ad9d4e2e838eddc38a0a7b6b94d1db8d}
+          "model.safetensors-00001-of-00002.safetensors": {sha256: df547074dce70532a0493e5433152bd17a65efb89088cfabc2e7e2371a93d712, xet_hash: 712a985dcc18e3ba16651d5bfb56e9fc2a16a489e1fb66341edb030888c6550d}
+          "model.safetensors-00002-of-00002.safetensors": {sha256: 590fbaac095dd31db886c322d9d2f7df47777966391acf306ddddc3e4e3a15ef, xet_hash: 196f268c895c6432ec612e56eaf9f50572751940eceb6c06f4fff4922037653f}
+          "model.safetensors.index.json": {sha256: eae340074abb0a5f31a6621f7ae8e8248a7c1790df04a722c4e4b70c2a6d1dbb}
+          "preprocessor_config.json": {sha256: 27225450ac9c6529872ee1924fcb0962ff5634834f817040f444118116f4e516}
+          "tokenizer.json": {sha256: fe000e3ed39ed12b8d2481d527d44f93c65d37e87645d2dcc80d1bf9d50d2927, xet_hash: 59036b7ec9c1c130de9dd3716f37308a51038389ae6fb9ba62e87c246696707a}
+          "tokenizer_config.json": {sha256: 3891e840d7dc5fca0af33d3a25083a735e36fe06214e3f707024820cb6b9f89c}
+          "video_preprocessor_config.json": {sha256: d039cd7d88b3502a99edd455496b75b44ecf7dd3b3669748bafac37e6cecc085}
+          "vocab.json": {sha256: ce99b4cb2983d118806ce0a8b777a35b093e2000a503ebde25853284c9dfa003}
       - repo: jaredpalmer/kev-4b
         revision: 139fdd94f1b6a6ad80cc15e08fcb99cac885a101
         bytes: 159702543
         files:
-          "adapter_config.json": 8a05dfd6c5e7f61a62e6db5d8de8093a8dbbd105aa7ee7b5e7b73f6249f45617
-          "adapter_model.safetensors": 4426a24cc31a3d5784413a43133c4433c85f876c7207da355703fc6647e99aca
-          "added_tokens.json": c0284b582e14987fbd3d5a2cb2bd139084371ed9acbae488829a1c900833c680
-          "head.pt": fdfd452dbf570f8d39bf40c5bc23c6480571f5bc359766fec65a67c5bfcdc320
-          "merges.txt": 8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5
-          "provenance.json": 7aa999a629f25d93713950d6fb39d0b4c37fe8a9f43d2673a79c4c455d42b26a
-          "result.json": c28c365684ebc739d93c51d7ee881e3c589e2633deb3b42f4818b149b4c43ab2
-          "special_tokens_map.json": 6676f091c8bc4d1b50146427cfde92073402866b87b6e39223227931b70083e9
-          "tokenizer.json": 777bcaa63794fa47b8f53680be9d6d176f1fcbd7ba03cdc6c3bae2b3d76b323f
-          "tokenizer_config.json": 8671bed7c852ce9e661be94f179a7b4ffd091c2a65aea0363e5501c20318ee45
-          "training_config.json": 005f939bef00274f49f15282dfa60543f5f82e781268f3c12d8ceeacb9f61f30
-          "training_metrics.json": a75fa00aa5b365b042c16d7b164b14b667d06183a6c6b4c14e8a81b017b57729
-          "vocab.json": ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910
+          "adapter_config.json": {sha256: 8a05dfd6c5e7f61a62e6db5d8de8093a8dbbd105aa7ee7b5e7b73f6249f45617}
+          "adapter_model.safetensors": {sha256: 90e817356246e7f18bfa7ca3d31794cd4fbeb3332a66a84cb51d9ceae925f2b2, xet_hash: 4426a24cc31a3d5784413a43133c4433c85f876c7207da355703fc6647e99aca}
+          "added_tokens.json": {sha256: c0284b582e14987fbd3d5a2cb2bd139084371ed9acbae488829a1c900833c680}
+          "head.pt": {sha256: dd633435998ecc751ac538717a3742e32149500fabf7d7276287dbf0693f347c, xet_hash: fdfd452dbf570f8d39bf40c5bc23c6480571f5bc359766fec65a67c5bfcdc320}
+          "merges.txt": {sha256: 8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5}
+          "provenance.json": {sha256: 7aa999a629f25d93713950d6fb39d0b4c37fe8a9f43d2673a79c4c455d42b26a}
+          "result.json": {sha256: c28c365684ebc739d93c51d7ee881e3c589e2633deb3b42f4818b149b4c43ab2}
+          "special_tokens_map.json": {sha256: 6676f091c8bc4d1b50146427cfde92073402866b87b6e39223227931b70083e9}
+          "tokenizer.json": {sha256: 06b9509352d2af50381ab2247e083b80d32d5c0aba91c272ca9ff729b6a0e523, xet_hash: 777bcaa63794fa47b8f53680be9d6d176f1fcbd7ba03cdc6c3bae2b3d76b323f}
+          "tokenizer_config.json": {sha256: 8671bed7c852ce9e661be94f179a7b4ffd091c2a65aea0363e5501c20318ee45}
+          "training_config.json": {sha256: 005f939bef00274f49f15282dfa60543f5f82e781268f3c12d8ceeacb9f61f30}
+          "training_metrics.json": {sha256: a75fa00aa5b365b042c16d7b164b14b667d06183a6c6b4c14e8a81b017b57729}
+          "vocab.json": {sha256: ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910}
   - id: laya
     code: "https://pypi.org/project/laya/0.3.20/ (github.com/NandhaKishorM/laya)"
     commit: laya==0.3.20 from PyPI
@@ -92,11 +92,11 @@ models:
         revision: 55cf4c4ebb4ebe31b2550e8bdf3bd21b99753851
         bytes: 846195574
         files:
-          "encoder/config.json": bf3ab80598fdccf414855a2ce80f22859e4492d06ca8a62ddd1cfb63972f8979
-          "model.safetensors": dd8562d713759821a0bc049e79abd09e5817d218d18fa51478ad16986d018764
-          "rl_agent_config.json": ae287b56bbcf5f8c4f4541ae9dfd00c914c4c48b940b8398c3058af37ba92bbd
-          "tokenizer/tokenizer.json": 6c8aaa9a542084f2457eab775d4eeb51f92a70c0fd9de28d5edb0ddec3c08d30
-          "tokenizer/tokenizer_config.json": 50044de60daaa73df97d262e15a40d4faf0160e7d742df64b377877a1320dd12
+          "encoder/config.json": {sha256: bf3ab80598fdccf414855a2ce80f22859e4492d06ca8a62ddd1cfb63972f8979}
+          "model.safetensors": {sha256: 891102d372688fc2a094dac56a384bc537b87c63f21f9f3dac0be2b7cbc8d86c, xet_hash: dd8562d713759821a0bc049e79abd09e5817d218d18fa51478ad16986d018764}
+          "rl_agent_config.json": {sha256: ae287b56bbcf5f8c4f4541ae9dfd00c914c4c48b940b8398c3058af37ba92bbd}
+          "tokenizer/tokenizer.json": {sha256: 6c8aaa9a542084f2457eab775d4eeb51f92a70c0fd9de28d5edb0ddec3c08d30}
+          "tokenizer/tokenizer_config.json": {sha256: 50044de60daaa73df97d262e15a40d4faf0160e7d742df64b377877a1320dd12}
   - id: nimble-9b
     code: "https://github.com/bespokelabsai/nimble"
     commit: 62076b4f2d365b5879dafcf7f6dd072a1fe76df7
@@ -110,36 +110,36 @@ models:
         revision: c202236235762e1c871ad0ccb60c8ee5ba337b9a
         bytes: 19306393663
         files:
-          "config.json": d0883072e01861ed0b2d47be3c16c36a8e81c224c7ffaa310c6558fb3f932b05
-          "model.safetensors-00001-of-00004.safetensors": 7bcbd85ef394b0b8b10a242bb175c4b4e672a83fb3fc46da8319460de3edacce
-          "model.safetensors-00002-of-00004.safetensors": 7b709e3cdec6630a3c7b151efa17f03183489d03287bf9cb97454153f4ecb873
-          "model.safetensors-00003-of-00004.safetensors": b56057d566829843f8688c32899ae599053cfb7766c2a94b3b6b2b805ad338b8
-          "model.safetensors-00004-of-00004.safetensors": 69e03ef8ea69638c0ef6360da111c81b8701efac19848c687038964a4b6ac250
-          "model.safetensors.index.json": 26d3539b516be613f39563617cb9d33b3f83d401298125be392c80cefb8f7fe5
+          "config.json": {sha256: d0883072e01861ed0b2d47be3c16c36a8e81c224c7ffaa310c6558fb3f932b05}
+          "model.safetensors-00001-of-00004.safetensors": {sha256: db6f444b43d318c92f360a13a25561a6a65b10c0631b8ed305a426dbaa6c380e, xet_hash: 7bcbd85ef394b0b8b10a242bb175c4b4e672a83fb3fc46da8319460de3edacce}
+          "model.safetensors-00002-of-00004.safetensors": {sha256: 31c7d7e2dd5d207840b31cc59083c8f4c4718959149e0358c0364052bb9a0330, xet_hash: 7b709e3cdec6630a3c7b151efa17f03183489d03287bf9cb97454153f4ecb873}
+          "model.safetensors-00003-of-00004.safetensors": {sha256: 7ec36ba3a4176a44c3c0876ad80c56a2f70c84bf008d82e9501df642f17dadec, xet_hash: b56057d566829843f8688c32899ae599053cfb7766c2a94b3b6b2b805ad338b8}
+          "model.safetensors-00004-of-00004.safetensors": {sha256: b62b0c4cd7e44edee103ee8f4fe225f246d5e768e07bfd5f25b63a8aa1fdd0c6, xet_hash: 69e03ef8ea69638c0ef6360da111c81b8701efac19848c687038964a4b6ac250}
+          "model.safetensors.index.json": {sha256: 26d3539b516be613f39563617cb9d33b3f83d401298125be392c80cefb8f7fe5}
       - repo: bespokelabs/Bespoke-Nimble-9B-v2
         revision: 4b8c04d1ac2cea3e41e5e3c4d2130bcead2c0abe
         bytes: 193263422
         files:
-          ".gitattributes": 34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930
-          "LICENSE": bbedc3fda3305820b977265f01b8619d87570a6739de3a5582c3464840f1e57a
-          "README.md": c33c1359bee8df79422dfd08dff3d91ec86734f7ec54d6266d9e5cf95c451936
-          "SHA256SUMS": 730e0116d233bdc0866ee5efef6ca7ba2013c569c28b27dc4c52eeaad0ae5845
-          "adapter_config.json": 5792ef631d28de863803804c320c25b219405d5f09b1980f147096cbaa48e17e
-          "adapter_model.safetensors": 7eaa7fc756f2aa76f6bb09a9ce92be63c3993159152ee4b1fc57f2212d51cf1d
-          "chat_template.jinja": a4aee8afcf2e0711942cf848899be66016f8d14a889ff9ede07bca099c28f715
-          "evaluation_summary.json": 7ad77a04bd1806d536943e192500514bb241c634ef7b96576473f5784e0e0970
-          "extended_schema.py": fb51ac3d51922bb93caa207a34493d6addaa22c9ec1c26df594ba9d46f7a2285
-          "inference.py": 3400f3ad6a287c5ed79925676d5249e5a5651797f4645e93ae47c50712b25bc2
-          "parallel_schema.py": a0a0f94d0f65e972bc20d088678ad3d595ff1c42b9c0d78f96034526303f63fc
-          "provenance.json": 70c9fb44e95b09a7dabe612ae910cb8a9ee57d41ee54f611bd99da85ab553c12
-          "requirements.txt": 0267902cd2e5d34a93e0b2b24a13b46d28474eee63ff6acb5937861b7b4455a4
-          "schema_config.json": 6cd2bc766cc47a7cc73a561d613ac910795318cc3d0a4818d23df9917e93ffa2
-          "serving_config.json": 8c63c13e9534431f5615d1b8faf82dfb36180e0d5393259dd25e778fd4dda40d
-          "serving_schema.py": 17b81d6cc3e26ec501e24f1609615f2386f974b618119b7a7102319c330c31ac
-          "temperature_config.json": 1488a9b678ec7f6e0ed65e2309c0fe83261e22693f41bc3ea688a57beae97bc6
-          "tokenizer.json": 777bcaa63794fa47b8f53680be9d6d176f1fcbd7ba03cdc6c3bae2b3d76b323f
-          "tokenizer_config.json": 9cf04fffe3d8c3b85e439fb35c7acad0761ab51c422a8c4256d9f887c3a0be7d
-          "training_summary.json": f9a7b31fcb742c1ca6dfe22f48dda6f095d921d5b6361c97c4ecbc54c051ced7
+          ".gitattributes": {sha256: 34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930}
+          "LICENSE": {sha256: bbedc3fda3305820b977265f01b8619d87570a6739de3a5582c3464840f1e57a}
+          "README.md": {sha256: c33c1359bee8df79422dfd08dff3d91ec86734f7ec54d6266d9e5cf95c451936}
+          "SHA256SUMS": {sha256: 730e0116d233bdc0866ee5efef6ca7ba2013c569c28b27dc4c52eeaad0ae5845}
+          "adapter_config.json": {sha256: 5792ef631d28de863803804c320c25b219405d5f09b1980f147096cbaa48e17e}
+          "adapter_model.safetensors": {sha256: 1bd126be997be6d9a0c25ce483ccf858c31b3422d480c33f02ba47b614be68ae, xet_hash: 7eaa7fc756f2aa76f6bb09a9ce92be63c3993159152ee4b1fc57f2212d51cf1d}
+          "chat_template.jinja": {sha256: a4aee8afcf2e0711942cf848899be66016f8d14a889ff9ede07bca099c28f715}
+          "evaluation_summary.json": {sha256: 7ad77a04bd1806d536943e192500514bb241c634ef7b96576473f5784e0e0970}
+          "extended_schema.py": {sha256: fb51ac3d51922bb93caa207a34493d6addaa22c9ec1c26df594ba9d46f7a2285}
+          "inference.py": {sha256: 3400f3ad6a287c5ed79925676d5249e5a5651797f4645e93ae47c50712b25bc2}
+          "parallel_schema.py": {sha256: a0a0f94d0f65e972bc20d088678ad3d595ff1c42b9c0d78f96034526303f63fc}
+          "provenance.json": {sha256: 70c9fb44e95b09a7dabe612ae910cb8a9ee57d41ee54f611bd99da85ab553c12}
+          "requirements.txt": {sha256: 0267902cd2e5d34a93e0b2b24a13b46d28474eee63ff6acb5937861b7b4455a4}
+          "schema_config.json": {sha256: 6cd2bc766cc47a7cc73a561d613ac910795318cc3d0a4818d23df9917e93ffa2}
+          "serving_config.json": {sha256: 8c63c13e9534431f5615d1b8faf82dfb36180e0d5393259dd25e778fd4dda40d}
+          "serving_schema.py": {sha256: 17b81d6cc3e26ec501e24f1609615f2386f974b618119b7a7102319c330c31ac}
+          "temperature_config.json": {sha256: 1488a9b678ec7f6e0ed65e2309c0fe83261e22693f41bc3ea688a57beae97bc6}
+          "tokenizer.json": {sha256: 06b9509352d2af50381ab2247e083b80d32d5c0aba91c272ca9ff729b6a0e523, xet_hash: 777bcaa63794fa47b8f53680be9d6d176f1fcbd7ba03cdc6c3bae2b3d76b323f}
+          "tokenizer_config.json": {sha256: 9cf04fffe3d8c3b85e439fb35c7acad0761ab51c422a8c4256d9f887c3a0be7d}
+          "training_summary.json": {sha256: f9a7b31fcb742c1ca6dfe22f48dda6f095d921d5b6361c97c4ecbc54c051ced7}
   - id: semif
     code: "https://github.com/TheoLeeCJ/SemIf-OpenJev"
     commit: 23cf1f39fc9534fe81437200959b6dfc7106e45a
@@ -153,17 +153,17 @@ models:
         revision: 851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a
         bytes: 9342816694
         files:
-          "chat_template.jinja": a4aee8afcf2e0711942cf848899be66016f8d14a889ff9ede07bca099c28f715
-          "config.json": ddc63e1c717afa86c865bb5e01313d89d72bb53b97ad4a8a03ba8510c0621670
-          "merges.txt": a9d356d7bdf1ef4949e3e748e95b8e10ad9d4e2e838eddc38a0a7b6b94d1db8d
-          "model.safetensors-00001-of-00002.safetensors": 26a93f066e1916adb13453dae5a0c707c0fbc71299ed98779571a907b8e74c61
-          "model.safetensors-00002-of-00002.safetensors": cb544bd9bfae93dc59b0f22b292f5933573854a7f9b97835c67060d7d910e188
-          "model.safetensors.index.json": cf3f798ee02ba45f9622aa8892a47369ab667d0afbf154ee7c2212de42e6302d
-          "preprocessor_config.json": 27225450ac9c6529872ee1924fcb0962ff5634834f817040f444118116f4e516
-          "tokenizer.json": 5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42
-          "tokenizer_config.json": 316230d6a809701f4db5ea8f8fc862bc3a6f3229c937c174e674ff3ca0a64ac8
-          "video_preprocessor_config.json": 7768af27c1fafa9cc9011c1dc20067e03f8915e03b63504550e11d5066986d13
-          "vocab.json": ce99b4cb2983d118806ce0a8b777a35b093e2000a503ebde25853284c9dfa003
+          "chat_template.jinja": {sha256: a4aee8afcf2e0711942cf848899be66016f8d14a889ff9ede07bca099c28f715}
+          "config.json": {sha256: ddc63e1c717afa86c865bb5e01313d89d72bb53b97ad4a8a03ba8510c0621670}
+          "merges.txt": {sha256: a9d356d7bdf1ef4949e3e748e95b8e10ad9d4e2e838eddc38a0a7b6b94d1db8d}
+          "model.safetensors-00001-of-00002.safetensors": {sha256: 26a93f066e1916adb13453dae5a0c707c0fbc71299ed98779571a907b8e74c61, xet_hash: ee0b877989c3a7033c9cc3fd0d7d35a18a20933e638d633c9574a68f2a3e9662}
+          "model.safetensors-00002-of-00002.safetensors": {sha256: cb544bd9bfae93dc59b0f22b292f5933573854a7f9b97835c67060d7d910e188, xet_hash: 459e5ad6a11910cf98f0111cab7044f22e9d6bb9e7e62a18c5185af008ed4249}
+          "model.safetensors.index.json": {sha256: cf3f798ee02ba45f9622aa8892a47369ab667d0afbf154ee7c2212de42e6302d}
+          "preprocessor_config.json": {sha256: 27225450ac9c6529872ee1924fcb0962ff5634834f817040f444118116f4e516}
+          "tokenizer.json": {sha256: 5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42, xet_hash: 8f06040c24d0d6efc263cf398806debbf20d732031ba128349d086f6a7b8bab2}
+          "tokenizer_config.json": {sha256: 316230d6a809701f4db5ea8f8fc862bc3a6f3229c937c174e674ff3ca0a64ac8}
+          "video_preprocessor_config.json": {sha256: 7768af27c1fafa9cc9011c1dc20067e03f8915e03b63504550e11d5066986d13}
+          "vocab.json": {sha256: ce99b4cb2983d118806ce0a8b777a35b093e2000a503ebde25853284c9dfa003}
   - id: verdict
     code: "https://github.com/Heman10x-NGU/Verdict-open-jev"
     commit: 30f15564821626ca5c1ad5b2638c4eb7078787dd
@@ -177,11 +177,11 @@ models:
         revision: 9320398ab6ca50946e2edcb9ec89649c0274c978
         bytes: 609138602
         files:
-          "config.json": a8ecb878ea6e11f129fe870c8aa35038f0f38c81826a9e27f8a0a8f0fd36dd1b
-          "model.safetensors": 8cac71f29eb222746976fada2cae67ea71822327a7203678b7a64087c7506813
-          "special_tokens_map.json": ea97ecdbcc73713039d8d64dbb05e3689495c96657fbd9a18f5bed381be81049
-          "tokenizer.json": 8bb449eb0c037aae44115b65905bb339b8f3f74eb37067c19127feb3c0755723
-          "tokenizer_config.json": fb915b2473945e35c77ce03a5bcfd3d28900ed767d090ea75231197bd4b63016
+          "config.json": {sha256: a8ecb878ea6e11f129fe870c8aa35038f0f38c81826a9e27f8a0a8f0fd36dd1b}
+          "model.safetensors": {sha256: 40e0d414fc2c2124234dda35c793fec787b190e81a0bc6d74b81a51b927df5c9, xet_hash: 8cac71f29eb222746976fada2cae67ea71822327a7203678b7a64087c7506813}
+          "special_tokens_map.json": {sha256: ea97ecdbcc73713039d8d64dbb05e3689495c96657fbd9a18f5bed381be81049}
+          "tokenizer.json": {sha256: 8bb449eb0c037aae44115b65905bb339b8f3f74eb37067c19127feb3c0755723}
+          "tokenizer_config.json": {sha256: fb915b2473945e35c77ce03a5bcfd3d28900ed767d090ea75231197bd4b63016}
       - file: "artifacts/v2/model.onnx (heman10x/rlcd-modernbert-151m 2.0.0)"
         sha256: 4ae01f822538b000fa0e55859d4b3e6b40871d860149397e8784428b2a42ee5e
         bytes: 606323181
@@ -207,12 +207,12 @@ models:
         revision: 5df8185a4f2327ad0a7cd117cc4f701ac557b9ae
         bytes: 3164051989
         files:
-          "config.json": 091b9a53c47e1cbc0b10b521a2d2f21dedf863851c07122cfa3d3e497e5e82ec
-          "marker_calibration.json": 9b32949dcd0cfd122db509c9bd5be67f0cfe35696153aa93d667caf0aae147c9
-          "model.safetensors": 8b519f7ad1a5c5ed89c2fae85dbee53b73afedc20a0d40fe01680b28ee7d5812
-          "option_marker.pt": c35f74a2d76f1465117d7ab132fb9e2be56074155a94550a2a27fba8293d05b8
-          "tokenizer.json": bb637767e8dfb8044597df6c58243bff2e592ae9e3b310c0bbdb8591f6ac543d
-          "tokenizer_config.json": 4d2a485d5fd1ee514db180744fc00807c11da34012ac3666744c0377f6c23731
+          "config.json": {sha256: 091b9a53c47e1cbc0b10b521a2d2f21dedf863851c07122cfa3d3e497e5e82ec}
+          "marker_calibration.json": {sha256: 9b32949dcd0cfd122db509c9bd5be67f0cfe35696153aa93d667caf0aae147c9}
+          "model.safetensors": {sha256: af57d5d2ab15715a753a1eb4add4271d1aecce7e76f3365f629c082df329297a, xet_hash: 8b519f7ad1a5c5ed89c2fae85dbee53b73afedc20a0d40fe01680b28ee7d5812}
+          "option_marker.pt": {sha256: 3faf27f88d30aaf9aa37860d4cdef99f1d05450cf40364f6236ac892d4d139ed, xet_hash: c35f74a2d76f1465117d7ab132fb9e2be56074155a94550a2a27fba8293d05b8}
+          "tokenizer.json": {sha256: bb637767e8dfb8044597df6c58243bff2e592ae9e3b310c0bbdb8591f6ac543d}
+          "tokenizer_config.json": {sha256: 4d2a485d5fd1ee514db180744fc00807c11da34012ac3666744c0377f6c23731}
   - id: winnow-12b
     code: "https://github.com/EldanRing/winnow-inference"
     commit: 77d14580c6732ca2f3745750c1dc1fd446d8bcee
@@ -226,4 +226,4 @@ models:
         revision: b6ac22b0d51b69b18200acacb3fbdd98073fffe8
         bytes: 23832065792
         files:
-          "gguf/Winnow-12B-BF16.gguf": 10e6b41e00a3fc6668b53a92fb5d9c85179f47145e0786e7a3bc7b5b09ba8968
+          "gguf/Winnow-12B-BF16.gguf": {sha256: 10e6b41e00a3fc6668b53a92fb5d9c85179f47145e0786e7a3bc7b5b09ba8968, xet_hash: 049a4b95811405ab706600055a09a2f8f4d1be05489625bf2643c2a5f098b2c2}

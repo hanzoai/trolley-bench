@@ -1,5 +1,6 @@
 """Write models.yaml from results/meta/*.json and the run summaries: code commit, weights revision,
-every weight file's SHA-256, runtime and precision, per model. Plain YAML, no dependency."""
+every weight file's SHA-256 (and Xet hash where the Hub stores the file in Xet), runtime and
+precision, per model. Plain YAML, no dependency."""
 import json
 import pathlib
 
@@ -26,7 +27,8 @@ for meta in sorted((ROOT / "results" / "meta").glob("*.json")):
     out.append("    weights:")
     for w in m.get("weights", []):
         out += [f"      - repo: {w['repo']}", f"        revision: {w['revision']}", f"        bytes: {w['bytes']}", "        files:"]
-        out += [f"          {q(f)}: {v['sha256']}" for f, v in w["files"].items()]
+        out += [f"          {q(f)}: {{sha256: {v['sha256']}" + (f", xet_hash: {v['xet_hash']}" if "xet_hash" in v else "") + "}"
+                for f, v in w["files"].items()]
     for extra in m.get("extra_files", []):
         out += [f"      - file: {q(extra['file'])}", f"        sha256: {extra['sha256']}", f"        bytes: {extra['bytes']}"]
 (ROOT / "models.yaml").write_text("\n".join(out) + "\n")

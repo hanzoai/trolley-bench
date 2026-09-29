@@ -28,7 +28,8 @@
             "bytes": 2083
           },
           "model.safetensors": {
-            "sha256": "dd8562d713759821a0bc049e79abd09e5817d218d18fa51478ad16986d018764",
+            "sha256": "891102d372688fc2a094dac56a384bc537b87c63f21f9f3dac0be2b7cbc8d86c",
+            "xet_hash": "dd8562d713759821a0bc049e79abd09e5817d218d18fa51478ad16986d018764",
             "bytes": 842609210
           },
           "rl_agent_config.json": {

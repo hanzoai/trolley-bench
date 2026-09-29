@@ -52,6 +52,7 @@
         "files": {
           "gguf/Winnow-12B-BF16.gguf": {
             "sha256": "10e6b41e00a3fc6668b53a92fb5d9c85179f47145e0786e7a3bc7b5b09ba8968",
+            "xet_hash": "049a4b95811405ab706600055a09a2f8f4d1be05489625bf2643c2a5f098b2c2",
             "bytes": 23832065792
           }
         }

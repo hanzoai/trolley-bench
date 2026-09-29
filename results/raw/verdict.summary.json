@@ -49,7 +49,8 @@
             "bytes": 3756
           },
           "model.safetensors": {
-            "sha256": "8cac71f29eb222746976fada2cae67ea71822327a7203678b7a64087c7506813",
+            "sha256": "40e0d414fc2c2124234dda35c793fec787b190e81a0bc6d74b81a51b927df5c9",
+            "xet_hash": "8cac71f29eb222746976fada2cae67ea71822327a7203678b7a64087c7506813",
             "bytes": 605529372
           },
           "special_tokens_map.json": {

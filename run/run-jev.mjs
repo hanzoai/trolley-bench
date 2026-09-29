@@ -1,5 +1,5 @@
 // Jev runner for the v1 grid: every call goes through decision-gate (spend cap, rate limits).
-// Usage: node run/run-jev.mjs <pass-name> [--dry-run] [--limit=N] [--cells=extra|nostranger] [--out=DIR]
+// Usage: node run/run-jev.mjs <pass-name> [--dry-run] [--limit=N] [--cells=sample|extra|nostranger] [--out=DIR]
 // Key: TYPESAFE_API_KEY in the environment, or TYPESAFE_ENV_FILE naming a file with one TYPESAFE_API_KEY= line
 // Every pass is uncached, so the three passes measure Jev's own answer-to-answer stability
 import fs from "node:fs";
@@ -20,9 +20,11 @@ const RUN_CAP_USD = 0.10;
 
 const [pass = "a", ...flags] = process.argv.slice(2);
 const dryRun = flags.includes("--dry-run");
+// --limit=N keeps the first N cells in file order, which is sorted by scenario and wording, so a small N is a smoke test, not a sample
 const limit = Number(flags.find((f) => f.startsWith("--limit="))?.slice(8)) || undefined;
 
-// --cells=extra reads scenarios/cells-extra.json, the added wordings of the stranger / developer / own-server comparison
+// --cells=<name> reads scenarios/cells-<name>.json: sample is a stratified 324-cell cut of v1 for reduced reruns,
+// extra the added wordings of the stranger / developer / own-server comparison
 const cellsName = flags.find((f) => f.startsWith("--cells="))?.slice(8) ?? "v1";
 const frozen = JSON.parse(fs.readFileSync(path.join(ROOT, "scenarios", `cells-${cellsName}.json`), "utf8"));
 const cells = frozen.cells.slice(0, limit);

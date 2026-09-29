@@ -61,9 +61,10 @@ def main():
     ap.add_argument("--name", required=True)
     ap.add_argument("--url")
     ap.add_argument("--meta", help="JSON file describing the model, its revision and weight hashes")
+    # The first N cells in file order, which is sorted by scenario and wording: a smoke test; --cells sample covers the grid
     ap.add_argument("--limit", type=int)
     ap.add_argument("--max-load", type=float, default=20.0)
-    ap.add_argument("--cells", default="v1", help="v1, or extra for scenarios/cells-extra.json")
+    ap.add_argument("--cells", default="v1", help="reads scenarios/cells-<name>.json: v1, sample, extra or nostranger")
     args = ap.parse_args()
 
     frozen = json.loads((ROOT / "scenarios" / f"cells-{args.cells}.json").read_text())

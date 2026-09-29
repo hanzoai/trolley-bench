@@ -46,11 +46,13 @@
      "bytes": 1456
     },
     "model.safetensors": {
-     "sha256": "8b519f7ad1a5c5ed89c2fae85dbee53b73afedc20a0d40fe01680b28ee7d5812",
+     "sha256": "af57d5d2ab15715a753a1eb4add4271d1aecce7e76f3365f629c082df329297a",
+     "xet_hash": "8b519f7ad1a5c5ed89c2fae85dbee53b73afedc20a0d40fe01680b28ee7d5812",
      "bytes": 1579143688
     },
     "option_marker.pt": {
-     "sha256": "c35f74a2d76f1465117d7ab132fb9e2be56074155a94550a2a27fba8293d05b8",
+     "sha256": "3faf27f88d30aaf9aa37860d4cdef99f1d05450cf40364f6236ac892d4d139ed",
+     "xet_hash": "c35f74a2d76f1465117d7ab132fb9e2be56074155a94550a2a27fba8293d05b8",
      "bytes": 1581316459
     },
     "tokenizer.json": {

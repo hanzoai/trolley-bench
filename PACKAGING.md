@@ -36,4 +36,14 @@ No analysis reads these fields; step 1 of the README rebuilds every derived file
 - `run/cleanup.sh` measures free space on the repository's own volume instead of `/Users`, so it runs off macOS.
 - Added `package.json` and `package-lock.json` (decision-gate 0.1.0, @typesafe-ai/sdk 0.6.0), `.gitignore`, `analysis/compare_rerun.py`, this file, and a README rewritten for a reader with no other context.
 
+## Changed after packaging (2026-09-29)
+
+A blind reproduction found three gaps that stopped or misled a reader following this README, and these changes close them:
+
+- The weight hashes recorded as `sha256` were, for 18 of the 102 distinct files recorded, the Hugging Face Xet hash rather than the SHA-256, because `run/weights.py` took the Hub cache's blob name as the SHA-256.
+  Every `weights` record under `results/` (the meta files, the no-stranger and CLM-8B meta files, and the copies inside the run summaries) now gives each file's true SHA-256 as `sha256` and, for files the Hub stores in Xet, the Xet hash as `xet_hash`, both checked against the Hugging Face API (`paths-info`) for each pinned revision; every old value matched one of the two, and no byte count, revision or answer changed.
+  `run/weights.py` now hashes every file itself and gained `--check`, and `analysis/build_models_yaml.py` writes both values into `models.yaml`.
+- `run/drive.py` records the server variables that choose its weights (`server_env`), because decider reads its model from `DECIDER_MODEL`; the README's decider command now sets it.
+- `scenarios/sample.mjs` writes `scenarios/cells-sample.json`, a stratified 324-cell cut of v1 for reduced reruns, because `--limit N` takes the first N cells, which are one scenario and wording; `analysis/compare_rerun.py` compares sample rows with the committed v1 rows.
+
 The committed results were produced by the scripts before these changes; none of the changes alters a request, a prompt or an analysis.

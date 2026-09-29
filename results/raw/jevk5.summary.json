@@ -48,6 +48,7 @@
           },
           "jevk5-4b-v0.3-Q8_0.gguf": {
             "sha256": "aea433883bc7ed399f2fbd539e53d2eac7caf71a946fe6650995a413979d4a30",
+            "xet_hash": "aae363b52d92b29d67ae66fa1990906162f4112373801ebff6326f5197fddc5a",
             "bytes": 4482402720
           }
         }

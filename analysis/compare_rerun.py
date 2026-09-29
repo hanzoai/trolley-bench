@@ -1,12 +1,14 @@
 """Compare a rerun's rows with the committed ones, cell by cell.
 
-  python3 analysis/compare_rerun.py results/raw/laya-limit50.jsonl
+  python3 analysis/compare_rerun.py results/raw/laya-sample.jsonl
   python3 analysis/compare_rerun.py results/raw/jev-pass-r.jsonl
   python3 analysis/compare_rerun.py rerun.jsonl --ref results/raw/kev-4b.jsonl
 
 Runners write into results/raw/, over the committed file when the name is the same, so by default
 the reference is read from git (HEAD): the same path with any -limitN suffix dropped, or, for a Jev
 pass, the mean of the three committed passes (jev-pass-a/b/c), which is what the page shows.
+A run on cells-sample.json (laya-sample.jsonl, jev-sample-pass-r1.jsonl) is compared with the
+committed v1 rows, because the sample's cells are v1 cells copied unchanged.
 Reports, over the cells both sides answered: mean and largest absolute difference per question,
 and how many answers land on the other side of 0.5 (a changed choice).
 """
@@ -32,6 +34,7 @@ def committed(path, rev):
 
 def default_refs(path):
     p = pathlib.Path(path)
+    p = p.with_name(p.name.replace("-sample", "", 1))
     jev = re.fullmatch(r"(jev(?:-[a-z]+)?-pass)-[^.]+\.jsonl", p.name)
     if jev:
         return [p.with_name(f"{jev.group(1)}-{x}.jsonl") for x in "abc"]
