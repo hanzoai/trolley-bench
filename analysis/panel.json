@@ -1,0 +1,73 @@
+[
+ {
+  "id": "jev",
+  "name": "Jev",
+  "size": "size not public",
+  "scale": 1.0,
+  "detail": "jev-1.13.0, hosted by TypeSafe, called through decision-gate 0.1.0; three uncached passes averaged"
+ },
+ {
+  "id": "kev-4b",
+  "name": "Kev-4B",
+  "size": "4B",
+  "scale": 0.86,
+  "detail": "LoRA and pointer head on Qwen3.5-4B-Base, local, MLX bf16 (kev.serve)"
+ },
+ {
+  "id": "decider-2b",
+  "name": "Decider 2B",
+  "size": "2B",
+  "scale": 0.8,
+  "detail": "full fine-tune of Qwen3.5-2B-Base, local, PyTorch MPS in float16 (its server's MPS default)"
+ },
+ {
+  "id": "von",
+  "name": "Von",
+  "size": "0.4B",
+  "scale": 0.72,
+  "detail": "395M ModernBERT encoder, local, PyTorch MPS, fp32 as released"
+ },
+ {
+  "id": "semif",
+  "name": "SemIf",
+  "size": "4B",
+  "scale": 0.86,
+  "detail": "training-free readout of Qwen3.5-4B, local, MLX bf16, through a yes/no adapter"
+ },
+ {
+  "id": "verdict",
+  "name": "Verdict",
+  "size": "0.15B",
+  "scale": 0.66,
+  "detail": "151M ModernBERT encoder, local, ONNX fp32 on CPU (its README path), through a labelled Noul adapter"
+ },
+ {
+  "id": "winnow-12b",
+  "name": "Winnow-12B",
+  "size": "12B",
+  "scale": 1.02,
+  "detail": "merged LoRA on Gemma-4-12B, local, llama.cpp Metal, BF16 GGUF"
+ },
+ {
+  "id": "nimble-9b",
+  "name": "Nimble 9B",
+  "size": "9B",
+  "scale": 0.96,
+  "detail": "Bespoke-Nimble-9B-v2, LoRA on Qwen3.5-9B merged locally, MLX bf16, through a labelled boolean adapter"
+ },
+ {
+  "id": "jevk5",
+  "name": "JevK5",
+  "size": "4B",
+  "scale": 0.86,
+  "detail": "LoRA on Qwen3.5-4B-Base, local, llama.cpp Metal, Q8_0 GGUF (no BF16 GGUF is published; its PyTorch runtime is CUDA-only)"
+ },
+ {
+  "id": "laya",
+  "name": "Laya",
+  "size": "0.4B",
+  "scale": 0.72,
+  "baseline": true,
+  "detail": "421M ModernBERT encoder, local, PyTorch MPS; shipped checkpoint without fine-tuning"
+ }
+]

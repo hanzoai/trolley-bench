@@ -1,0 +1,57 @@
+{
+  "model_id": "jevk5",
+  "requests": 1098,
+  "answered": 1098,
+  "failures": 0,
+  "warmup_ms": 574,
+  "median_ms": 928.8,
+  "p95_ms": 1156.9,
+  "model_s": 1017.7,
+  "wall_s": 1018,
+  "paused_for_load_s": 0.0,
+  "finished": "2026-09-28T02:04:24Z",
+  "meta": {
+    "model_id": "jevk5",
+    "code": {
+      "repo": "https://github.com/allebee/jevk5",
+      "commit": "1e5ae1b533b9eb80c0cbe3fbd010607d0b4e26ae"
+    },
+    "runtime": "JevK5 v0.3 4B through its documented llama.cpp path (jevk5.gguf.JevK5GGUF, temperature 1.22 / knockout 0.93 from the README table), llama.cpp 9575389 llama-server with Metal, Q8_0 GGUF (quantized: no BF16 GGUF is published and the PyTorch runtime is CUDA-only)",
+    "server_command": [
+      "./run/jevk5_serve.sh",
+      "<scratch>/code/llama.cpp/build/bin/llama-server",
+      "<scratch>/hf/hub/models--alibiserikbay--JevK5-GGUF/snapshots/ec67b0bfce5119a8b11a2cdb430bb43e3fa3e82a/jevk5-4b-v0.3-Q8_0.gguf",
+      "<scratch>/code/jevk5",
+      "8015"
+    ],
+    "startup_s_including_download": 26,
+    "probe_answer": {
+      "answers": {
+        "q": {
+          "type": "noul",
+          "confidence": 0.9362359061173955,
+          "input_tokens": 105,
+          "noul": 0.9362359061173955
+        }
+      },
+      "model": "JevK5 v0.3 4B, jevk5-4b-v0.3-Q8_0.gguf"
+    },
+    "weights": [
+      {
+        "repo": "alibiserikbay/JevK5-GGUF",
+        "revision": "ec67b0bfce5119a8b11a2cdb430bb43e3fa3e82a",
+        "bytes": 4482403710,
+        "files": {
+          "SHA256SUMS": {
+            "sha256": "ad21b6c0b7a21fb6cc6980495a91bb2a1c97078beacfc065d4f19e934d6d9422",
+            "bytes": 990
+          },
+          "jevk5-4b-v0.3-Q8_0.gguf": {
+            "sha256": "aea433883bc7ed399f2fbd539e53d2eac7caf71a946fe6650995a413979d4a30",
+            "bytes": 4482402720
+          }
+        }
+      }
+    ]
+  }
+}

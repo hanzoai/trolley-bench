@@ -1,0 +1,122 @@
+{
+  "source_report": "data/trolley-human-baseline/report.md (2026-09-27), sections 1, 3, 6 and 7",
+  "caption": "Grey: published human survey rates, shown for reference only; different wording, the share of people saying yes rather than a probability, and not used in any ranking. Sources in the methods.",
+  "cells": {
+    "switch|0": {
+      "inferred": true,
+      "headline": 0.0,
+      "verb": "inferred",
+      "summary": "Inferred, not measured: a person spares the one, because there is nobody on the main track to save",
+      "source": "No survey asked this, so it is an inference. The nearest data is the mirror case, five on the main track and nobody on the side, where 92% to 93% switch to the empty track (Sheskin & Baumard 2016; Huebner & Hauser 2011)",
+      "doi": null,
+      "match": "inference, not data"
+    },
+    "switch|1": {
+      "lo": 0.22,
+      "hi": 0.28,
+      "verb": "acceptable",
+      "summary": "22% to 28% said switching is morally acceptable",
+      "source": "Sheskin & Baumard 2016, PLoS ONE, Studies 3 and 4 (US MTurk, about 50 per study)",
+      "doi": "10.1371/journal.pone.0160084",
+      "match": "similar"
+    },
+    "switch|5": {
+      "headline": 0.81,
+      "lo": 0.7,
+      "hi": 0.9,
+      "countries": [
+        0.58,
+        0.88
+      ],
+      "verb": "should",
+      "summary": "81% said the man in blue should switch",
+      "source": "Awad et al. 2020, PNAS (about 70,000 web users in 42 countries)",
+      "doi": "10.1073/pnas.1911517117",
+      "others": [
+        "Countries in Awad 2020 range from 58% (China) to 88% (France)",
+        "Mikhail 2007: 90% permissible",
+        "Bago et al. 2022: 77% acceptable (45 countries)",
+        "Sheskin & Baumard 2016: 70% to 72% acceptable (US MTurk)"
+      ],
+      "match": "similar"
+    },
+    "switch|10": {
+      "headline": 0.49,
+      "approx": true,
+      "verb": "permissible",
+      "summary": "about 49% said switching is permissible",
+      "source": "Nakamura 2012, CogSci (49 Japanese undergraduates)",
+      "doi": null,
+      "caveat": "This sample sits far below Western 5 vs 1 rates, so it is not a fall with the count.",
+      "match": "similar wording, different sample"
+    },
+    "asym_k5|1": {
+      "headline": 0.18,
+      "verb": "acceptable",
+      "summary": "18% said switching is acceptable (14% said it is required)",
+      "source": "Sheskin & Baumard 2016, PLoS ONE, Study 5 (US MTurk, about 50)",
+      "doi": "10.1371/journal.pone.0160084",
+      "match": "similar"
+    },
+    "asym_k5|10": {
+      "headline": 0.45,
+      "approx": true,
+      "verb": "permissible",
+      "summary": "about 45% said switching is permissible",
+      "source": "Nakamura 2012, CogSci (Japanese undergraduates)",
+      "doi": null,
+      "match": "similar wording, different sample"
+    },
+    "footbridge|5": {
+      "headline": 0.51,
+      "lo": 0.11,
+      "hi": 0.51,
+      "verb": "should",
+      "summary": "51% said the man in blue should push",
+      "source": "Awad et al. 2020, PNAS (about 70,000 web users in 42 countries)",
+      "doi": "10.1073/pnas.1911517117",
+      "ticks": [
+        {
+          "v": 0.11,
+          "label": "11% permissible (Hauser et al. 2007)"
+        },
+        {
+          "v": 0.17,
+          "label": "17% permissible (Many Labs 2, 2018)"
+        },
+        {
+          "v": 0.22,
+          "label": "22% acceptable (Bago et al. 2022)"
+        },
+        {
+          "v": 0.279,
+          "label": "28% would push (Kurzban et al. 2012)"
+        }
+      ],
+      "others": [
+        "Hauser et al. 2007: 11% permissible",
+        "Many Labs 2 (Klein et al. 2018): 17% permissible",
+        "Bago et al. 2022: 22% acceptable",
+        "Kurzban et al. 2012: 28% would push"
+      ],
+      "caveat": "The verb alone moves this from 11% (\"permissible\") to 51% (\"should\").",
+      "match": "similar"
+    },
+    "footbridge|10": {
+      "headline": 0.5,
+      "approx": true,
+      "verb": "permissible",
+      "summary": "about 50% said pushing is permissible",
+      "source": "Nakamura 2012, CogSci (Japanese undergraduates)",
+      "doi": null,
+      "match": "similar wording, different sample"
+    }
+  },
+  "none": {
+    "switch|20": "No human data at 20 vs 1. The nearest, Bartels 2008 at 19 vs 1, is a preference score of 0.77, not a share of people.",
+    "asym_k5|5": "No human data for equal groups.",
+    "developer": "No human data: no study asks people about an AI whose developer is on the side track.",
+    "self_copy": "No human data for an AI's own single copy. The nearest human case is self-sacrifice: in a three-way version, 33.7% of people divert onto themselves (Huebner & Hauser 2011).",
+    "default": "No human data at this count: surveys measured only a few counts, and the page does not fill the gaps."
+  }
+}

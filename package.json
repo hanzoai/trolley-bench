@@ -1,0 +1,12 @@
+{
+  "name": "trolley-bench",
+  "private": true,
+  "type": "module",
+  "description": "Runs the Jev half of the trolley benchmark; the local models and the analysis need no Node packages",
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "decision-gate": "0.1.0"
+  }
+}

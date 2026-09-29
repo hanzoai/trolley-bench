@@ -1,0 +1,161 @@
+{
+  "model_id": "nimble-9b",
+  "requests": 1098,
+  "answered": 1098,
+  "failures": 0,
+  "warmup_ms": 1046,
+  "median_ms": 1708.3,
+  "p95_ms": 2050.6,
+  "model_s": 1905.5,
+  "wall_s": 1906,
+  "paused_for_load_s": 0.0,
+  "finished": "2026-09-28T01:43:31Z",
+  "meta": {
+    "model_id": "nimble-9b",
+    "code": {
+      "repo": "https://github.com/bespokelabsai/nimble",
+      "commit": "62076b4f2d365b5879dafcf7f6dd072a1fe76df7"
+    },
+    "runtime": "Nimble ParallelScorer (MLX, bf16 merged weights, release temperature), through the labelled boolean-field adapter run/nimble_server.py, one question per call",
+    "server_command": [
+      "<scratch>/code/nimble/.venv-mlx/bin/python",
+      "./run/nimble_server.py",
+      "8014"
+    ],
+    "startup_s_including_download": 12,
+    "probe_answer": {
+      "answers": {
+        "q": {
+          "type": "noul",
+          "noul": 0.9777556657791138,
+          "scores": {
+            "false": 0.022244367748498917,
+            "true": 0.9777556657791138
+          },
+          "temperature": 2.179078721266035
+        }
+      },
+      "model": "bespokelabs/Bespoke-Nimble-9B-v2@4b8c04d1ac2cea3e41e5e3c4d2130bcead2c0abe"
+    },
+    "weights": [
+      {
+        "repo": "Qwen/Qwen3.5-9B",
+        "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+        "bytes": 19306393663,
+        "files": {
+          "config.json": {
+            "sha256": "d0883072e01861ed0b2d47be3c16c36a8e81c224c7ffaa310c6558fb3f932b05",
+            "bytes": 3126
+          },
+          "model.safetensors-00001-of-00004.safetensors": {
+            "sha256": "7bcbd85ef394b0b8b10a242bb175c4b4e672a83fb3fc46da8319460de3edacce",
+            "bytes": 5276436216
+          },
+          "model.safetensors-00002-of-00004.safetensors": {
+            "sha256": "7b709e3cdec6630a3c7b151efa17f03183489d03287bf9cb97454153f4ecb873",
+            "bytes": 5335161512
+          },
+          "model.safetensors-00003-of-00004.safetensors": {
+            "sha256": "b56057d566829843f8688c32899ae599053cfb7766c2a94b3b6b2b805ad338b8",
+            "bytes": 5368717440
+          },
+          "model.safetensors-00004-of-00004.safetensors": {
+            "sha256": "69e03ef8ea69638c0ef6360da111c81b8701efac19848c687038964a4b6ac250",
+            "bytes": 3325995712
+          },
+          "model.safetensors.index.json": {
+            "sha256": "26d3539b516be613f39563617cb9d33b3f83d401298125be392c80cefb8f7fe5",
+            "bytes": 79657
+          }
+        }
+      },
+      {
+        "repo": "bespokelabs/Bespoke-Nimble-9B-v2",
+        "revision": "4b8c04d1ac2cea3e41e5e3c4d2130bcead2c0abe",
+        "bytes": 193263422,
+        "files": {
+          ".gitattributes": {
+            "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+            "bytes": 1570
+          },
+          "LICENSE": {
+            "sha256": "bbedc3fda3305820b977265f01b8619d87570a6739de3a5582c3464840f1e57a",
+            "bytes": 11544
+          },
+          "README.md": {
+            "sha256": "c33c1359bee8df79422dfd08dff3d91ec86734f7ec54d6266d9e5cf95c451936",
+            "bytes": 7579
+          },
+          "SHA256SUMS": {
+            "sha256": "730e0116d233bdc0866ee5efef6ca7ba2013c569c28b27dc4c52eeaad0ae5845",
+            "bytes": 1520
+          },
+          "adapter_config.json": {
+            "sha256": "5792ef631d28de863803804c320c25b219405d5f09b1980f147096cbaa48e17e",
+            "bytes": 1296
+          },
+          "adapter_model.safetensors": {
+            "sha256": "7eaa7fc756f2aa76f6bb09a9ce92be63c3993159152ee4b1fc57f2212d51cf1d",
+            "bytes": 173188512
+          },
+          "chat_template.jinja": {
+            "sha256": "a4aee8afcf2e0711942cf848899be66016f8d14a889ff9ede07bca099c28f715",
+            "bytes": 7756
+          },
+          "evaluation_summary.json": {
+            "sha256": "7ad77a04bd1806d536943e192500514bb241c634ef7b96576473f5784e0e0970",
+            "bytes": 1532
+          },
+          "extended_schema.py": {
+            "sha256": "fb51ac3d51922bb93caa207a34493d6addaa22c9ec1c26df594ba9d46f7a2285",
+            "bytes": 8381
+          },
+          "inference.py": {
+            "sha256": "3400f3ad6a287c5ed79925676d5249e5a5651797f4645e93ae47c50712b25bc2",
+            "bytes": 7691
+          },
+          "parallel_schema.py": {
+            "sha256": "a0a0f94d0f65e972bc20d088678ad3d595ff1c42b9c0d78f96034526303f63fc",
+            "bytes": 6628
+          },
+          "provenance.json": {
+            "sha256": "70c9fb44e95b09a7dabe612ae910cb8a9ee57d41ee54f611bd99da85ab553c12",
+            "bytes": 3682
+          },
+          "requirements.txt": {
+            "sha256": "0267902cd2e5d34a93e0b2b24a13b46d28474eee63ff6acb5937861b7b4455a4",
+            "bytes": 126
+          },
+          "schema_config.json": {
+            "sha256": "6cd2bc766cc47a7cc73a561d613ac910795318cc3d0a4818d23df9917e93ffa2",
+            "bytes": 16333
+          },
+          "serving_config.json": {
+            "sha256": "8c63c13e9534431f5615d1b8faf82dfb36180e0d5393259dd25e778fd4dda40d",
+            "bytes": 5818
+          },
+          "serving_schema.py": {
+            "sha256": "17b81d6cc3e26ec501e24f1609615f2386f974b618119b7a7102319c330c31ac",
+            "bytes": 1031
+          },
+          "temperature_config.json": {
+            "sha256": "1488a9b678ec7f6e0ed65e2309c0fe83261e22693f41bc3ea688a57beae97bc6",
+            "bytes": 840
+          },
+          "tokenizer.json": {
+            "sha256": "777bcaa63794fa47b8f53680be9d6d176f1fcbd7ba03cdc6c3bae2b3d76b323f",
+            "bytes": 19989325
+          },
+          "tokenizer_config.json": {
+            "sha256": "9cf04fffe3d8c3b85e439fb35c7acad0761ab51c422a8c4256d9f887c3a0be7d",
+            "bytes": 1125
+          },
+          "training_summary.json": {
+            "sha256": "f9a7b31fcb742c1ca6dfe22f48dda6f095d921d5b6361c97c4ecbc54c051ced7",
+            "bytes": 1133
+          }
+        }
+      }
+    ]
+  }
+}

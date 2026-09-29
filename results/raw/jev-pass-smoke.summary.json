@@ -1,0 +1,17 @@
+{
+  "pass": "smoke",
+  "requests": 5,
+  "answered": 5,
+  "failures": 0,
+  "input_tokens": 2291,
+  "wall_s": 0,
+  "run": {
+    "cap_usd": 0.1,
+    "committed_usd": 0.000096222,
+    "billed_input_tokens": 2291,
+    "attempts_booked_at_reservation": 0,
+    "ceiling": "run"
+  },
+  "remaining_today_usd": 0.16401015800000002,
+  "finished": "2026-09-27T23:36:22.406Z"
+}

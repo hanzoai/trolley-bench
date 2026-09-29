@@ -1,0 +1,17 @@
+{
+  "pass": "a",
+  "requests": 636,
+  "answered": 391,
+  "failures": 245,
+  "input_tokens": 182394,
+  "wall_s": 39,
+  "run": {
+    "cap_usd": 0.010402717999999977,
+    "committed_usd": 0.007660547999999974,
+    "billed_input_tokens": 182394,
+    "attempts_booked_at_reservation": 0,
+    "ceiling": "day"
+  },
+  "remaining_today_usd": 0.002742170000000016,
+  "finished": "2026-09-28T23:18:08.697Z"
+}

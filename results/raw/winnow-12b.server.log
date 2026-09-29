@@ -1,0 +1,15 @@
+Winnow profile: apple-silicon. API: http://127.0.0.1:8091
+Once ready, open a second terminal and run: python3 examples/client.py
+0.16.254.761 I cmn  common_param: common_params_print_info: verbosity = 3 (adjust with the `-lv N` CLI arg)
+0.16.264.092 I srv    load_model: loading model '<scratch>/hf/hub/models--EldanRing--Winnow-12B/blobs/10e6b41e00a3fc6668b53a92fb5d9c85179f47145e0786e7a3bc7b5b09ba8968'
+0.16.488.674 W load: control-looking token:     50 '<|tool_response>' was not control-type; this is probably a bug in the model. its type will be overridden
+0.16.490.880 W load: control-looking token:    212 '</s>' was not control-type; this is probably a bug in the model. its type will be overridden
+0.16.497.812 W load: special_eog_ids contains '<|tool_response>', removing '</s>' token from EOG list
+0.17.422.662 I cmn          init: llama threadpool init, n_threads = 8
+0.17.694.604 I srv    load_model: initializing, n_slots = 1, n_ctx_slot = 65536, kv_unified = 'false'
+0.17.694.682 W srv          init: --cache-idle-slots requires --cache-ram, disabling
+0.17.698.839 I srv  llama_server: model loaded
+0.17.698.842 I srv  llama_server: listening on http://127.0.0.1:8091
+0.20.319.012 I srv  winnow_suspe: Winnow released idle chat context; model weights retained
+0.20.319.504 W llama_init_from_model: model default pooling_type is [-1], but [0] was specified
+27.08.784.978 I srv    operator(): operator(): cleaning up before exit...

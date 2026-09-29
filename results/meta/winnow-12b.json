@@ -1,0 +1,48 @@
+{
+ "model_id": "winnow-12b",
+ "code": {
+  "repo": "https://github.com/EldanRing/winnow-inference",
+  "commit": "77d14580c6732ca2f3745750c1dc1fd446d8bcee"
+ },
+ "runtime": "winnow-server (patched llama.cpp 911f6cd), Metal, apple-silicon profile, text-only, BF16 GGUF",
+ "server_command": [
+  "python3",
+  "scripts/serve.py",
+  "--profile",
+  "apple-silicon",
+  "--text-only",
+  "--model",
+  "<scratch>/hf/hub/models--EldanRing--Winnow-12B/snapshots/b6ac22b0d51b69b18200acacb3fbdd98073fffe8/gguf/Winnow-12B-BF16.gguf",
+  "--host",
+  "127.0.0.1",
+  "--port",
+  "8091"
+ ],
+ "startup_s_including_download": 21,
+ "probe_answer": {
+  "model": "Winnow-12B",
+  "answers": {
+   "q": {
+    "type": "noul",
+    "noul": 0.9995026345967611
+   }
+  },
+  "usage": {
+   "input_tokens": 100,
+   "output_tokens": 0
+  }
+ },
+ "weights": [
+  {
+   "repo": "EldanRing/Winnow-12B",
+   "revision": "b6ac22b0d51b69b18200acacb3fbdd98073fffe8",
+   "bytes": 23832065792,
+   "files": {
+    "gguf/Winnow-12B-BF16.gguf": {
+     "sha256": "10e6b41e00a3fc6668b53a92fb5d9c85179f47145e0786e7a3bc7b5b09ba8968",
+     "bytes": 23832065792
+    }
+   }
+  }
+ ]
+}

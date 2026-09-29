@@ -1,0 +1,1 @@
+{"model":"clm-latest","answers":{"rank":{"type":"choice","choice":"a","confidence":0.997909408386072,"probabilities":{"a":0.998432056289554,"b":0.001557211690167138,"c":4.8811550855986875e-06,"d":5.850865193222095e-06}}},"usage":{"billing_units":1,"input_tokens":0,"output_tokens":0}}
