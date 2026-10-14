@@ -1,0 +1,1480 @@
+{
+  "seed": 20261014,
+  "cells": 2414,
+  "sample_sha256": "27612ec70104171551b7f142290bc17351715eebb3f177436fbc0cc200d59a25",
+  "alpha_familywise": 0.05,
+  "comparisons": 126,
+  "z": 3.542186105472276,
+  "target_power": 0.8,
+  "meaningful_mean_probability_shift": 0.1,
+  "families": {
+    "switch": {
+      "population_wordings": 24,
+      "sample_wordings": 24,
+      "selected_wordings": [
+        "c1",
+        "s05",
+        "s06",
+        "s07",
+        "s08",
+        "s09",
+        "s10",
+        "s11",
+        "s12",
+        "s13",
+        "s14",
+        "s15",
+        "s16",
+        "s17",
+        "s18",
+        "s19",
+        "s20",
+        "s21",
+        "s22",
+        "s23",
+        "s24",
+        "w2",
+        "w3",
+        "w4"
+      ],
+      "power": {
+        "jev": {
+          "pull": {
+            "reference_wording_sd": 0.03598094251843624,
+            "assumed_difference_sd": 0.07196188503687248,
+            "infinite_n": 9.951945317251958,
+            "finite_n": 8
+          },
+          "pull_criteria": {
+            "reference_wording_sd": 0.02345841619697814,
+            "assumed_difference_sd": 0.04691683239395628,
+            "infinite_n": 4.230193996463641,
+            "finite_n": 4
+          },
+          "stay": {
+            "reference_wording_sd": 0.027382265031376748,
+            "assumed_difference_sd": 0.054764530062753496,
+            "infinite_n": 5.763703737999932,
+            "finite_n": 5
+          }
+        },
+        "clef": {
+          "pull": {
+            "reference_wording_sd": 0.033873187007904704,
+            "assumed_difference_sd": 0.06774637401580941,
+            "infinite_n": 8.820130882055908,
+            "finite_n": 7
+          },
+          "pull_criteria": {
+            "reference_wording_sd": 0.0337140521320507,
+            "assumed_difference_sd": 0.0674281042641014,
+            "infinite_n": 8.737452306415122,
+            "finite_n": 7
+          },
+          "stay": {
+            "reference_wording_sd": 0.03975794898753596,
+            "assumed_difference_sd": 0.07951589797507191,
+            "infinite_n": 12.15096736343694,
+            "finite_n": 9
+          }
+        },
+        "clef-flash": {
+          "pull": {
+            "reference_wording_sd": 0.05905199941561109,
+            "assumed_difference_sd": 0.11810399883122218,
+            "infinite_n": 26.8060068148224,
+            "finite_n": 13
+          },
+          "pull_criteria": {
+            "reference_wording_sd": 0.05850752475310725,
+            "assumed_difference_sd": 0.1170150495062145,
+            "infinite_n": 26.31396908730701,
+            "finite_n": 13
+          },
+          "stay": {
+            "reference_wording_sd": 0.0684552688483691,
+            "assumed_difference_sd": 0.1369105376967382,
+            "infinite_n": 36.02273398170173,
+            "finite_n": 15
+          }
+        },
+        "decider-2b": {
+          "pull": {
+            "reference_wording_sd": 0.09623881629321628,
+            "assumed_difference_sd": 0.19247763258643255,
+            "infinite_n": 71.1972887154482,
+            "finite_n": 19
+          },
+          "pull_criteria": {
+            "reference_wording_sd": 0.13782662458729722,
+            "assumed_difference_sd": 0.27565324917459444,
+            "infinite_n": 146.02565087246754,
+            "finite_n": 21
+          },
+          "stay": {
+            "reference_wording_sd": 0.1237405557559554,
+            "assumed_difference_sd": 0.2474811115119108,
+            "infinite_n": 117.70286512264285,
+            "finite_n": 21
+          }
+        },
+        "gpt-6-luna": {
+          "pull": {
+            "reference_wording_sd": 0.05323253401583471,
+            "assumed_difference_sd": 0.10646506803166941,
+            "infinite_n": 21.782974880570865,
+            "finite_n": 12
+          },
+          "pull_criteria": {
+            "reference_wording_sd": 0.04573604678973104,
+            "assumed_difference_sd": 0.09147209357946208,
+            "infinite_n": 16.07978202072024,
+            "finite_n": 10
+          },
+          "stay": {
+            "reference_wording_sd": 0.05538830110767548,
+            "assumed_difference_sd": 0.11077660221535096,
+            "infinite_n": 23.582997181274575,
+            "finite_n": 13
+          }
+        },
+        "jevk5": {
+          "pull": {
+            "reference_wording_sd": 0.0624408052340213,
+            "assumed_difference_sd": 0.1248816104680426,
+            "infinite_n": 29.97090797831835,
+            "finite_n": 14
+          },
+          "pull_criteria": {
+            "reference_wording_sd": 0.08652446656225235,
+            "assumed_difference_sd": 0.1730489331245047,
+            "infinite_n": 57.549396148988514,
+            "finite_n": 18
+          },
+          "stay": {
+            "reference_wording_sd": 0.061067168264775026,
+            "assumed_difference_sd": 0.12213433652955005,
+            "infinite_n": 28.666750978583682,
+            "finite_n": 14
+          }
+        },
+        "kev-4b": {
+          "pull": {
+            "reference_wording_sd": 0.0551309757698991,
+            "assumed_difference_sd": 0.1102619515397982,
+            "infinite_n": 23.3643803997642,
+            "finite_n": 13
+          },
+          "pull_criteria": {
+            "reference_wording_sd": 0.05104319911368963,
+            "assumed_difference_sd": 0.10208639822737926,
+            "infinite_n": 20.028050681496396,
+            "finite_n": 12
+          },
+          "stay": {
+            "reference_wording_sd": 0.07565484254480837,
+            "assumed_difference_sd": 0.15130968508961673,
+            "infinite_n": 43.99834832221262,
+            "finite_n": 16
+          }
+        },
+        "laya": {
+          "pull": {
+            "reference_wording_sd": 0.14539123398553197,
+            "assumed_difference_sd": 0.29078246797106394,
+            "infinite_n": 162.49475793382913,
+            "finite_n": 22
+          },
+          "pull_criteria": {
+            "reference_wording_sd": 0.08728037750285703,
+            "assumed_difference_sd": 0.17456075500571405,
+            "infinite_n": 58.559335786766795,
+            "finite_n": 18
+          },
+          "stay": {
+            "reference_wording_sd": 0.28547535711617034,
+            "assumed_difference_sd": 0.5709507142323407,
+            "infinite_n": 626.4698287864375,
+            "finite_n": 24
+          }
+        },
+        "nimble-9b": {
+          "pull": {
+            "reference_wording_sd": 0.05386041823885915,
+            "assumed_difference_sd": 0.1077208364777183,
+            "infinite_n": 22.299871118985077,
+            "finite_n": 12
+          },
+          "pull_criteria": {
+            "reference_wording_sd": 0.05021543668259359,
+            "assumed_difference_sd": 0.10043087336518718,
+            "infinite_n": 19.383732044203427,
+            "finite_n": 11
+          },
+          "stay": {
+            "reference_wording_sd": 0.0641303519386249,
+            "assumed_difference_sd": 0.1282607038772498,
+            "infinite_n": 31.6147794640374,
+            "finite_n": 14
+          }
+        },
+        "semif": {
+          "pull": {
+            "reference_wording_sd": 0.07366708178571665,
+            "assumed_difference_sd": 0.1473341635714333,
+            "infinite_n": 41.716690044307384,
+            "finite_n": 16
+          },
+          "pull_criteria": {
+            "reference_wording_sd": 0.08574072673837572,
+            "assumed_difference_sd": 0.17148145347675145,
+            "infinite_n": 56.51155147518457,
+            "finite_n": 18
+          },
+          "stay": {
+            "reference_wording_sd": 0.087758287251038,
+            "assumed_difference_sd": 0.175516574502076,
+            "infinite_n": 59.20238289711121,
+            "finite_n": 18
+          }
+        },
+        "strands-decider-2b": {
+          "pull": {
+            "reference_wording_sd": 0.06665982089350343,
+            "assumed_difference_sd": 0.13331964178700687,
+            "infinite_n": 34.157902532169466,
+            "finite_n": 15
+          },
+          "pull_criteria": {
+            "reference_wording_sd": 0.090312754247214,
+            "assumed_difference_sd": 0.180625508494428,
+            "infinite_n": 62.699067851501106,
+            "finite_n": 18
+          },
+          "stay": {
+            "reference_wording_sd": 0.06292652865954686,
+            "assumed_difference_sd": 0.12585305731909371,
+            "infinite_n": 30.439005508186558,
+            "finite_n": 14
+          }
+        },
+        "verdict": {
+          "pull": {
+            "reference_wording_sd": 0.026237051962573713,
+            "assumed_difference_sd": 0.052474103925147425,
+            "infinite_n": 5.291672779475294,
+            "finite_n": 5
+          },
+          "pull_criteria": {
+            "reference_wording_sd": 0.024596415569403524,
+            "assumed_difference_sd": 0.04919283113880705,
+            "infinite_n": 4.650573946114164,
+            "finite_n": 5
+          },
+          "stay": {
+            "reference_wording_sd": 0.025293476846065633,
+            "assumed_difference_sd": 0.050586953692131266,
+            "infinite_n": 4.91790316835569,
+            "finite_n": 5
+          }
+        },
+        "von": {
+          "pull": {
+            "reference_wording_sd": 0.07857102538180058,
+            "assumed_difference_sd": 0.15714205076360116,
+            "infinite_n": 47.45563094012269,
+            "finite_n": 17
+          },
+          "pull_criteria": {
+            "reference_wording_sd": 0.12075013737075917,
+            "assumed_difference_sd": 0.24150027474151833,
+            "infinite_n": 112.08259491290507,
+            "finite_n": 20
+          },
+          "stay": {
+            "reference_wording_sd": 0.03808472972136781,
+            "assumed_difference_sd": 0.07616945944273562,
+            "infinite_n": 11.149738089384085,
+            "finite_n": 8
+          }
+        },
+        "winnow-12b": {
+          "pull": {
+            "reference_wording_sd": 0.034557320789828386,
+            "assumed_difference_sd": 0.06911464157965677,
+            "infinite_n": 9.180007565026534,
+            "finite_n": 7
+          },
+          "pull_criteria": {
+            "reference_wording_sd": 0.0197435498012517,
+            "assumed_difference_sd": 0.0394870996025034,
+            "infinite_n": 2.996493839626159,
+            "finite_n": 4
+          },
+          "stay": {
+            "reference_wording_sd": 0.04439601924585265,
+            "assumed_difference_sd": 0.0887920384917053,
+            "infinite_n": 15.151337491411523,
+            "finite_n": 10
+          }
+        }
+      }
+    },
+    "ai": {
+      "population_wordings": 24,
+      "sample_wordings": 23,
+      "selected_wordings": [
+        "v1",
+        "v2",
+        "v3",
+        "x01",
+        "x02",
+        "x03",
+        "x04",
+        "x05",
+        "x06",
+        "x07",
+        "x08",
+        "x09",
+        "x10",
+        "x11",
+        "x12",
+        "x13",
+        "x14",
+        "x15",
+        "x16",
+        "x17",
+        "x18",
+        "x20",
+        "x21"
+      ],
+      "power": {
+        "jev": {
+          "pull": {
+            "reference_wording_sd": 0.03317600755346147,
+            "assumed_difference_sd": 0.06635201510692294,
+            "infinite_n": 8.460794612015377,
+            "finite_n": 7
+          },
+          "pull_criteria": {
+            "reference_wording_sd": 0.021561839158296826,
+            "assumed_difference_sd": 0.04312367831659365,
+            "infinite_n": 3.573835135814259,
+            "finite_n": 4
+          },
+          "stay": {
+            "reference_wording_sd": 0.024378158185738647,
+            "assumed_difference_sd": 0.048756316371477294,
+            "infinite_n": 4.568405983277174,
+            "finite_n": 4
+          }
+        },
+        "clef": {
+          "pull": {
+            "reference_wording_sd": 0.05646226187571597,
+            "assumed_difference_sd": 0.11292452375143194,
+            "infinite_n": 24.506396396880625,
+            "finite_n": 13
+          },
+          "pull_criteria": {
+            "reference_wording_sd": 0.06051656550863698,
+            "assumed_difference_sd": 0.12103313101727396,
+            "infinite_n": 28.15214270140582,
+            "finite_n": 14
+          },
+          "stay": {
+            "reference_wording_sd": 0.03666777632680796,
+            "assumed_difference_sd": 0.07333555265361592,
+            "infinite_n": 10.335513464321348,
+            "finite_n": 8
+          }
+        },
+        "clef-flash": {
+          "pull": {
+            "reference_wording_sd": 0.07576940228471704,
+            "assumed_difference_sd": 0.15153880456943408,
+            "infinite_n": 44.13169750100933,
+            "finite_n": 16
+          },
+          "pull_criteria": {
+            "reference_wording_sd": 0.08560246672702346,
+            "assumed_difference_sd": 0.17120493345404691,
+            "infinite_n": 56.32944459455827,
+            "finite_n": 18
+          },
+          "stay": {
+            "reference_wording_sd": 0.0517653278861846,
+            "assumed_difference_sd": 0.1035306557723692,
+            "infinite_n": 20.598749135749593,
+            "finite_n": 12
+          }
+        },
+        "decider-2b": {
+          "pull": {
+            "reference_wording_sd": 0.10275752625914342,
+            "assumed_difference_sd": 0.20551505251828683,
+            "infinite_n": 81.16899925112028,
+            "finite_n": 19
+          },
+          "pull_criteria": {
+            "reference_wording_sd": 0.14395342245277917,
+            "assumed_difference_sd": 0.28790684490555835,
+            "infinite_n": 159.29674409174018,
+            "finite_n": 21
+          },
+          "stay": {
+            "reference_wording_sd": 0.13545120792458595,
+            "assumed_difference_sd": 0.2709024158491719,
+            "infinite_n": 141.03557541218882,
+            "finite_n": 21
+          }
+        },
+        "gpt-6-luna": {
+          "pull": {
+            "reference_wording_sd": 0.02865439869748048,
+            "assumed_difference_sd": 0.05730879739496096,
+            "infinite_n": 6.311687799393505,
+            "finite_n": 6
+          },
+          "pull_criteria": {
+            "reference_wording_sd": 0.03273327651342511,
+            "assumed_difference_sd": 0.06546655302685021,
+            "infinite_n": 8.236484177899072,
+            "finite_n": 7
+          },
+          "stay": {
+            "reference_wording_sd": 0.03863782641313512,
+            "assumed_difference_sd": 0.07727565282627025,
+            "infinite_n": 11.475940401171592,
+            "finite_n": 8
+          }
+        },
+        "jevk5": {
+          "pull": {
+            "reference_wording_sd": 0.055841585468629815,
+            "assumed_difference_sd": 0.11168317093725963,
+            "infinite_n": 23.97057163172512,
+            "finite_n": 13
+          },
+          "pull_criteria": {
+            "reference_wording_sd": 0.09480048383398663,
+            "assumed_difference_sd": 0.18960096766797327,
+            "infinite_n": 69.08504070405006,
+            "finite_n": 19
+          },
+          "stay": {
+            "reference_wording_sd": 0.043589118710217784,
+            "assumed_difference_sd": 0.08717823742043557,
+            "infinite_n": 14.60558939043967,
+            "finite_n": 10
+          }
+        },
+        "kev-4b": {
+          "pull": {
+            "reference_wording_sd": 0.08151709784494013,
+            "assumed_difference_sd": 0.16303419568988026,
+            "infinite_n": 51.081110392847314,
+            "finite_n": 17
+          },
+          "pull_criteria": {
+            "reference_wording_sd": 0.07420100111381937,
+            "assumed_difference_sd": 0.14840200222763875,
+            "infinite_n": 42.323584255723766,
+            "finite_n": 16
+          },
+          "stay": {
+            "reference_wording_sd": 0.0628091346678205,
+            "assumed_difference_sd": 0.125618269335641,
+            "infinite_n": 30.32553911302924,
+            "finite_n": 14
+          }
+        },
+        "laya": {
+          "pull": {
+            "reference_wording_sd": 0.23180253759212235,
+            "assumed_difference_sd": 0.4636050751842447,
+            "infinite_n": 413.04681914900056,
+            "finite_n": 23
+          },
+          "pull_criteria": {
+            "reference_wording_sd": 0.07696464766015132,
+            "assumed_difference_sd": 0.15392929532030264,
+            "infinite_n": 45.53501470642526,
+            "finite_n": 16
+          },
+          "stay": {
+            "reference_wording_sd": 0.22733802663641725,
+            "assumed_difference_sd": 0.4546760532728345,
+            "infinite_n": 397.28949508700566,
+            "finite_n": 23
+          }
+        },
+        "nimble-9b": {
+          "pull": {
+            "reference_wording_sd": 0.064973348884229,
+            "assumed_difference_sd": 0.129946697768458,
+            "infinite_n": 32.45139823189919,
+            "finite_n": 15
+          },
+          "pull_criteria": {
+            "reference_wording_sd": 0.10492392159350977,
+            "assumed_difference_sd": 0.20984784318701954,
+            "infinite_n": 84.62758322389702,
+            "finite_n": 19
+          },
+          "stay": {
+            "reference_wording_sd": 0.037639351053516984,
+            "assumed_difference_sd": 0.07527870210703397,
+            "infinite_n": 10.890483572228556,
+            "finite_n": 8
+          }
+        },
+        "semif": {
+          "pull": {
+            "reference_wording_sd": 0.08878776987889403,
+            "assumed_difference_sd": 0.17757553975778806,
+            "infinite_n": 60.59952298928056,
+            "finite_n": 18
+          },
+          "pull_criteria": {
+            "reference_wording_sd": 0.09262775523039973,
+            "assumed_difference_sd": 0.18525551046079947,
+            "infinite_n": 65.9546148855018,
+            "finite_n": 18
+          },
+          "stay": {
+            "reference_wording_sd": 0.07897205100345871,
+            "assumed_difference_sd": 0.15794410200691741,
+            "infinite_n": 47.9412931957953,
+            "finite_n": 17
+          }
+        },
+        "strands-decider-2b": {
+          "pull": {
+            "reference_wording_sd": 0.07347498245576518,
+            "assumed_difference_sd": 0.14694996491153037,
+            "infinite_n": 41.49940711652334,
+            "finite_n": 16
+          },
+          "pull_criteria": {
+            "reference_wording_sd": 0.10266918348701938,
+            "assumed_difference_sd": 0.20533836697403876,
+            "infinite_n": 81.02949390746097,
+            "finite_n": 19
+          },
+          "stay": {
+            "reference_wording_sd": 0.06329014484563392,
+            "assumed_difference_sd": 0.12658028969126783,
+            "infinite_n": 30.791800854141684,
+            "finite_n": 14
+          }
+        },
+        "verdict": {
+          "pull": {
+            "reference_wording_sd": 0.018888571495887817,
+            "assumed_difference_sd": 0.037777142991775634,
+            "infinite_n": 2.742591582909884,
+            "finite_n": 4
+          },
+          "pull_criteria": {
+            "reference_wording_sd": 0.01670598587714804,
+            "assumed_difference_sd": 0.03341197175429608,
+            "infinite_n": 2.145394337151022,
+            "finite_n": 4
+          },
+          "stay": {
+            "reference_wording_sd": 0.018097790557872744,
+            "assumed_difference_sd": 0.03619558111574549,
+            "infinite_n": 2.5177582395424385,
+            "finite_n": 4
+          }
+        },
+        "von": {
+          "pull": {
+            "reference_wording_sd": 0.053498445998084315,
+            "assumed_difference_sd": 0.10699689199616863,
+            "infinite_n": 22.001143013396344,
+            "finite_n": 12
+          },
+          "pull_criteria": {
+            "reference_wording_sd": 0.08958618461294932,
+            "assumed_difference_sd": 0.17917236922589863,
+            "infinite_n": 61.69429300351079,
+            "finite_n": 18
+          },
+          "stay": {
+            "reference_wording_sd": 0.028554657772312926,
+            "assumed_difference_sd": 0.05710931554462585,
+            "infinite_n": 6.267824521071319,
+            "finite_n": 6
+          }
+        },
+        "winnow-12b": {
+          "pull": {
+            "reference_wording_sd": 0.04513428583578322,
+            "assumed_difference_sd": 0.09026857167156643,
+            "infinite_n": 15.659433975221273,
+            "finite_n": 10
+          },
+          "pull_criteria": {
+            "reference_wording_sd": 0.051090970437715176,
+            "assumed_difference_sd": 0.10218194087543035,
+            "infinite_n": 20.065556724775554,
+            "finite_n": 12
+          },
+          "stay": {
+            "reference_wording_sd": 0.06509878298393443,
+            "assumed_difference_sd": 0.13019756596786886,
+            "infinite_n": 32.57681707357911,
+            "finite_n": 15
+          }
+        }
+      }
+    },
+    "foot": {
+      "population_wordings": 24,
+      "sample_wordings": 23,
+      "selected_wordings": [
+        "f04",
+        "f05",
+        "f06",
+        "f07",
+        "f08",
+        "f09",
+        "f10",
+        "f11",
+        "f12",
+        "f14",
+        "f15",
+        "f16",
+        "f17",
+        "f18",
+        "f19",
+        "f20",
+        "f21",
+        "f22",
+        "f23",
+        "f24",
+        "v1",
+        "v2",
+        "v3"
+      ],
+      "power": {
+        "jev": {
+          "pull": {
+            "reference_wording_sd": 0.03797168194644663,
+            "assumed_difference_sd": 0.07594336389289326,
+            "infinite_n": 11.08364428353064,
+            "finite_n": 8
+          },
+          "pull_criteria": {
+            "reference_wording_sd": 0.0358807607218732,
+            "assumed_difference_sd": 0.0717615214437464,
+            "infinite_n": 9.89660403312215,
+            "finite_n": 8
+          },
+          "stay": {
+            "reference_wording_sd": 0.05177885909687244,
+            "assumed_difference_sd": 0.10355771819374487,
+            "infinite_n": 20.609519373461698,
+            "finite_n": 12
+          }
+        },
+        "clef": {
+          "pull": {
+            "reference_wording_sd": 0.07931283296221806,
+            "assumed_difference_sd": 0.1586256659244361,
+            "infinite_n": 48.3559405963669,
+            "finite_n": 17
+          },
+          "pull_criteria": {
+            "reference_wording_sd": 0.052030686166508314,
+            "assumed_difference_sd": 0.10406137233301663,
+            "infinite_n": 20.810476129093384,
+            "finite_n": 12
+          },
+          "stay": {
+            "reference_wording_sd": 0.05502260773386237,
+            "assumed_difference_sd": 0.11004521546772474,
+            "infinite_n": 23.272618426757347,
+            "finite_n": 13
+          }
+        },
+        "clef-flash": {
+          "pull": {
+            "reference_wording_sd": 0.07266407547268644,
+            "assumed_difference_sd": 0.14532815094537288,
+            "infinite_n": 40.588445131868255,
+            "finite_n": 16
+          },
+          "pull_criteria": {
+            "reference_wording_sd": 0.06512067589422033,
+            "assumed_difference_sd": 0.13024135178844065,
+            "infinite_n": 32.5987321148975,
+            "finite_n": 15
+          },
+          "stay": {
+            "reference_wording_sd": 0.0575546837997539,
+            "assumed_difference_sd": 0.1151093675995078,
+            "infinite_n": 25.463860984690864,
+            "finite_n": 13
+          }
+        },
+        "decider-2b": {
+          "pull": {
+            "reference_wording_sd": 0.0839889680117882,
+            "assumed_difference_sd": 0.1679779360235764,
+            "infinite_n": 54.22597882811692,
+            "finite_n": 17
+          },
+          "pull_criteria": {
+            "reference_wording_sd": 0.09267368727162457,
+            "assumed_difference_sd": 0.18534737454324915,
+            "infinite_n": 66.0200419531407,
+            "finite_n": 18
+          },
+          "stay": {
+            "reference_wording_sd": 0.05396387141086105,
+            "assumed_difference_sd": 0.1079277428217221,
+            "infinite_n": 22.385618986246314,
+            "finite_n": 12
+          }
+        },
+        "gpt-6-luna": {
+          "pull": {
+            "reference_wording_sd": 0.07514322869252664,
+            "assumed_difference_sd": 0.15028645738505328,
+            "infinite_n": 43.40528510163146,
+            "finite_n": 16
+          },
+          "pull_criteria": {
+            "reference_wording_sd": 0.07331143782358159,
+            "assumed_difference_sd": 0.14662287564716317,
+            "infinite_n": 41.31486942485041,
+            "finite_n": 16
+          },
+          "stay": {
+            "reference_wording_sd": 0.06249102189943309,
+            "assumed_difference_sd": 0.12498204379886618,
+            "infinite_n": 30.01913427040177,
+            "finite_n": 14
+          }
+        },
+        "jevk5": {
+          "pull": {
+            "reference_wording_sd": 0.13766515447434857,
+            "assumed_difference_sd": 0.27533030894869714,
+            "infinite_n": 145.68370001052506,
+            "finite_n": 21
+          },
+          "pull_criteria": {
+            "reference_wording_sd": 0.17518627275546556,
+            "assumed_difference_sd": 0.3503725455109311,
+            "infinite_n": 235.91907434278622,
+            "finite_n": 22
+          },
+          "stay": {
+            "reference_wording_sd": 0.0777184257654709,
+            "assumed_difference_sd": 0.1554368515309418,
+            "infinite_n": 46.43130608957591,
+            "finite_n": 17
+          }
+        },
+        "kev-4b": {
+          "pull": {
+            "reference_wording_sd": 0.08685654149974573,
+            "assumed_difference_sd": 0.17371308299949145,
+            "infinite_n": 57.99198506487604,
+            "finite_n": 18
+          },
+          "pull_criteria": {
+            "reference_wording_sd": 0.0593378617556297,
+            "assumed_difference_sd": 0.1186757235112594,
+            "infinite_n": 27.06616312590838,
+            "finite_n": 13
+          },
+          "stay": {
+            "reference_wording_sd": 0.034403865248114444,
+            "assumed_difference_sd": 0.06880773049622889,
+            "infinite_n": 9.098658941477291,
+            "finite_n": 7
+          }
+        },
+        "laya": {
+          "pull": {
+            "reference_wording_sd": 0.1726493401716611,
+            "assumed_difference_sd": 0.3452986803433222,
+            "infinite_n": 229.1356984838949,
+            "finite_n": 22
+          },
+          "pull_criteria": {
+            "reference_wording_sd": 0.09442809752320469,
+            "assumed_difference_sd": 0.18885619504640938,
+            "infinite_n": 68.54336001757864,
+            "finite_n": 18
+          },
+          "stay": {
+            "reference_wording_sd": 0.18966692611209046,
+            "assumed_difference_sd": 0.3793338522241809,
+            "infinite_n": 276.53246286416106,
+            "finite_n": 23
+          }
+        },
+        "nimble-9b": {
+          "pull": {
+            "reference_wording_sd": 0.04940074419453433,
+            "assumed_difference_sd": 0.09880148838906866,
+            "infinite_n": 18.75987295111695,
+            "finite_n": 11
+          },
+          "pull_criteria": {
+            "reference_wording_sd": 0.05488140696239545,
+            "assumed_difference_sd": 0.1097628139247909,
+            "infinite_n": 23.15332581781833,
+            "finite_n": 13
+          },
+          "stay": {
+            "reference_wording_sd": 0.03569454126802766,
+            "assumed_difference_sd": 0.07138908253605532,
+            "infinite_n": 9.794144788965077,
+            "finite_n": 8
+          }
+        },
+        "semif": {
+          "pull": {
+            "reference_wording_sd": 0.10267789638631133,
+            "assumed_difference_sd": 0.20535579277262267,
+            "infinite_n": 81.04324743608797,
+            "finite_n": 19
+          },
+          "pull_criteria": {
+            "reference_wording_sd": 0.12149215367869312,
+            "assumed_difference_sd": 0.24298430735738624,
+            "infinite_n": 113.46433489838195,
+            "finite_n": 20
+          },
+          "stay": {
+            "reference_wording_sd": 0.0802524391610631,
+            "assumed_difference_sd": 0.1605048783221262,
+            "infinite_n": 49.50845711996355,
+            "finite_n": 17
+          }
+        },
+        "strands-decider-2b": {
+          "pull": {
+            "reference_wording_sd": 0.06312359996070842,
+            "assumed_difference_sd": 0.12624719992141684,
+            "infinite_n": 30.629959871858425,
+            "finite_n": 14
+          },
+          "pull_criteria": {
+            "reference_wording_sd": 0.06040787887946891,
+            "assumed_difference_sd": 0.12081575775893783,
+            "infinite_n": 28.05111205530304,
+            "finite_n": 14
+          },
+          "stay": {
+            "reference_wording_sd": 0.03593983475927727,
+            "assumed_difference_sd": 0.07187966951855454,
+            "infinite_n": 9.929218370947051,
+            "finite_n": 8
+          }
+        },
+        "verdict": {
+          "pull": {
+            "reference_wording_sd": 0.02948577900191598,
+            "assumed_difference_sd": 0.05897155800383196,
+            "infinite_n": 6.683256391314353,
+            "finite_n": 6
+          },
+          "pull_criteria": {
+            "reference_wording_sd": 0.015959839464668047,
+            "assumed_difference_sd": 0.031919678929336094,
+            "infinite_n": 1.9580327309000918,
+            "finite_n": 4
+          },
+          "stay": {
+            "reference_wording_sd": 0.02369451776295325,
+            "assumed_difference_sd": 0.0473890355259065,
+            "infinite_n": 4.315773644963301,
+            "finite_n": 4
+          }
+        },
+        "von": {
+          "pull": {
+            "reference_wording_sd": 0.05355575198545584,
+            "assumed_difference_sd": 0.10711150397091168,
+            "infinite_n": 22.048302233254145,
+            "finite_n": 12
+          },
+          "pull_criteria": {
+            "reference_wording_sd": 0.12179891314075539,
+            "assumed_difference_sd": 0.24359782628151078,
+            "infinite_n": 114.03803779201351,
+            "finite_n": 20
+          },
+          "stay": {
+            "reference_wording_sd": 0.021277212097652758,
+            "assumed_difference_sd": 0.042554424195305515,
+            "infinite_n": 3.4801050656758306,
+            "finite_n": 4
+          }
+        },
+        "winnow-12b": {
+          "pull": {
+            "reference_wording_sd": 0.09248707822464658,
+            "assumed_difference_sd": 0.18497415644929316,
+            "infinite_n": 65.7544318609368,
+            "finite_n": 18
+          },
+          "pull_criteria": {
+            "reference_wording_sd": 0.05859586854702856,
+            "assumed_difference_sd": 0.11719173709405711,
+            "infinite_n": 26.393494958598527,
+            "finite_n": 13
+          },
+          "stay": {
+            "reference_wording_sd": 0.09177959233847877,
+            "assumed_difference_sd": 0.18355918467695753,
+            "infinite_n": 64.75229397879826,
+            "finite_n": 18
+          }
+        }
+      }
+    }
+  },
+  "models": {
+    "jev": {
+      "questions": {
+        "pull": {
+          "replay_pairs": 7242,
+          "observed_pair_mean_abs": 0.017268710301021818,
+          "mean_abs_limit": 0.02726871030102182,
+          "p95_abs_limit": 0.07000000000000005,
+          "near_line_margin": 0.08999999999999996,
+          "flip_rate_limit": 0.058467274233637116,
+          "noise_source": "committed three-pass replay"
+        },
+        "pull_criteria": {
+          "replay_pairs": 7242,
+          "observed_pair_mean_abs": 0.015070422535211268,
+          "mean_abs_limit": 0.025070422535211266,
+          "p95_abs_limit": 0.06999999999999994,
+          "near_line_margin": 0.08,
+          "flip_rate_limit": 0.041897265948632974,
+          "noise_source": "committed three-pass replay"
+        },
+        "stay": {
+          "replay_pairs": 7242,
+          "observed_pair_mean_abs": 0.0184065175365921,
+          "mean_abs_limit": 0.028406517536592103,
+          "p95_abs_limit": 0.07000000000000005,
+          "near_line_margin": 0.09000000000000001,
+          "flip_rate_limit": 0.05308202154101077,
+          "noise_source": "committed three-pass replay"
+        }
+      },
+      "passes": 3,
+      "estimated_wall_s_per_pass_excluding_setup": 151,
+      "reference_files": [
+        "results/v2/raw/jev-v2-pass-a.jsonl",
+        "results/v2/raw/jev-v2-pass-b.jsonl",
+        "results/v2/raw/jev-v2-pass-c.jsonl"
+      ]
+    },
+    "clef": {
+      "questions": {
+        "pull": {
+          "replay_pairs": 0,
+          "observed_pair_mean_abs": null,
+          "mean_abs_limit": 0.01,
+          "p95_abs_limit": 0.02,
+          "near_line_margin": 0.01,
+          "flip_rate_limit": 0.01,
+          "noise_source": "no replay measured; 0.01 engineering allowance, not an empirical noise floor"
+        },
+        "pull_criteria": {
+          "replay_pairs": 0,
+          "observed_pair_mean_abs": null,
+          "mean_abs_limit": 0.01,
+          "p95_abs_limit": 0.02,
+          "near_line_margin": 0.01,
+          "flip_rate_limit": 0.01,
+          "noise_source": "no replay measured; 0.01 engineering allowance, not an empirical noise floor"
+        },
+        "stay": {
+          "replay_pairs": 0,
+          "observed_pair_mean_abs": null,
+          "mean_abs_limit": 0.01,
+          "p95_abs_limit": 0.02,
+          "near_line_margin": 0.01,
+          "flip_rate_limit": 0.01,
+          "noise_source": "no replay measured; 0.01 engineering allowance, not an empirical noise floor"
+        }
+      },
+      "passes": 1,
+      "estimated_wall_s_per_pass_excluding_setup": 9319,
+      "reference_files": [
+        "results/v2/raw/clef.jsonl"
+      ]
+    },
+    "clef-flash": {
+      "questions": {
+        "pull": {
+          "replay_pairs": 0,
+          "observed_pair_mean_abs": null,
+          "mean_abs_limit": 0.01,
+          "p95_abs_limit": 0.02,
+          "near_line_margin": 0.01,
+          "flip_rate_limit": 0.01,
+          "noise_source": "no replay measured; 0.01 engineering allowance, not an empirical noise floor"
+        },
+        "pull_criteria": {
+          "replay_pairs": 0,
+          "observed_pair_mean_abs": null,
+          "mean_abs_limit": 0.01,
+          "p95_abs_limit": 0.02,
+          "near_line_margin": 0.01,
+          "flip_rate_limit": 0.01,
+          "noise_source": "no replay measured; 0.01 engineering allowance, not an empirical noise floor"
+        },
+        "stay": {
+          "replay_pairs": 0,
+          "observed_pair_mean_abs": null,
+          "mean_abs_limit": 0.01,
+          "p95_abs_limit": 0.02,
+          "near_line_margin": 0.01,
+          "flip_rate_limit": 0.01,
+          "noise_source": "no replay measured; 0.01 engineering allowance, not an empirical noise floor"
+        }
+      },
+      "passes": 1,
+      "estimated_wall_s_per_pass_excluding_setup": 2501,
+      "reference_files": [
+        "results/v2/raw/clef-flash.jsonl"
+      ]
+    },
+    "decider-2b": {
+      "questions": {
+        "pull": {
+          "replay_pairs": 0,
+          "observed_pair_mean_abs": null,
+          "mean_abs_limit": 0.01,
+          "p95_abs_limit": 0.02,
+          "near_line_margin": 0.01,
+          "flip_rate_limit": 0.01,
+          "noise_source": "no replay measured; 0.01 engineering allowance, not an empirical noise floor"
+        },
+        "pull_criteria": {
+          "replay_pairs": 0,
+          "observed_pair_mean_abs": null,
+          "mean_abs_limit": 0.01,
+          "p95_abs_limit": 0.02,
+          "near_line_margin": 0.01,
+          "flip_rate_limit": 0.01,
+          "noise_source": "no replay measured; 0.01 engineering allowance, not an empirical noise floor"
+        },
+        "stay": {
+          "replay_pairs": 0,
+          "observed_pair_mean_abs": null,
+          "mean_abs_limit": 0.01,
+          "p95_abs_limit": 0.02,
+          "near_line_margin": 0.01,
+          "flip_rate_limit": 0.01,
+          "noise_source": "no replay measured; 0.01 engineering allowance, not an empirical noise floor"
+        }
+      },
+      "passes": 1,
+      "estimated_wall_s_per_pass_excluding_setup": 727,
+      "reference_files": [
+        "results/v2/raw/decider-2b.jsonl"
+      ]
+    },
+    "gpt-6-luna": {
+      "questions": {
+        "pull": {
+          "replay_pairs": 7242,
+          "observed_pair_mean_abs": 0.0,
+          "mean_abs_limit": 0.01,
+          "p95_abs_limit": 0.02,
+          "near_line_margin": 0.01,
+          "flip_rate_limit": 0.01,
+          "noise_source": "committed three-pass replay"
+        },
+        "pull_criteria": {
+          "replay_pairs": 7242,
+          "observed_pair_mean_abs": 0.0,
+          "mean_abs_limit": 0.01,
+          "p95_abs_limit": 0.02,
+          "near_line_margin": 0.01,
+          "flip_rate_limit": 0.01,
+          "noise_source": "committed three-pass replay"
+        },
+        "stay": {
+          "replay_pairs": 7242,
+          "observed_pair_mean_abs": 0.0,
+          "mean_abs_limit": 0.01,
+          "p95_abs_limit": 0.02,
+          "near_line_margin": 0.01,
+          "flip_rate_limit": 0.01,
+          "noise_source": "committed three-pass replay"
+        }
+      },
+      "passes": 3,
+      "estimated_wall_s_per_pass_excluding_setup": 42,
+      "reference_files": [
+        "results/v2/raw/gpt-6-luna-pass-a.jsonl",
+        "results/v2/raw/gpt-6-luna-pass-b.jsonl",
+        "results/v2/raw/gpt-6-luna-pass-c.jsonl"
+      ]
+    },
+    "jevk5": {
+      "questions": {
+        "pull": {
+          "replay_pairs": 0,
+          "observed_pair_mean_abs": null,
+          "mean_abs_limit": 0.01,
+          "p95_abs_limit": 0.02,
+          "near_line_margin": 0.01,
+          "flip_rate_limit": 0.01,
+          "noise_source": "no replay measured; 0.01 engineering allowance, not an empirical noise floor"
+        },
+        "pull_criteria": {
+          "replay_pairs": 0,
+          "observed_pair_mean_abs": null,
+          "mean_abs_limit": 0.01,
+          "p95_abs_limit": 0.02,
+          "near_line_margin": 0.01,
+          "flip_rate_limit": 0.01,
+          "noise_source": "no replay measured; 0.01 engineering allowance, not an empirical noise floor"
+        },
+        "stay": {
+          "replay_pairs": 0,
+          "observed_pair_mean_abs": null,
+          "mean_abs_limit": 0.01,
+          "p95_abs_limit": 0.02,
+          "near_line_margin": 0.01,
+          "flip_rate_limit": 0.01,
+          "noise_source": "no replay measured; 0.01 engineering allowance, not an empirical noise floor"
+        }
+      },
+      "passes": 1,
+      "estimated_wall_s_per_pass_excluding_setup": 2390,
+      "reference_files": [
+        "results/v2/raw/jevk5.jsonl"
+      ]
+    },
+    "kev-4b": {
+      "questions": {
+        "pull": {
+          "replay_pairs": 0,
+          "observed_pair_mean_abs": null,
+          "mean_abs_limit": 0.01,
+          "p95_abs_limit": 0.02,
+          "near_line_margin": 0.01,
+          "flip_rate_limit": 0.01,
+          "noise_source": "no replay measured; 0.01 engineering allowance, not an empirical noise floor"
+        },
+        "pull_criteria": {
+          "replay_pairs": 0,
+          "observed_pair_mean_abs": null,
+          "mean_abs_limit": 0.01,
+          "p95_abs_limit": 0.02,
+          "near_line_margin": 0.01,
+          "flip_rate_limit": 0.01,
+          "noise_source": "no replay measured; 0.01 engineering allowance, not an empirical noise floor"
+        },
+        "stay": {
+          "replay_pairs": 0,
+          "observed_pair_mean_abs": null,
+          "mean_abs_limit": 0.01,
+          "p95_abs_limit": 0.02,
+          "near_line_margin": 0.01,
+          "flip_rate_limit": 0.01,
+          "noise_source": "no replay measured; 0.01 engineering allowance, not an empirical noise floor"
+        }
+      },
+      "passes": 1,
+      "estimated_wall_s_per_pass_excluding_setup": 844,
+      "reference_files": [
+        "results/v2/raw/kev-4b.jsonl"
+      ]
+    },
+    "laya": {
+      "questions": {
+        "pull": {
+          "replay_pairs": 0,
+          "observed_pair_mean_abs": null,
+          "mean_abs_limit": 0.01,
+          "p95_abs_limit": 0.02,
+          "near_line_margin": 0.01,
+          "flip_rate_limit": 0.01,
+          "noise_source": "no replay measured; 0.01 engineering allowance, not an empirical noise floor"
+        },
+        "pull_criteria": {
+          "replay_pairs": 0,
+          "observed_pair_mean_abs": null,
+          "mean_abs_limit": 0.01,
+          "p95_abs_limit": 0.02,
+          "near_line_margin": 0.01,
+          "flip_rate_limit": 0.01,
+          "noise_source": "no replay measured; 0.01 engineering allowance, not an empirical noise floor"
+        },
+        "stay": {
+          "replay_pairs": 0,
+          "observed_pair_mean_abs": null,
+          "mean_abs_limit": 0.01,
+          "p95_abs_limit": 0.02,
+          "near_line_margin": 0.01,
+          "flip_rate_limit": 0.01,
+          "noise_source": "no replay measured; 0.01 engineering allowance, not an empirical noise floor"
+        }
+      },
+      "passes": 1,
+      "estimated_wall_s_per_pass_excluding_setup": 180,
+      "reference_files": [
+        "results/v2/raw/laya.jsonl"
+      ]
+    },
+    "nimble-9b": {
+      "questions": {
+        "pull": {
+          "replay_pairs": 0,
+          "observed_pair_mean_abs": null,
+          "mean_abs_limit": 0.01,
+          "p95_abs_limit": 0.02,
+          "near_line_margin": 0.01,
+          "flip_rate_limit": 0.01,
+          "noise_source": "no replay measured; 0.01 engineering allowance, not an empirical noise floor"
+        },
+        "pull_criteria": {
+          "replay_pairs": 0,
+          "observed_pair_mean_abs": null,
+          "mean_abs_limit": 0.01,
+          "p95_abs_limit": 0.02,
+          "near_line_margin": 0.01,
+          "flip_rate_limit": 0.01,
+          "noise_source": "no replay measured; 0.01 engineering allowance, not an empirical noise floor"
+        },
+        "stay": {
+          "replay_pairs": 0,
+          "observed_pair_mean_abs": null,
+          "mean_abs_limit": 0.01,
+          "p95_abs_limit": 0.02,
+          "near_line_margin": 0.01,
+          "flip_rate_limit": 0.01,
+          "noise_source": "no replay measured; 0.01 engineering allowance, not an empirical noise floor"
+        }
+      },
+      "passes": 1,
+      "estimated_wall_s_per_pass_excluding_setup": 6143,
+      "reference_files": [
+        "results/v2/raw/nimble-9b.jsonl"
+      ]
+    },
+    "semif": {
+      "questions": {
+        "pull": {
+          "replay_pairs": 0,
+          "observed_pair_mean_abs": null,
+          "mean_abs_limit": 0.01,
+          "p95_abs_limit": 0.02,
+          "near_line_margin": 0.01,
+          "flip_rate_limit": 0.01,
+          "noise_source": "no replay measured; 0.01 engineering allowance, not an empirical noise floor"
+        },
+        "pull_criteria": {
+          "replay_pairs": 0,
+          "observed_pair_mean_abs": null,
+          "mean_abs_limit": 0.01,
+          "p95_abs_limit": 0.02,
+          "near_line_margin": 0.01,
+          "flip_rate_limit": 0.01,
+          "noise_source": "no replay measured; 0.01 engineering allowance, not an empirical noise floor"
+        },
+        "stay": {
+          "replay_pairs": 0,
+          "observed_pair_mean_abs": null,
+          "mean_abs_limit": 0.01,
+          "p95_abs_limit": 0.02,
+          "near_line_margin": 0.01,
+          "flip_rate_limit": 0.01,
+          "noise_source": "no replay measured; 0.01 engineering allowance, not an empirical noise floor"
+        }
+      },
+      "passes": 1,
+      "estimated_wall_s_per_pass_excluding_setup": 2146,
+      "reference_files": [
+        "results/v2/raw/semif.jsonl"
+      ]
+    },
+    "strands-decider-2b": {
+      "questions": {
+        "pull": {
+          "replay_pairs": 0,
+          "observed_pair_mean_abs": null,
+          "mean_abs_limit": 0.01,
+          "p95_abs_limit": 0.02,
+          "near_line_margin": 0.01,
+          "flip_rate_limit": 0.01,
+          "noise_source": "no replay measured; 0.01 engineering allowance, not an empirical noise floor"
+        },
+        "pull_criteria": {
+          "replay_pairs": 0,
+          "observed_pair_mean_abs": null,
+          "mean_abs_limit": 0.01,
+          "p95_abs_limit": 0.02,
+          "near_line_margin": 0.01,
+          "flip_rate_limit": 0.01,
+          "noise_source": "no replay measured; 0.01 engineering allowance, not an empirical noise floor"
+        },
+        "stay": {
+          "replay_pairs": 0,
+          "observed_pair_mean_abs": null,
+          "mean_abs_limit": 0.01,
+          "p95_abs_limit": 0.02,
+          "near_line_margin": 0.01,
+          "flip_rate_limit": 0.01,
+          "noise_source": "no replay measured; 0.01 engineering allowance, not an empirical noise floor"
+        }
+      },
+      "passes": 1,
+      "estimated_wall_s_per_pass_excluding_setup": 615,
+      "reference_files": [
+        "results/v2/raw/strands-decider-2b.jsonl"
+      ]
+    },
+    "verdict": {
+      "questions": {
+        "pull": {
+          "replay_pairs": 0,
+          "observed_pair_mean_abs": null,
+          "mean_abs_limit": 0.01,
+          "p95_abs_limit": 0.02,
+          "near_line_margin": 0.01,
+          "flip_rate_limit": 0.01,
+          "noise_source": "no replay measured; 0.01 engineering allowance, not an empirical noise floor"
+        },
+        "pull_criteria": {
+          "replay_pairs": 0,
+          "observed_pair_mean_abs": null,
+          "mean_abs_limit": 0.01,
+          "p95_abs_limit": 0.02,
+          "near_line_margin": 0.01,
+          "flip_rate_limit": 0.01,
+          "noise_source": "no replay measured; 0.01 engineering allowance, not an empirical noise floor"
+        },
+        "stay": {
+          "replay_pairs": 0,
+          "observed_pair_mean_abs": null,
+          "mean_abs_limit": 0.01,
+          "p95_abs_limit": 0.02,
+          "near_line_margin": 0.01,
+          "flip_rate_limit": 0.01,
+          "noise_source": "no replay measured; 0.01 engineering allowance, not an empirical noise floor"
+        }
+      },
+      "passes": 1,
+      "estimated_wall_s_per_pass_excluding_setup": 436,
+      "reference_files": [
+        "results/v2/raw/verdict.jsonl"
+      ]
+    },
+    "von": {
+      "questions": {
+        "pull": {
+          "replay_pairs": 0,
+          "observed_pair_mean_abs": null,
+          "mean_abs_limit": 0.01,
+          "p95_abs_limit": 0.02,
+          "near_line_margin": 0.01,
+          "flip_rate_limit": 0.01,
+          "noise_source": "no replay measured; 0.01 engineering allowance, not an empirical noise floor"
+        },
+        "pull_criteria": {
+          "replay_pairs": 0,
+          "observed_pair_mean_abs": null,
+          "mean_abs_limit": 0.01,
+          "p95_abs_limit": 0.02,
+          "near_line_margin": 0.01,
+          "flip_rate_limit": 0.01,
+          "noise_source": "no replay measured; 0.01 engineering allowance, not an empirical noise floor"
+        },
+        "stay": {
+          "replay_pairs": 0,
+          "observed_pair_mean_abs": null,
+          "mean_abs_limit": 0.01,
+          "p95_abs_limit": 0.02,
+          "near_line_margin": 0.01,
+          "flip_rate_limit": 0.01,
+          "noise_source": "no replay measured; 0.01 engineering allowance, not an empirical noise floor"
+        }
+      },
+      "passes": 1,
+      "estimated_wall_s_per_pass_excluding_setup": 332,
+      "reference_files": [
+        "results/v2/raw/von.jsonl"
+      ]
+    },
+    "winnow-12b": {
+      "questions": {
+        "pull": {
+          "replay_pairs": 0,
+          "observed_pair_mean_abs": null,
+          "mean_abs_limit": 0.01,
+          "p95_abs_limit": 0.02,
+          "near_line_margin": 0.01,
+          "flip_rate_limit": 0.01,
+          "noise_source": "no replay measured; 0.01 engineering allowance, not an empirical noise floor"
+        },
+        "pull_criteria": {
+          "replay_pairs": 0,
+          "observed_pair_mean_abs": null,
+          "mean_abs_limit": 0.01,
+          "p95_abs_limit": 0.02,
+          "near_line_margin": 0.01,
+          "flip_rate_limit": 0.01,
+          "noise_source": "no replay measured; 0.01 engineering allowance, not an empirical noise floor"
+        },
+        "stay": {
+          "replay_pairs": 0,
+          "observed_pair_mean_abs": null,
+          "mean_abs_limit": 0.01,
+          "p95_abs_limit": 0.02,
+          "near_line_margin": 0.01,
+          "flip_rate_limit": 0.01,
+          "noise_source": "no replay measured; 0.01 engineering allowance, not an empirical noise floor"
+        }
+      },
+      "passes": 1,
+      "estimated_wall_s_per_pass_excluding_setup": 3856,
+      "reference_files": [
+        "results/v2/raw/winnow-12b.jsonl"
+      ]
+    }
+  },
+  "article_claims": {
+    "jev_keeps_server_at_20_of_48": 16,
+    "other_models_worse_than_jev_at_20": 8,
+    "never_keeps_server_at_positive_counts": [
+      "gpt-6-luna",
+      "verdict"
+    ],
+    "server_at_20_by_model": {
+      "jev": 16,
+      "clef": 4,
+      "clef-flash": 35,
+      "decider-2b": 22,
+      "gpt-6-luna": 0,
+      "jevk5": 42,
+      "kev-4b": 43,
+      "laya": 10,
+      "nimble-9b": 29,
+      "semif": 17,
+      "strands-decider-2b": 22,
+      "verdict": 0,
+      "von": 47,
+      "winnow-12b": 4
+    }
+  }
+}

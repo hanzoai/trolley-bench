@@ -1,0 +1,27 @@
+{
+  "pass": "a",
+  "cells": "v1",
+  "model": "gpt-6-luna",
+  "models_reported": [
+    "gpt-6-luna"
+  ],
+  "endpoint": "https://api.openai.com/v1/decisions",
+  "cells_file": "scenarios/cells-v1.json",
+  "cells_sha256": "3c17e39e315c780f4c5400c1c27abe3c044940d4028eedb6f6d4254f0a278b8d",
+  "sample": null,
+  "node": "v26.10.0",
+  "requests": 1098,
+  "answered": 1098,
+  "refusals": 0,
+  "failures": 0,
+  "failed": [],
+  "stopped": null,
+  "input_tokens": 495738,
+  "usage_reported": true,
+  "billed_usd": 0.049574,
+  "cap_usd": 0.15,
+  "usd_per_m_input": 0.1,
+  "concurrency": 8,
+  "wall_s": 35,
+  "finished": "2026-10-09T00:01:42.281Z"
+}

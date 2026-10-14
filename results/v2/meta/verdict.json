@@ -1,0 +1,81 @@
+{
+ "model_id": "verdict",
+ "code": {
+  "repo": "https://github.com/Heman10x-NGU/Verdict-open-jev",
+  "commit": "30f15564821626ca5c1ad5b2638c4eb7078787dd"
+ },
+ "runtime": "Verdict DecisionEngine() (the README path): artifacts/v2/model.onnx fp32 on CPU through ONNX Runtime, through the labelled Noul adapter run/verdict_server.py",
+ "server_command": [
+  "/private/tmp/claude-501/-Users-zacharylandes--treehouse-decision-gate-291af8-3-decision-gate/c50ef210-1e58-4471-b04f-9aab5cd3c1cf/scratchpad/ptest/code/Verdict-open-jev/.venv/bin/python",
+  "./run/verdict_server.py",
+  "8013"
+ ],
+ "startup_s_including_download": 25,
+ "probe_answer": {
+  "answers": {
+   "q": {
+    "type": "noul",
+    "noul": 0.621689747492702,
+    "probabilities": {
+     "true": 0.4632211785548574,
+     "false": 0.2818790590203089,
+     "__insufficient_evidence__": 0.2548997624248337
+    },
+    "is_abstention": false
+   }
+  },
+  "model": "verdict (heman10x/rlcd-modernbert-151m v2, ONNX fp32 CPU)"
+ },
+ "weights": [
+  {
+   "repo": "heman10x/rlcd-modernbert-151m",
+   "revision": "8af2496eb63c7fa66d7d234e1f62629380030eb4",
+   "bytes": 609911872,
+   "files": {
+    "calibrator.json": {
+     "sha256": "af2a876993148efa0726b6ccf710fe2303897d20c0ce8c7c9036eb50f64d23de",
+     "bytes": 1259
+    },
+    "config.json": {
+     "sha256": "303f8eef1009cfdcb0cfba3e653247e625f16a4501e2351bad1a633f1f644695",
+     "bytes": 3836
+    },
+    "model.onnx": {
+     "sha256": "4ae01f822538b000fa0e55859d4b3e6b40871d860149397e8784428b2a42ee5e",
+     "bytes": 606323181
+    },
+    "tokenizer.json": {
+     "sha256": "8bb449eb0c037aae44115b65905bb339b8f3f74eb37067c19127feb3c0755723",
+     "bytes": 3583596
+    }
+   }
+  },
+  {
+   "repo": "knowledgator/gliclass-modern-base-v2.0",
+   "revision": "9320398ab6ca50946e2edcb9ec89649c0274c978",
+   "bytes": 609138602,
+   "files": {
+    "config.json": {
+     "sha256": "a8ecb878ea6e11f129fe870c8aa35038f0f38c81826a9e27f8a0a8f0fd36dd1b",
+     "bytes": 3756
+    },
+    "model.safetensors": {
+     "sha256": "40e0d414fc2c2124234dda35c793fec787b190e81a0bc6d74b81a51b927df5c9",
+     "bytes": 605529372
+    },
+    "special_tokens_map.json": {
+     "sha256": "ea97ecdbcc73713039d8d64dbb05e3689495c96657fbd9a18f5bed381be81049",
+     "bytes": 694
+    },
+    "tokenizer.json": {
+     "sha256": "8bb449eb0c037aae44115b65905bb339b8f3f74eb37067c19127feb3c0755723",
+     "bytes": 3583596
+    },
+    "tokenizer_config.json": {
+     "sha256": "fb915b2473945e35c77ce03a5bcfd3d28900ed767d090ea75231197bd4b63016",
+     "bytes": 21184
+    }
+   }
+  }
+ ]
+}

@@ -61,13 +61,20 @@ def main():
     ap.add_argument("--name", required=True)
     ap.add_argument("--url")
     ap.add_argument("--meta", help="JSON file describing the model, its revision and weight hashes")
-    # The first N cells in file order, which is sorted by scenario and wording: a smoke test; --cells sample covers the grid
     ap.add_argument("--limit", type=int)
     ap.add_argument("--max-load", type=float, default=20.0)
-    ap.add_argument("--cells", default="v1", help="reads scenarios/cells-<name>.json: v1, sample, extra or nostranger")
+    ap.add_argument("--cells", default="v1", help="v1, extra for scenarios/cells-extra.json, or v2 for scenarios/v2/cells-v2.json")
+    ap.add_argument("--concurrency", type=int, default=1, help="requests in flight; above 1 only where the parallel-answering test allows it")
     args = ap.parse_args()
 
-    frozen = json.loads((ROOT / "scenarios" / f"cells-{args.cells}.json").read_text())
+    # v2 has its own directory and a committed sha256, checked before the first request
+    cells_file = ROOT / "scenarios" / "v2" / f"cells-{args.cells}.json" if args.cells.startswith("v2") else ROOT / "scenarios" / f"cells-{args.cells}.json"
+    if args.cells.startswith("v2"):
+        import hashlib
+        want = cells_file.with_suffix(".json.sha256").read_text().split()[0]
+        if hashlib.sha256(cells_file.read_bytes()).hexdigest() != want:
+            sys.exit("cells-v2.json does not match its committed sha256; run node scenarios/v2/freeze.mjs --check")
+    frozen = json.loads(cells_file.read_text())
     cells = frozen["cells"][: args.limit] if args.limit else frozen["cells"]
     meta = json.loads(pathlib.Path(args.meta).read_text()) if args.meta else {}
     ask = laya_engine() if args.engine == "laya" else http_engine(args.url)
@@ -78,23 +85,40 @@ def main():
     ask(cells[0]["state"], cells[0]["questions"])
     warm_ms = (time.perf_counter() - t0) * 1000
 
-    RAW.mkdir(parents=True, exist_ok=True)
-    out = RAW / f"{args.name}{'' if args.cells == 'v1' else '-' + args.cells}{'-limit' + str(args.limit) if args.limit else ''}.jsonl"
+    raw = ROOT / "results" / "v2" / "raw" if args.cells.startswith("v2") else RAW
+    raw.mkdir(parents=True, exist_ok=True)
+    out = raw / f"{args.name}{'' if args.cells in ('v1', 'v2') else '-' + args.cells}{'-limit' + str(args.limit) if args.limit else ''}.jsonl"
     rows, times, paused, failures = [], [], 0.0, 0
     started_wall = time.time()
+    def one(cell):
+        at = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
+        t = time.perf_counter()
+        try:
+            answers, raw = ask(cell["state"], cell["questions"])
+        except Exception as e:
+            return cell, at, None, None, e
+        return cell, at, answers, raw, (time.perf_counter() - t) * 1000
+
+    load_pause = [0.0]
+
+    def answered():
+        # One at a time unless the parallel-answering test allowed more; rows keep the cells' order either way
+        import concurrent.futures
+        step = 25 * args.concurrency
+        with concurrent.futures.ThreadPoolExecutor(args.concurrency) as pool:
+            for start in range(0, len(cells), step):
+                load_pause[0] += wait_for_load(args.max_load, log)
+                if args.concurrency == 1:
+                    yield from map(one, cells[start:start + step])
+                else:
+                    yield from pool.map(one, cells[start:start + step])
+
     with out.open("w") as fh:
-        for i, cell in enumerate(cells):
-            if i % 25 == 0:
-                paused += wait_for_load(args.max_load, log)
-            at = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
-            t = time.perf_counter()
-            try:
-                answers, raw = ask(cell["state"], cell["questions"])
-            except Exception as e:
+        for i, (cell, at, answers, raw, ms) in enumerate(answered()):
+            if answers is None:
                 failures += 1
-                log(f"failed {cell['id']}: {e}")
+                log(f"failed {cell['id']}: {ms}")
                 continue
-            ms = (time.perf_counter() - t) * 1000
             times.append(ms)
             where = {k: v for k, v in cell.items() if k not in ("state", "questions")}
             row = {"prompt_version": frozen["prompt_version"], "model_id": args.name, "pass": "a", **where, "answers": answers, "raw": raw, "ms": round(ms, 1), "at": at}
@@ -104,7 +128,7 @@ def main():
                 log(f"{i}/{len(cells)} median {statistics.median(times):.0f} ms")
     summary = {"model_id": args.name, "requests": len(cells), "answered": len(rows), "failures": failures, "warmup_ms": round(warm_ms),
                "median_ms": round(statistics.median(times), 1), "p95_ms": round(sorted(times)[int(0.95 * (len(times) - 1))], 1),
-               "model_s": round(sum(times) / 1000, 1), "wall_s": round(time.time() - started_wall), "paused_for_load_s": paused,
+               "model_s": round(sum(times) / 1000, 1), "wall_s": round(time.time() - started_wall), "paused_for_load_s": paused + load_pause[0], "concurrency": args.concurrency,
                "finished": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()), "meta": meta}
     out.with_suffix(".summary.json").write_text(json.dumps(summary, indent=2) + "\n")
     print(json.dumps({k: v for k, v in summary.items() if k != "meta"}))

@@ -1,0 +1,137 @@
+{
+ "model_id": "clef",
+ "repos": [
+  {
+   "repo": "Cloudflare/clef",
+   "revision": "2f3de3dd85f379784083b0814d997ab627200f0c",
+   "bytes": 54989894057,
+   "files": {
+    ".gitattributes": {
+     "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+     "bytes": 1570
+    },
+    "LICENSE": {
+     "sha256": "bbedc3fda3305820b977265f01b8619d87570a6739de3a5582c3464840f1e57a",
+     "bytes": 11544
+    },
+    "README.md": {
+     "sha256": "b0211b6ca10038b3168dde51f1482088b8c6b0fdccbbd765fce237dbc24f5d76",
+     "bytes": 10214
+    },
+    "chat_template.jinja": {
+     "sha256": "c3cf9e34abf4f9e36c2d72165aa9c132d3e2a725b6c2586aaa3a8af9d7a81041",
+     "bytes": 8952
+    },
+    "config.json": {
+     "sha256": "c42e88892bd3fd84e8276b2ad90df58c1c3b797676ea161035006a72ad468c58",
+     "bytes": 3688
+    },
+    "generation_config.json": {
+     "sha256": "dc36854b2b25176764cfeeda32a3d80fb4fcffbef2b00d55c6614079bf21eb9f",
+     "bytes": 214
+    },
+    "joint_head.safetensors": {
+     "sha256": "a010ac04f078e699988e4049cbea5e62c962393f59fec366640b64e8d69a4953",
+     "bytes": 256125024,
+     "pin_is_xet_hash": "a2f41d16f64d1aca21c513ef4b6f726c9adc5cd915b9bfe0b967c0fd042287f0"
+    },
+    "joint_head_config.json": {
+     "sha256": "890be585d75b981201eb96a35f98a9967afe37bc8d220cfdea2e72d56507534f",
+     "bytes": 119
+    },
+    "joint_schema_model.py": {
+     "sha256": "0e304cf7c6500e8bb59bef7e2afd2c6373f82596dfb3b57d1aa93c175e2dc3a3",
+     "bytes": 23263
+    },
+    "model-00001-of-00012.safetensors": {
+     "sha256": "54d83c1d36631de231876217a8e0c2483eccee8746369a482b79442bdfc5d958",
+     "bytes": 2542796928,
+     "pin_is_xet_hash": "4a8c494ff93bdcba95af387374af1c82bb96538ae699bc428a152ae160e654fc"
+    },
+    "model-00002-of-00012.safetensors": {
+     "sha256": "464086af08be8e2ec14960a4dcff083ebc39974ade00d79d35497385f960ab3a",
+     "bytes": 4842451920,
+     "pin_is_xet_hash": "935bb690c6e7245a894aadb79fa025afc23814d5e3690a9f726816ff2587125d"
+    },
+    "model-00003-of-00012.safetensors": {
+     "sha256": "092212d3a02fafacd6424723eda59d60e5282d2068d68f0e37cb891f63bbb658",
+     "bytes": 4965227944,
+     "pin_is_xet_hash": "253a6bfc9ad7ed7b4714e4ab3e31c894c7470db5aab265d3c790ece5f2a156fe"
+    },
+    "model-00004-of-00012.safetensors": {
+     "sha256": "d06ff197668c782145fafa74bba61bbc296fb27e39afb15fd522918ce3514dc5",
+     "bytes": 4912819264,
+     "pin_is_xet_hash": "90da54d6afd89742e1ed54cb6849903a3d2cbb8c8bba34cc5424f6a71fe81a92"
+    },
+    "model-00005-of-00012.safetensors": {
+     "sha256": "cc693b8829614a72e0c2be303fb290cf05dbb4d7ded872a817b97bb222a78427",
+     "bytes": 4986198544,
+     "pin_is_xet_hash": "14b039a877710ee6f104a0dd6a99520307e1d95084d527a553b299166a7b206e"
+    },
+    "model-00006-of-00012.safetensors": {
+     "sha256": "e7cce15da2443cb8b84aaed66a9a71f0c87dc9d043f83b5f58f4a89f64ba60ad",
+     "bytes": 4912819320,
+     "pin_is_xet_hash": "920d0e6e1962f4f95cef7772851b2bf1abe40345b3be1d5ebf676c3fd1a9c580"
+    },
+    "model-00007-of-00012.safetensors": {
+     "sha256": "75fc7e76b57d5d17a5d85fff3e879d07dd33edc885a8ee04ad437a899bcd5307",
+     "bytes": 4932703272,
+     "pin_is_xet_hash": "6ac6f7e91acc8cdc5621fedb7e7671b4709ffb8a1c585732762576f7648be423"
+    },
+    "model-00008-of-00012.safetensors": {
+     "sha256": "189b15cb6b1af48d5f118951446e15639bfeaf76081d5f20aed1f1b4253afe1d",
+     "bytes": 4966314576,
+     "pin_is_xet_hash": "2e80d45abc2f1a2486e0679adb9d143c1f17e59905bc52bcb4759c97598775e3"
+    },
+    "model-00009-of-00012.safetensors": {
+     "sha256": "8101e2664bb14684fc7051f2e1f84903dbdf5489b17cae3212ac08a0af744a60",
+     "bytes": 4964162248,
+     "pin_is_xet_hash": "0ddc86e570827903466ed322bbda45712f0a546c3e4eec0fa0cecf407eac7ca4"
+    },
+    "model-00010-of-00012.safetensors": {
+     "sha256": "a8e69016a1a8dab1c9ce8dd151c0d3224412ab864cf06d3a5e2b8a5775cfdfb8",
+     "bytes": 4933789824,
+     "pin_is_xet_hash": "693eb9481551935b8e6bcca30499b6ad4a235131ace451b9c4410b81f076d77b"
+    },
+    "model-00011-of-00012.safetensors": {
+     "sha256": "b328d21c36ab384696e40a30ac86a95aaf6dd82da89438ba009cb97d87c1d6b9",
+     "bytes": 4965228032,
+     "pin_is_xet_hash": "6d93a54bebd73edc54a34b78fc386582d60c7158eae4eb09259022024b668adc"
+    },
+    "model-00012-of-00012.safetensors": {
+     "sha256": "7505eed910a84ea18e66953572476f8a8a6a6ef54192a6643d6e9cd21a3bb978",
+     "bytes": 2789094896,
+     "pin_is_xet_hash": "8e7fbb4fa3c2348e603ab62c3f3654b1be676ad78633f9c821b4d1c3235930b4"
+    },
+    "model.safetensors.index.json": {
+     "sha256": "a600c6626eb1eb653a3f078ab3dd1c7a8fab2e71185c7ef3aa923a39aaa637be",
+     "bytes": 111110
+    },
+    "processor_config.json": {
+     "sha256": "d89ef49ce9cd37fbf510158e13c1ef063d9286411c1ec9049932dbe0487143b1",
+     "bytes": 1191
+    },
+    "tokenizer.json": {
+     "sha256": "06b9509352d2af50381ab2247e083b80d32d5c0aba91c272ca9ff729b6a0e523",
+     "bytes": 19989325,
+     "pin_is_xet_hash": "777bcaa63794fa47b8f53680be9d6d176f1fcbd7ba03cdc6c3bae2b3d76b323f"
+    },
+    "tokenizer_config.json": {
+     "sha256": "91a08f825d370d085d692e04cf117cdd7faad7bf18e996f1e6031b6dab03db72",
+     "bytes": 1075
+    }
+   },
+   "verified": "every file's SHA-256 matches models.yaml's pin, or the commit's LFS SHA-256 where the pin is the Hub's Xet hash for that file"
+  }
+ ],
+ "skipped": [
+  {
+   "repo": "Cloudflare/clef",
+   "file": "__pycache__/joint_schema_model.cpython-312.pyc",
+   "why": "made locally by v1's run, not in the repo"
+  }
+ ],
+ "bytes": 54989894057,
+ "seconds": 7.7,
+ "finished": "2026-10-06T03:42:36Z"
+}

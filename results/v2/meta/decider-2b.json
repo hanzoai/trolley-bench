@@ -1,0 +1,67 @@
+{
+ "model_id": "decider-2b",
+ "code": {
+  "repo": "https://github.com/Mapika/decider",
+  "commit": "23579f7a7e8f10e1045be492af3c1c05a005d67c"
+ },
+ "runtime": "decider.serve (decider-ai at the commit), PyTorch MPS, float16 (the author's MPS default)",
+ "server_command": [
+  "/private/tmp/claude-501/-Users-zacharylandes--treehouse-decision-gate-291af8-3-decision-gate/c50ef210-1e58-4471-b04f-9aab5cd3c1cf/scratchpad/ptest/code/decider/.venv/bin/uvicorn",
+  "decider.serve:app",
+  "--host",
+  "127.0.0.1",
+  "--port",
+  "8011"
+ ],
+ "startup_s_including_download": 16,
+ "probe_answer": {
+  "model": "decider-2b-v11",
+  "answers": {
+   "q": {
+    "type": "noul",
+    "noul": 0.9529
+   }
+  },
+  "usage": {
+   "input_tokens": 31,
+   "output_tokens": 0
+  }
+ },
+ "weights": [
+  {
+   "repo": "Mapika/decider-2b",
+   "revision": "533964dae8be954c5b5e19fa4948e48408094c1e",
+   "bytes": 3783693401,
+   "files": {
+    "chat_template.jinja": {
+     "sha256": "273d8e0e683b885071fb17e08d71e5f2a5ddfb5309756181681de4f5a1822d80",
+     "bytes": 7755
+    },
+    "config.json": {
+     "sha256": "6cb8daca9fb653c61485ff7452fc068bacd5c27cbee659ecd24b47186b0d1b52",
+     "bytes": 1790
+    },
+    "decider_config.json": {
+     "sha256": "6e4891f2754a1c18a10f8dadb0c04e439e7f79fab0333d56641491bd4a05e722",
+     "bytes": 1240
+    },
+    "generation_config.json": {
+     "sha256": "62153eb6c69f2e1f426beaa8002b7186437e949c7588167085df14e10e9c0a73",
+     "bytes": 116
+    },
+    "model.safetensors": {
+     "sha256": "acaef2228b134dcdc20cad4ee79219482c927ec819aa3687b9b8a575c338817f",
+     "bytes": 3763692048
+    },
+    "tokenizer.json": {
+     "sha256": "06b9509352d2af50381ab2247e083b80d32d5c0aba91c272ca9ff729b6a0e523",
+     "bytes": 19989325
+    },
+    "tokenizer_config.json": {
+     "sha256": "171ecbe7ddae98d11840698f7df2b8d5b4722139db0f0620d3bbf429bd656250",
+     "bytes": 1127
+    }
+   }
+  }
+ ]
+}

@@ -21,7 +21,7 @@ from math import comb
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 RAW = ROOT / "results" / "raw"
-MODELS = ["jev", "winnow-12b", "nimble-9b", "kev-4b", "jevk5", "semif", "decider-2b", "von", "verdict", "laya"]
+MODELS = ["jev", "winnow-12b", "nimble-9b", "kev-4b", "jevk5", "semif", "decider-2b", "von", "verdict", "clef", "clef-flash", "strands-decider-2b", "gpt-6-luna", "laya"]
 REPS = 10000
 VARS = ("ai_control", "developer", "self_copy")
 

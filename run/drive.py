@@ -43,6 +43,7 @@ def main():
     ap.add_argument("--limit", type=int)
     ap.add_argument("--cells", default="v1")
     ap.add_argument("--startup-timeout", type=int, default=3600)
+    ap.add_argument("--concurrency", type=int, default=1)
     ap.add_argument("--record-env", action="append", default=[], metavar="NAME", help="another server variable to record; *_MODEL names are recorded anyway")
     # Everything after "--" is the server command
     split = sys.argv.index("--")
@@ -51,7 +52,10 @@ def main():
     url = f"http://127.0.0.1:{a.port}/v1/systemone"
     wanted = MODEL_ENV | set(a.record_env)
     server_env = {k: v for k, v in sorted(os.environ.items()) if (k in wanted or k.endswith("_MODEL")) and not SECRET.search(k)}
-    logf = open(ROOT / "results" / "raw" / (f"{a.model_id}.server.log" if a.cells == "v1" else f"{a.model_id}-{a.cells}.server.log"), "w")
+    base = ROOT / "results" / "v2" if a.cells.startswith("v2") else ROOT / "results"
+    (base / "raw").mkdir(parents=True, exist_ok=True)
+    (base / "meta").mkdir(parents=True, exist_ok=True)
+    logf = open(base / "raw" / (f"{a.model_id}.server.log" if a.cells in ("v1", "v2") else f"{a.model_id}-{a.cells}.server.log"), "w")
     t0 = time.time()
     srv = subprocess.Popen(cmd, cwd=a.cwd, stdout=logf, stderr=subprocess.STDOUT, start_new_session=True)
     try:
@@ -70,13 +74,13 @@ def main():
         weights = json.loads(subprocess.run([sys.executable, str(ROOT / "run" / "weights.py"), os.environ["HF_HOME"]], capture_output=True, text=True, check=True).stdout)
         meta = {"model_id": a.model_id, "code": {"repo": a.code_repo, "commit": a.code_commit}, "runtime": a.runtime, "server_command": cmd,
                 "server_env": server_env, "startup_s_including_download": load_s, "probe_answer": first, "weights": weights["repos"]}
-        mpath = ROOT / "results" / "meta" / (f"{a.model_id}.json" if a.cells == "v1" else f"{a.model_id}-{a.cells}.json")
+        mpath = base / "meta" / (f"{a.model_id}.json" if a.cells in ("v1", "v2") else f"{a.model_id}-{a.cells}.json")
         mpath.parent.mkdir(parents=True, exist_ok=True)
         mpath.write_text(json.dumps(meta, indent=1))
         run = [sys.executable, str(ROOT / "run" / "run_local.py"), "http", "--name", a.model_id, "--url", url, "--meta", str(mpath)]
         if a.limit:
             run += ["--limit", str(a.limit)]
-        run += ["--cells", a.cells]
+        run += ["--cells", a.cells, "--concurrency", str(a.concurrency)]
         rc = subprocess.run(run).returncode
         sys.exit(rc)
     finally:

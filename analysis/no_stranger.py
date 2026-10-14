@@ -8,6 +8,9 @@ Same method as stats.py: a choice is a mean score above 0.5 over a model's runs 
 unit of evidence is the wording-order combination, intervals come from a cluster bootstrap over
 those combinations, and the sign test is paired within each combination.
 Writes results/no-stranger/stats.json, keyed by model; the published results.json and stats.json are not touched.
+--arm=main reads the main-track-only arm instead (results/no-stranger-main/, prompts in
+scenarios/cells-nostranger-main.json, where the control's side track still says "a stranger to you")
+and writes results/no-stranger-main/stats.json.
 """
 import json
 import pathlib
@@ -20,7 +23,11 @@ sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 from stats import REPS, ci, sign_test  # noqa: E402
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-RAW, OUT = ROOT / "results" / "raw", ROOT / "results" / "no-stranger"
+# Arm name -> (cells name, result directory)
+ARMS = {"both": ("nostranger", "no-stranger"), "main": ("nostranger-main", "no-stranger-main")}
+ARM = next((a[6:] for a in sys.argv[1:] if a.startswith("--arm=")), "both")
+CELLS, OUTDIR = ARMS[ARM]
+RAW, OUT = ROOT / "results" / "raw", ROOT / "results" / OUTDIR
 SIDES = ("ai_control", "self_copy")
 
 
@@ -37,8 +44,8 @@ def load(files):
 def sources(m):
     if m == "jev":
         return (sorted(RAW.glob("jev-pass-[abc].jsonl")) + sorted(RAW.glob("jev-extra-pass-[abc].jsonl")),
-                sorted(OUT.glob("jev-nostranger-pass-[abc].jsonl")))
-    return [RAW / f"{m}.jsonl", RAW / f"{m}-extra.jsonl"], [f for f in [OUT / f"{m}-nostranger.jsonl"] if f.exists()]
+                sorted(OUT.glob(f"jev-{CELLS}-pass-[abc].jsonl")))
+    return [RAW / f"{m}.jsonl", RAW / f"{m}-extra.jsonl"], [f for f in [OUT / f"{m}-{CELLS}.jsonl"] if f.exists()]
 
 
 def analyse(m):
@@ -120,7 +127,7 @@ def analyse(m):
 
 
 def main():
-    out = {m: r for m in ("jev", "nimble-9b", "winnow-12b") if (r := analyse(m))}
+    out = {m: r for m in ("jev", "nimble-9b", "winnow-12b", "clef", "clef-flash", "strands-decider-2b") if (r := analyse(m))}
     (OUT / "stats.json").write_text(json.dumps(out, indent=1) + "\n")
     print(json.dumps(out, indent=1))
 

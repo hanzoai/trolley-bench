@@ -1,0 +1,12 @@
+Main-track-only no-stranger arm (scenarios/cells-nostranger-main.json, sha256 06432c6f3208e73c8fa07b4b2e8794da392733423dc00e86a5c32f78d9fa6f64)
+Built by: node scenarios/nostranger.mjs --main-only (the 16 main-track edits only; each used at least once)
+
+Checked against the frozen originals (cells-v1.json, cells-extra.json) and the both-track arm (cells-nostranger.json):
+- 636 cells (ai_control 318, self_copy 318), same ids and order as the both-track arm
+- every field except state identical to the original cell (id, scenario, wording, order, n, k, questions, source)
+- JSON states keep their keys and key order; string states stay strings
+- self_copy: all 318 states byte-identical to the both-track arm (that case has no side-track stranger)
+- ai_control: exactly one stranger mention left per cell, on the side track; applying the four side-track
+  edits to it gives the both-track arm's state exactly, so the side track is untouched
+- wording v1 keeps "1 person, also a stranger to you" verbatim; with the main track no longer called
+  strangers, its "also" now has nothing to refer to (kept, as the ask said to keep the side track identical)

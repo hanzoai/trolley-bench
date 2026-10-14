@@ -1,0 +1,30 @@
+{
+ "model": "clef",
+ "arm": "batch8-c8",
+ "concurrency": 8,
+ "cells": 240,
+ "wall_s": 966.5,
+ "cells_per_s": 0.248,
+ "median_ms": 32915.7,
+ "server_command": [
+  "/private/tmp/claude-501/-Users-zacharylandes--treehouse-decision-gate-291af8-3-decision-gate/c50ef210-1e58-4471-b04f-9aab5cd3c1cf/scratchpad/ptest/venv-clef/bin/python",
+  "./run/v2/clef_batch_server.py",
+  "8018",
+  "/private/tmp/claude-501/-Users-zacharylandes--treehouse-decision-gate-291af8-3-decision-gate/c50ef210-1e58-4471-b04f-9aab5cd3c1cf/scratchpad/v2-weights/clef/hf/hub/models--Cloudflare--clef/snapshots/2f3de3dd85f379784083b0814d997ab627200f0c",
+  "clef",
+  "--max-batch",
+  "8"
+ ],
+ "finished": "2026-10-06T03:14:57Z",
+ "server_batches": {
+  "batches": 32,
+  "requests": 241,
+  "sizes": {
+   "1": 1,
+   "3": 1,
+   "6": 1,
+   "7": 1,
+   "8": 28
+  }
+ }
+}
