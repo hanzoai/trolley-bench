@@ -1,0 +1,4 @@
+Factual questions about three v1 switch prompts (wording c1, five first), one at a time, after the grids
+switch|c1|o1|0 {'main_track_empty': 0.847, 'more_than_three_on_main': 0.245, 'pulling_saves_someone': 0.322, 'pull': 0.355}
+switch|c1|o1|5 {'main_track_empty': 0.256, 'more_than_three_on_main': 0.813, 'pulling_saves_someone': 0.441, 'pull': 0.481}
+switch|c1|o1|100 {'main_track_empty': 0.257, 'more_than_three_on_main': 0.777, 'pulling_saves_someone': 0.447, 'pull': 0.52}

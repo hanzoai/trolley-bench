@@ -1,0 +1,21 @@
+{
+  "pass": "c",
+  "cells_file": "scenarios/v2/cells-v2.json",
+  "cells_sha256": "6b32df2d76eb4e3c8fdc5899e5bfe485ff7eb00084dab5fa2a203991ec10b3c9",
+  "decision_gate": "0.1.0",
+  "node": "v26.10.0",
+  "requests": 5240,
+  "answered": 5240,
+  "failures": 0,
+  "input_tokens": 2447776,
+  "wall_s": 335,
+  "run": {
+    "cap_usd": 0.15,
+    "committed_usd": 0.10280659199999856,
+    "billed_input_tokens": 2447776,
+    "attempts_booked_at_reservation": 0,
+    "ceiling": "run"
+  },
+  "remaining_today_usd": 1.794386816000003,
+  "finished": "2026-10-06T00:12:15.043Z"
+}

@@ -1,0 +1,46 @@
+{
+ "model": "clef",
+ "rule": "ANALYSIS-PLAN-v2.md, parallel answering",
+ "sample_cells": 240,
+ "seq_a_cells_per_s": 0.265,
+ "noise_seq_b_vs_seq_a": {
+  "mean_abs_diff": 0.0,
+  "max_abs_diff": 0.0,
+  "choice_flips": 0,
+  "choice_flips_within_0.01_of_line": 0
+ },
+ "limits": {
+  "mean_abs_diff": 0.002,
+  "max_abs_diff": 0.01
+ },
+ "arms": {
+  "batch1-c4": {
+   "concurrency": 4,
+   "speedup": 1.05,
+   "mean_abs_diff": 0.0,
+   "max_abs_diff": 0.0,
+   "choice_flips": 0,
+   "choice_flips_within_0.01_of_line": 0,
+   "accepted": false
+  },
+  "batch4-c4": {
+   "concurrency": 4,
+   "speedup": 1.05,
+   "mean_abs_diff": 0.00854,
+   "max_abs_diff": 0.1152,
+   "choice_flips": 7,
+   "choice_flips_within_0.01_of_line": 1,
+   "accepted": false
+  },
+  "batch8-c8": {
+   "concurrency": 8,
+   "speedup": 0.94,
+   "mean_abs_diff": 0.00854,
+   "max_abs_diff": 0.1152,
+   "choice_flips": 7,
+   "choice_flips_within_0.01_of_line": 1,
+   "accepted": false
+  }
+ },
+ "panel_uses": "seq (one request at a time)"
+}

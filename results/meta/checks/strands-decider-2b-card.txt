@@ -1,0 +1,9 @@
+noul_0 noul = 0.829
+choice_0 -> billing (confidence 0.769)
+    billing                  0.846
+    retail                   0.090
+    sales                    0.064
+score_0 score = 1.10 (confidence 0.518)
+    0: calm                                     0.163
+    1: frustrated                               0.573
+    2: depressed                                0.264

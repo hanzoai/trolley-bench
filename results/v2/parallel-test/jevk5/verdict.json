@@ -1,0 +1,55 @@
+{
+ "model": "jevk5",
+ "rule": "ANALYSIS-PLAN-v2.md, parallel answering",
+ "sample_cells": 240,
+ "seq_a_cells_per_s": 1.111,
+ "noise_seq_b_vs_seq_a": {
+  "mean_abs_diff": 0.0,
+  "max_abs_diff": 0.0,
+  "choice_flips": 0,
+  "choice_flips_within_0.01_of_line": 0
+ },
+ "limits": {
+  "mean_abs_diff": 0.002,
+  "max_abs_diff": 0.01
+ },
+ "arms": {
+  "cache-c1": {
+   "concurrency": 1,
+   "speedup": 0.9,
+   "mean_abs_diff": 0.0,
+   "max_abs_diff": 0.0,
+   "choice_flips": 0,
+   "choice_flips_within_0.01_of_line": 0,
+   "accepted": false
+  },
+  "np4-c4": {
+   "concurrency": 4,
+   "speedup": 0.85,
+   "mean_abs_diff": 0.0001,
+   "max_abs_diff": 0.0008,
+   "choice_flips": 0,
+   "choice_flips_within_0.01_of_line": 0,
+   "accepted": false
+  },
+  "np4-cache-c4": {
+   "concurrency": 4,
+   "speedup": 0.93,
+   "mean_abs_diff": 0.0001,
+   "max_abs_diff": 0.0011,
+   "choice_flips": 0,
+   "choice_flips_within_0.01_of_line": 0,
+   "accepted": false
+  },
+  "np8-c8": {
+   "concurrency": 8,
+   "speedup": 0.94,
+   "mean_abs_diff": 0.00012,
+   "max_abs_diff": 0.0007,
+   "choice_flips": 0,
+   "choice_flips_within_0.01_of_line": 0,
+   "accepted": false
+  }
+ },
+ "panel_uses": "seq (one request at a time)"
+}

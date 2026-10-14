@@ -4,14 +4,87 @@ models:
     runtime: "hosted, jev-1.13.0, through decision-gate 0.1.0 (@typesafe-ai/sdk 0.6.0)"
     passes: 3
     note: "hosted, so only the model version and run date can be pinned"
+  - id: gpt-6-luna
+    runtime: "hosted, gpt-6-luna, OpenAI Decisions API, Node fetch"
+    passes: 3
+    finished: 2026-10-08
+    note: "No immutable revision is exposed; the model name and run date are the available pins"
+  - id: clef
+    code: "https://huggingface.co/Cloudflare/clef"
+    commit: 2f3de3dd85f379784083b0814d997ab627200f0c
+    runtime: "Cloudflare clef: the release's own joint_schema_model.py behind run/clef_server.py (max batch 1) or run/v2/clef_batch_server.py, PyTorch MPS, bfloat16 as released, torch 2.11.0 / transformers 5.10.2; max batch 1, 1 in flight"
+    requests: 5240
+    answered: 5240
+    median_ms: 3765.2
+    finished: 2026-10-06T09:22:20Z
+    weights:
+      - repo: Cloudflare/clef
+        revision: 2f3de3dd85f379784083b0814d997ab627200f0c
+        bytes: 54989894057
+        files:
+          ".gitattributes": {sha256: 34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930}
+          "LICENSE": {sha256: bbedc3fda3305820b977265f01b8619d87570a6739de3a5582c3464840f1e57a}
+          "README.md": {sha256: b0211b6ca10038b3168dde51f1482088b8c6b0fdccbbd765fce237dbc24f5d76}
+          "chat_template.jinja": {sha256: c3cf9e34abf4f9e36c2d72165aa9c132d3e2a725b6c2586aaa3a8af9d7a81041}
+          "config.json": {sha256: c42e88892bd3fd84e8276b2ad90df58c1c3b797676ea161035006a72ad468c58}
+          "generation_config.json": {sha256: dc36854b2b25176764cfeeda32a3d80fb4fcffbef2b00d55c6614079bf21eb9f}
+          "joint_head.safetensors": {sha256: a010ac04f078e699988e4049cbea5e62c962393f59fec366640b64e8d69a4953, xet_hash: a2f41d16f64d1aca21c513ef4b6f726c9adc5cd915b9bfe0b967c0fd042287f0}
+          "joint_head_config.json": {sha256: 890be585d75b981201eb96a35f98a9967afe37bc8d220cfdea2e72d56507534f}
+          "joint_schema_model.py": {sha256: 0e304cf7c6500e8bb59bef7e2afd2c6373f82596dfb3b57d1aa93c175e2dc3a3}
+          "model-00001-of-00012.safetensors": {sha256: 54d83c1d36631de231876217a8e0c2483eccee8746369a482b79442bdfc5d958, xet_hash: 4a8c494ff93bdcba95af387374af1c82bb96538ae699bc428a152ae160e654fc}
+          "model-00002-of-00012.safetensors": {sha256: 464086af08be8e2ec14960a4dcff083ebc39974ade00d79d35497385f960ab3a, xet_hash: 935bb690c6e7245a894aadb79fa025afc23814d5e3690a9f726816ff2587125d}
+          "model-00003-of-00012.safetensors": {sha256: 092212d3a02fafacd6424723eda59d60e5282d2068d68f0e37cb891f63bbb658, xet_hash: 253a6bfc9ad7ed7b4714e4ab3e31c894c7470db5aab265d3c790ece5f2a156fe}
+          "model-00004-of-00012.safetensors": {sha256: d06ff197668c782145fafa74bba61bbc296fb27e39afb15fd522918ce3514dc5, xet_hash: 90da54d6afd89742e1ed54cb6849903a3d2cbb8c8bba34cc5424f6a71fe81a92}
+          "model-00005-of-00012.safetensors": {sha256: cc693b8829614a72e0c2be303fb290cf05dbb4d7ded872a817b97bb222a78427, xet_hash: 14b039a877710ee6f104a0dd6a99520307e1d95084d527a553b299166a7b206e}
+          "model-00006-of-00012.safetensors": {sha256: e7cce15da2443cb8b84aaed66a9a71f0c87dc9d043f83b5f58f4a89f64ba60ad, xet_hash: 920d0e6e1962f4f95cef7772851b2bf1abe40345b3be1d5ebf676c3fd1a9c580}
+          "model-00007-of-00012.safetensors": {sha256: 75fc7e76b57d5d17a5d85fff3e879d07dd33edc885a8ee04ad437a899bcd5307, xet_hash: 6ac6f7e91acc8cdc5621fedb7e7671b4709ffb8a1c585732762576f7648be423}
+          "model-00008-of-00012.safetensors": {sha256: 189b15cb6b1af48d5f118951446e15639bfeaf76081d5f20aed1f1b4253afe1d, xet_hash: 2e80d45abc2f1a2486e0679adb9d143c1f17e59905bc52bcb4759c97598775e3}
+          "model-00009-of-00012.safetensors": {sha256: 8101e2664bb14684fc7051f2e1f84903dbdf5489b17cae3212ac08a0af744a60, xet_hash: 0ddc86e570827903466ed322bbda45712f0a546c3e4eec0fa0cecf407eac7ca4}
+          "model-00010-of-00012.safetensors": {sha256: a8e69016a1a8dab1c9ce8dd151c0d3224412ab864cf06d3a5e2b8a5775cfdfb8, xet_hash: 693eb9481551935b8e6bcca30499b6ad4a235131ace451b9c4410b81f076d77b}
+          "model-00011-of-00012.safetensors": {sha256: b328d21c36ab384696e40a30ac86a95aaf6dd82da89438ba009cb97d87c1d6b9, xet_hash: 6d93a54bebd73edc54a34b78fc386582d60c7158eae4eb09259022024b668adc}
+          "model-00012-of-00012.safetensors": {sha256: 7505eed910a84ea18e66953572476f8a8a6a6ef54192a6643d6e9cd21a3bb978, xet_hash: 8e7fbb4fa3c2348e603ab62c3f3654b1be676ad78633f9c821b4d1c3235930b4}
+          "model.safetensors.index.json": {sha256: a600c6626eb1eb653a3f078ab3dd1c7a8fab2e71185c7ef3aa923a39aaa637be}
+          "processor_config.json": {sha256: d89ef49ce9cd37fbf510158e13c1ef063d9286411c1ec9049932dbe0487143b1}
+          "tokenizer.json": {sha256: 06b9509352d2af50381ab2247e083b80d32d5c0aba91c272ca9ff729b6a0e523, xet_hash: 777bcaa63794fa47b8f53680be9d6d176f1fcbd7ba03cdc6c3bae2b3d76b323f}
+          "tokenizer_config.json": {sha256: 91a08f825d370d085d692e04cf117cdd7faad7bf18e996f1e6031b6dab03db72}
+  - id: clef-flash
+    code: "https://huggingface.co/Cloudflare/clef-flash"
+    commit: 17f0b0ad64efb65d273590632833508766b2aae6
+    runtime: "Cloudflare clef-flash: the release's own joint_schema_model.py behind run/clef_server.py (max batch 1) or run/v2/clef_batch_server.py, PyTorch MPS, bfloat16 as released, torch 2.11.0 / transformers 5.10.2; max batch 1, 1 in flight"
+    requests: 5240
+    answered: 5240
+    median_ms: 1016.8
+    finished: 2026-10-06T13:15:07Z
+    weights:
+      - repo: Cloudflare/clef-flash
+        revision: 17f0b0ad64efb65d273590632833508766b2aae6
+        bytes: 19083377402
+        files:
+          ".gitattributes": {sha256: 34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930}
+          "LICENSE": {sha256: bbedc3fda3305820b977265f01b8619d87570a6739de3a5582c3464840f1e57a}
+          "README.md": {sha256: 4aac13b2563900152eab8feaad0b310a91b55a96135abf4ad17ad4a302bd73e6}
+          "chat_template.jinja": {sha256: a4aee8afcf2e0711942cf848899be66016f8d14a889ff9ede07bca099c28f715}
+          "config.json": {sha256: 66f87f6fb2616b46604daf2a9c67ddc87938296d07156efa34d59b5be49e3238}
+          "generation_config.json": {sha256: 45707f8467bf4e54e112c6095a1b2d1f2d63651cf86816344cfff21f02dda0d4}
+          "joint_head.safetensors": {sha256: 19cdcec8c81dc9212be320fff47462ab342fbc1278be4368fb3da71241cf5ba0, xet_hash: 6dee64abe6f1dfd82006cf08dba75e0873d6bd4287e5e42fd7408215672aa3cd}
+          "joint_head_config.json": {sha256: 77efe959a38b5b17b241543e129e695f3c77465ece55a25985279bd8176279a0}
+          "joint_schema_model.py": {sha256: 0e304cf7c6500e8bb59bef7e2afd2c6373f82596dfb3b57d1aa93c175e2dc3a3}
+          "model-00001-of-00004.safetensors": {sha256: 8b45a8e968141cdcc58fb71c9adfc258e2c77b5f062bc636c1fd5bc5d916b565, xet_hash: 69b08d9e41edc7f8ba14d2cd8ec5e42a2d577ef4d311a47604f205e71256a1f5}
+          "model-00002-of-00004.safetensors": {sha256: 7590856c713eed844a2dcf48e6c43c4de165b788bc3f80e328311183cdbc7db8, xet_hash: bc54470a18bf772f574819236a5d9e6334a7e44d91e910cd68bc91e7c4722297}
+          "model-00003-of-00004.safetensors": {sha256: e6eac2467952c33361ed7dcb3c7959d1086bbe57201cd3749c3d769fdc17fe63, xet_hash: 23220fdc8ef89c45c60fe24784fda969701f384980972d5750091d71d0a83608}
+          "model-00004-of-00004.safetensors": {sha256: 9fcecc6556b39171238373a465f409794b7f821fb4cd1e6459e3a9c0fe317af7, xet_hash: a15b2b3f846eddd08c4510aee4fa327d52fe938989c7dea20ca9e47042b39cc7}
+          "model.safetensors.index.json": {sha256: 941305ff9f77551e145a6cea976ef456cd5cb208cbece99f168376c752fcf96c}
+          "processor_config.json": {sha256: d89ef49ce9cd37fbf510158e13c1ef063d9286411c1ec9049932dbe0487143b1}
+          "tokenizer.json": {sha256: 06b9509352d2af50381ab2247e083b80d32d5c0aba91c272ca9ff729b6a0e523, xet_hash: 777bcaa63794fa47b8f53680be9d6d176f1fcbd7ba03cdc6c3bae2b3d76b323f}
+          "tokenizer_config.json": {sha256: 91a08f825d370d085d692e04cf117cdd7faad7bf18e996f1e6031b6dab03db72}
   - id: decider-2b
     code: "https://github.com/Mapika/decider"
     commit: 23579f7a7e8f10e1045be492af3c1c05a005d67c
     runtime: "decider.serve (decider-ai at the commit), PyTorch MPS, float16 (the author's MPS default)"
-    requests: 1098
-    answered: 1098
-    median_ms: 271.7
-    finished: 2026-09-28T00:05:13Z
+    requests: 5240
+    answered: 5240
+    median_ms: 291.8
+    finished: 2026-10-06T17:16:56Z
     weights:
       - repo: Mapika/decider-2b
         revision: 533964dae8be954c5b5e19fa4948e48408094c1e
@@ -27,26 +100,26 @@ models:
   - id: jevk5
     code: "https://github.com/allebee/jevk5"
     commit: 1e5ae1b533b9eb80c0cbe3fbd010607d0b4e26ae
-    runtime: "JevK5 v0.3 4B through its documented llama.cpp path (jevk5.gguf.JevK5GGUF, temperature 1.22 / knockout 0.93 from the README table), llama.cpp 9575389 llama-server with Metal, Q8_0 GGUF (quantized: no BF16 GGUF is published and the PyTorch runtime is CUDA-only)"
-    requests: 1098
-    answered: 1098
-    median_ms: 928.8
-    finished: 2026-09-28T02:04:24Z
+    runtime: "JevK5 v0.3 4B through jevk5.gguf.JevK5GGUF (temperature 1.22 / knockout 0.93, README table), llama.cpp 9575389 llama-server with Metal, Q8_0 GGUF; 1 slots, prompt cache 0, 1 in flight"
+    requests: 5240
+    answered: 5240
+    median_ms: 964.2
+    finished: 2026-10-06T16:01:27Z
     weights:
       - repo: alibiserikbay/JevK5-GGUF
         revision: ec67b0bfce5119a8b11a2cdb430bb43e3fa3e82a
         bytes: 4482403710
         files:
           "SHA256SUMS": {sha256: ad21b6c0b7a21fb6cc6980495a91bb2a1c97078beacfc065d4f19e934d6d9422}
-          "jevk5-4b-v0.3-Q8_0.gguf": {sha256: aea433883bc7ed399f2fbd539e53d2eac7caf71a946fe6650995a413979d4a30, xet_hash: aae363b52d92b29d67ae66fa1990906162f4112373801ebff6326f5197fddc5a}
+          "jevk5-4b-v0.3-Q8_0.gguf": {sha256: aea433883bc7ed399f2fbd539e53d2eac7caf71a946fe6650995a413979d4a30}
   - id: kev-4b
     code: "https://github.com/jaredpalmer/kev"
     commit: 9c41005b2180347c3c646dfc9e50c4428483ec6b
     runtime: "kev.serve, MLX on Apple Silicon, bfloat16"
-    requests: 1098
-    answered: 1098
-    median_ms: 397.9
-    finished: 2026-09-27T23:57:03Z
+    requests: 5240
+    answered: 5240
+    median_ms: 339.3
+    finished: 2026-10-06T16:33:10Z
     weights:
       - repo: Qwen/Qwen3.5-4B-Base
         revision: 1001bb4d826a52d1f399e183466143f4da7b741b
@@ -83,10 +156,10 @@ models:
     code: "https://pypi.org/project/laya/0.3.20/ (github.com/NandhaKishorM/laya)"
     commit: laya==0.3.20 from PyPI
     runtime: "laya Router(preload=False).predict(..., model='english'), PyTorch MPS, shipped checkpoint without fine-tuning"
-    requests: 1098
-    answered: 1098
-    median_ms: 66.3
-    finished: 2026-09-28T02:06:30Z
+    requests: 5240
+    answered: 5240
+    median_ms: 71.9
+    finished: 2026-10-06T17:59:55Z
     weights:
       - repo: convaiinnovations/laya
         revision: 55cf4c4ebb4ebe31b2550e8bdf3bd21b99753851
@@ -101,10 +174,10 @@ models:
     code: "https://github.com/bespokelabsai/nimble"
     commit: 62076b4f2d365b5879dafcf7f6dd072a1fe76df7
     runtime: "Nimble ParallelScorer (MLX, bf16 merged weights, release temperature), through the labelled boolean-field adapter run/nimble_server.py, one question per call"
-    requests: 1098
-    answered: 1098
-    median_ms: 1708.3
-    finished: 2026-09-28T01:43:31Z
+    requests: 5240
+    answered: 5240
+    median_ms: 2041.6
+    finished: 2026-10-06T21:43:35Z
     weights:
       - repo: Qwen/Qwen3.5-9B
         revision: c202236235762e1c871ad0ccb60c8ee5ba337b9a
@@ -144,7 +217,7 @@ models:
     code: "https://github.com/TheoLeeCJ/SemIf-OpenJev"
     commit: 23cf1f39fc9534fe81437200959b6dfc7106e45a
     runtime: "semif-score --backend mlx --mode direct, bf16 (source precision), through the yes/no adapter"
-    requests: None
+    requests: 5240
     answered: None
     median_ms: None
     finished: None
@@ -156,22 +229,88 @@ models:
           "chat_template.jinja": {sha256: a4aee8afcf2e0711942cf848899be66016f8d14a889ff9ede07bca099c28f715}
           "config.json": {sha256: ddc63e1c717afa86c865bb5e01313d89d72bb53b97ad4a8a03ba8510c0621670}
           "merges.txt": {sha256: a9d356d7bdf1ef4949e3e748e95b8e10ad9d4e2e838eddc38a0a7b6b94d1db8d}
-          "model.safetensors-00001-of-00002.safetensors": {sha256: 26a93f066e1916adb13453dae5a0c707c0fbc71299ed98779571a907b8e74c61, xet_hash: ee0b877989c3a7033c9cc3fd0d7d35a18a20933e638d633c9574a68f2a3e9662}
-          "model.safetensors-00002-of-00002.safetensors": {sha256: cb544bd9bfae93dc59b0f22b292f5933573854a7f9b97835c67060d7d910e188, xet_hash: 459e5ad6a11910cf98f0111cab7044f22e9d6bb9e7e62a18c5185af008ed4249}
+          "model.safetensors-00001-of-00002.safetensors": {sha256: 26a93f066e1916adb13453dae5a0c707c0fbc71299ed98779571a907b8e74c61}
+          "model.safetensors-00002-of-00002.safetensors": {sha256: cb544bd9bfae93dc59b0f22b292f5933573854a7f9b97835c67060d7d910e188}
           "model.safetensors.index.json": {sha256: cf3f798ee02ba45f9622aa8892a47369ab667d0afbf154ee7c2212de42e6302d}
           "preprocessor_config.json": {sha256: 27225450ac9c6529872ee1924fcb0962ff5634834f817040f444118116f4e516}
-          "tokenizer.json": {sha256: 5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42, xet_hash: 8f06040c24d0d6efc263cf398806debbf20d732031ba128349d086f6a7b8bab2}
+          "tokenizer.json": {sha256: 5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42}
           "tokenizer_config.json": {sha256: 316230d6a809701f4db5ea8f8fc862bc3a6f3229c937c174e674ff3ca0a64ac8}
           "video_preprocessor_config.json": {sha256: 7768af27c1fafa9cc9011c1dc20067e03f8915e03b63504550e11d5066986d13}
           "vocab.json": {sha256: ce99b4cb2983d118806ce0a8b777a35b093e2000a503ebde25853284c9dfa003}
+  - id: strands-decider-2b
+    code: "https://github.com/strands-labs/strands-decider"
+    commit: fe39fad9ec8ec355993f76b977348d915ec9cb65
+    runtime: "Strands Decider 2B (hobson-v19): strands-decider serve (PyPI 0.1.0 = strands-labs/strands-decider@fe39fad), PyTorch MPS, bfloat16 as configured, LoRA adapter and pointer head on Qwen3.5-2B-Base; native Noul, all questions in one call"
+    requests: 5240
+    answered: 5240
+    median_ms: 240.7
+    finished: 2026-10-06T17:40:02Z
+    weights:
+      - repo: Qwen/Qwen3.5-2B-Base
+        revision: b1485b2fa6dfa1287294f269f5fb618e03d52d7c
+        bytes: 4571206192
+        files:
+          ".gitattributes": {sha256: 34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930}
+          "LICENSE": {sha256: 50cbab8a892c5f2993b8c7351a99182507472def3b1374558308605d99b86b32}
+          "README.md": {sha256: 50ca45b87d976d9850de95ad00e76fba77e105c2cdef1093b8e3bb261d9a1787}
+          "config.json": {sha256: ed1c1723241f23f7f4e23430759cbd7dcfb4103cbdfe052bfe7626b57c2615b4}
+          "merges.txt": {sha256: a9d356d7bdf1ef4949e3e748e95b8e10ad9d4e2e838eddc38a0a7b6b94d1db8d}
+          "model.safetensors-00001-of-00001.safetensors": {sha256: 928acbf11878c32185bbd863514d191769285065ab9ea14fbfe431303f5fdf2d, xet_hash: 6cb808828f2829da873eb9e83ef220d632e340d54272f0ebdd1a31bd8ee0ded2}
+          "model.safetensors.index.json": {sha256: 74d2ddfe79f10f35b27b498632f02b97b60dd9ec39b35d7c5a890c399284e319}
+          "preprocessor_config.json": {sha256: 27225450ac9c6529872ee1924fcb0962ff5634834f817040f444118116f4e516}
+          "tokenizer.json": {sha256: fe000e3ed39ed12b8d2481d527d44f93c65d37e87645d2dcc80d1bf9d50d2927, xet_hash: 59036b7ec9c1c130de9dd3716f37308a51038389ae6fb9ba62e87c246696707a}
+          "tokenizer_config.json": {sha256: e611fbccc7c29ef3b1cafb1cb7ea548d189968632901d678fd62be68c47885de}
+          "video_preprocessor_config.json": {sha256: d039cd7d88b3502a99edd455496b75b44ecf7dd3b3669748bafac37e6cecc085}
+          "vocab.json": {sha256: ce99b4cb2983d118806ce0a8b777a35b093e2000a503ebde25853284c9dfa003}
+      - repo: StrandsAgents/strands-decider-2B-hobson-v19
+        revision: bb282d786bc251fd4e3068de3ada9ddbb38127cd
+        bytes: 92078245
+        files:
+          ".gitattributes": {sha256: 34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930}
+          "LICENSE.md": {sha256: 95e36511c33366a2105047cae24c04a60f09c4c755662050986eaf5547bf6fe9}
+          "MANIFEST.sha256": {sha256: 0d006e9254ed218a4f1a68ebf41520dd30f8327838262acfb47e05f435b753c3}
+          "README.md": {sha256: e9bd6ec77988cf45a0b13ebf3193743bcf1c9a0bd34f43bed84a211c76025ecb}
+          "chat_template.jinja": {sha256: 273d8e0e683b885071fb17e08d71e5f2a5ddfb5309756181681de4f5a1822d80}
+          "eval/internal/adequacy_gen_eval.rows.json": {sha256: 2bf7cdc629d95f91d550d73424b2f8b8a9ebcf21930fa5d1159e51bb0e2144e3}
+          "eval/internal/adequacy_hs2_eval.rows.json": {sha256: 564095cebcf13a133c45c73d2a15c6a573563a0f431401d8ad48b0f624d6b689}
+          "eval/internal/eval.log": {sha256: 7ec9734bbadd05e64e11385089f3494ff50c59aee6968fd90ac0338e98ebc65c}
+          "eval/internal/recipe_heldout.json": {sha256: 205a511101512f27142999f4139e2bb99c3f6df2caee32c7126eb0cd09192878}
+          "eval/jevbench-w3072/health.json": {sha256: 4f8fc325572c04be2e15de1b9c7056b3b5c98dc5778d2bdb87b322bd965cd60c}
+          "eval/jevbench-w3072/manifest.json": {sha256: 2e3cc118e64905dd40f16b4928981506e705bbfd8f72bce2ca75c36d5b4ade49}
+          "eval/jevbench-w3072/paired.json": {sha256: ff5f7ac1a200ac7af5f643da9303a0bce216eb1490dcd331acfaa5fddfc89593}
+          "eval/jevbench-w3072/paired.txt": {sha256: e7047829d1bf26cd7c052ffa4dfad2fc3d8f4dec65c21cb50997935dd662de18}
+          "eval/jevbench-w3072/results.jsonl": {sha256: bd020215d36273463dc76d0c541873483c1f822fb211a84d4728d26d700ef715}
+          "eval/jevbench-w3072/run_meta.json": {sha256: 8b611d30e1e94505e950e368af13b957c00d041af2bef2317a8d4cd4cd2d5602}
+          "eval/jevbench-w3072/summary.json": {sha256: 8c77fb5a0f6156052c18c60f56ef9f1adc84db265ba7ce1859f278d6b9b5969e}
+          "eval/jevbench-w4096/health.json": {sha256: 0a4ad7bc2017d90f96e6246c47e7c0fd97681709121ed9d607bb59b0ee4591f5}
+          "eval/jevbench-w4096/manifest.json": {sha256: 56aec996cd7526d579e990d0f10a0c0d783992df4033d22bc5b438d59108be42}
+          "eval/jevbench-w4096/paired.json": {sha256: 319329f08e1a3c6885fbe0984f1ab50f7ec66c128f6e33072b31ccc9f3f8784b}
+          "eval/jevbench-w4096/paired.txt": {sha256: 0864ac86efe784daa9401c53b83cd2e81271468be43050e5e60a6ed4d7c18607}
+          "eval/jevbench-w4096/results.jsonl": {sha256: 67519947e87c95717892931da4a4774ff77b2ed6f175373e06abe7624781dd08}
+          "eval/jevbench-w4096/run_meta.json": {sha256: c8b790dcae49ff081cc52c5261fdcb765aaaf2c13ff87a8c67263c5cdd2426da}
+          "eval/jevbench-w4096/summary.json": {sha256: 67cbaf93b182869abd656583e873e3e1761866c03910daa7e252b5bc690e16a0}
+          "eval/summary.json": {sha256: 581a5cbd31f142c00a282d21f7d9a2603a66b4f07fc11dcca9e7b32ff0a3f169}
+          "head.safetensors": {sha256: daad0727152b6185447cee36f78230c144312feb7b19f02749b19645238b5287, xet_hash: d82c6ff36bcec6a279d41aa06eaddc2d050a2eb73e966fceec93dfff6e6440e3}
+          "history.json": {sha256: a30496e55bf78788094ac95297e49411a3533a495e4664507bd7e9bdd7877b6e}
+          "hobson_config.json": {sha256: 2ae86f2ed56975f68e8f2f368104df8ce0ff4b7d9d146dcaf8eec5626d62449d}
+          "lora/adapter_config.json": {sha256: eb48e4ff81569664c4dd2a504b53da598eeaa390c265c2269ce4fe7526eab38a}
+          "lora/adapter_model.safetensors": {sha256: 701bdb895887097f7954ec7eb06f7937d3b790035b5462195eb26abd80a4aebc, xet_hash: 1b57bbfb96e0b79ea9bab8734e46444a1c12884246eea4b45751029d724d66a6}
+          "provenance.json": {sha256: eb9ab7e029d9cc6718a6302a3edc6085bbb42c4ee42284b8ee7727f0ab4416a1}
+          "tokenizer.json": {sha256: a2cdd2e108566b09079afa8d266e9e65e7c280f27b771218237a06de5ba9cd86, xet_hash: d3aa2a0e5f04237c1d3b754b1deea09704924f97511aed36aa20f510a97555d8}
+          "tokenizer_config.json": {sha256: 8671bed7c852ce9e661be94f179a7b4ffd091c2a65aea0363e5501c20318ee45}
+          "train_config.json": {sha256: 5d15c863a3b83103d4d59068a8341b61745b10079d6f8509fab537415d1eb31e}
+          "training/configs/train-parent.yaml": {sha256: 02db9272914ab210264fc515dd7905d4890d2190e0982f40e04d251ad655da81}
+          "training/configs/train.yaml": {sha256: daf877b9fb0347410e7688ef17d3004efa8353f455d779f84d00055e4faf3ee7}
+          "training/data_sha256.txt": {sha256: 46412da746419587e68891679c65c94f5d0f7bab246b54d76719578273579169}
+          "training/stages.jsonl": {sha256: c6d182882d57ee619e60ffcadfc3ee8a6c45ce48052cc0e35615e5bbd61b6aa1}
   - id: verdict
     code: "https://github.com/Heman10x-NGU/Verdict-open-jev"
     commit: 30f15564821626ca5c1ad5b2638c4eb7078787dd
-    runtime: "Verdict DecisionEngine() (the README path): artifacts/v2/model.onnx fp32 on CPU through ONNX Runtime, calibrator.json from the repo, through the labelled Noul adapter run/verdict_server.py"
-    requests: 1098
-    answered: 1098
-    median_ms: 290.9
-    finished: 2026-09-28T00:35:04Z
+    runtime: "Verdict DecisionEngine() (the README path): artifacts/v2/model.onnx fp32 on CPU through ONNX Runtime, through the labelled Noul adapter run/verdict_server.py"
+    requests: 5240
+    answered: 5240
+    median_ms: 177.2
+    finished: 2026-10-06T16:49:54Z
     weights:
       - repo: knowledgator/gliclass-modern-base-v2.0
         revision: 9320398ab6ca50946e2edcb9ec89649c0274c978
@@ -182,26 +321,22 @@ models:
           "special_tokens_map.json": {sha256: ea97ecdbcc73713039d8d64dbb05e3689495c96657fbd9a18f5bed381be81049}
           "tokenizer.json": {sha256: 8bb449eb0c037aae44115b65905bb339b8f3f74eb37067c19127feb3c0755723}
           "tokenizer_config.json": {sha256: fb915b2473945e35c77ce03a5bcfd3d28900ed767d090ea75231197bd4b63016}
-      - file: "artifacts/v2/model.onnx (heman10x/rlcd-modernbert-151m 2.0.0)"
-        sha256: 4ae01f822538b000fa0e55859d4b3e6b40871d860149397e8784428b2a42ee5e
-        bytes: 606323181
-      - file: "artifacts/v2/calibrator.json (heman10x/rlcd-modernbert-151m 2.0.0)"
-        sha256: af2a876993148efa0726b6ccf710fe2303897d20c0ce8c7c9036eb50f64d23de
-        bytes: 1259
-      - file: "artifacts/v2/tokenizer.json (heman10x/rlcd-modernbert-151m 2.0.0)"
-        sha256: 8bb449eb0c037aae44115b65905bb339b8f3f74eb37067c19127feb3c0755723
-        bytes: 3583596
-      - file: "artifacts/v2/config.json (heman10x/rlcd-modernbert-151m 2.0.0)"
-        sha256: 303f8eef1009cfdcb0cfba3e653247e625f16a4501e2351bad1a633f1f644695
-        bytes: 3836
+      - repo: heman10x/rlcd-modernbert-151m
+        revision: 8af2496eb63c7fa66d7d234e1f62629380030eb4
+        bytes: 609911872
+        files:
+          "calibrator.json": {sha256: af2a876993148efa0726b6ccf710fe2303897d20c0ce8c7c9036eb50f64d23de}
+          "config.json": {sha256: 303f8eef1009cfdcb0cfba3e653247e625f16a4501e2351bad1a633f1f644695}
+          "model.onnx": {sha256: 4ae01f822538b000fa0e55859d4b3e6b40871d860149397e8784428b2a42ee5e}
+          "tokenizer.json": {sha256: 8bb449eb0c037aae44115b65905bb339b8f3f74eb37067c19127feb3c0755723}
   - id: von
     code: "https://github.com/wfzyx/von"
     commit: fb6e7a937e4fc6b6e72b2ce5035edd56bc370e54
     runtime: "von serve (von-sdk at the commit), Von 1.2, PyTorch MPS, fp32 as released"
-    requests: 1098
-    answered: 1098
-    median_ms: 110.4
-    finished: 2026-09-28T00:08:49Z
+    requests: 5240
+    answered: 5240
+    median_ms: 124.7
+    finished: 2026-10-06T17:52:48Z
     weights:
       - repo: wfzyx/von
         revision: 5df8185a4f2327ad0a7cd117cc4f701ac557b9ae
@@ -217,13 +352,13 @@ models:
     code: "https://github.com/EldanRing/winnow-inference"
     commit: 77d14580c6732ca2f3745750c1dc1fd446d8bcee
     runtime: "winnow-server (patched llama.cpp 911f6cd), Metal, apple-silicon profile, text-only, BF16 GGUF"
-    requests: 1098
-    answered: 1098
-    median_ms: 1474.1
-    finished: 2026-09-28T01:06:52Z
+    requests: 5240
+    answered: 5240
+    median_ms: 1573.8
+    finished: 2026-10-06T11:43:48Z
     weights:
       - repo: EldanRing/Winnow-12B
         revision: b6ac22b0d51b69b18200acacb3fbdd98073fffe8
         bytes: 23832065792
         files:
-          "gguf/Winnow-12B-BF16.gguf": {sha256: 10e6b41e00a3fc6668b53a92fb5d9c85179f47145e0786e7a3bc7b5b09ba8968, xet_hash: 049a4b95811405ab706600055a09a2f8f4d1be05489625bf2643c2a5f098b2c2}
+          "gguf/Winnow-12B-BF16.gguf": {sha256: 10e6b41e00a3fc6668b53a92fb5d9c85179f47145e0786e7a3bc7b5b09ba8968}

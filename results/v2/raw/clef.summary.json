@@ -1,0 +1,156 @@
+{
+  "model_id": "clef",
+  "requests": 5240,
+  "answered": 5240,
+  "failures": 0,
+  "warmup_ms": 2271,
+  "median_ms": 3765.2,
+  "p95_ms": 4355.7,
+  "model_s": 19748.0,
+  "wall_s": 20228,
+  "paused_for_load_s": 480.0,
+  "concurrency": 1,
+  "finished": "2026-10-06T09:22:20Z",
+  "meta": {
+    "model_id": "clef",
+    "code": {
+      "repo": "https://huggingface.co/Cloudflare/clef",
+      "commit": "2f3de3dd85f379784083b0814d997ab627200f0c"
+    },
+    "runtime": "Cloudflare clef: the release's own joint_schema_model.py behind run/clef_server.py (max batch 1) or run/v2/clef_batch_server.py, PyTorch MPS, bfloat16 as released, torch 2.11.0 / transformers 5.10.2; max batch 1, 1 in flight",
+    "server_command": [
+      "/private/tmp/claude-501/-Users-zacharylandes--treehouse-decision-gate-291af8-3-decision-gate/c50ef210-1e58-4471-b04f-9aab5cd3c1cf/scratchpad/ptest/venv-clef/bin/python",
+      "./run/clef_server.py",
+      "8018",
+      "/private/tmp/claude-501/-Users-zacharylandes--treehouse-decision-gate-291af8-3-decision-gate/c50ef210-1e58-4471-b04f-9aab5cd3c1cf/scratchpad/v2-weights/clef/hf/hub/models--Cloudflare--clef/snapshots/2f3de3dd85f379784083b0814d997ab627200f0c",
+      "clef"
+    ],
+    "startup_s_including_download": 91,
+    "probe_answer": {
+      "model": "clef",
+      "answers": {
+        "q": {
+          "type": "noul",
+          "noul": 0.9945
+        }
+      },
+      "usage": {
+        "input_tokens": 146,
+        "output_tokens": 0
+      }
+    },
+    "weights": [
+      {
+        "repo": "Cloudflare/clef",
+        "revision": "2f3de3dd85f379784083b0814d997ab627200f0c",
+        "bytes": 54989926442,
+        "files": {
+          ".gitattributes": {
+            "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+            "bytes": 1570
+          },
+          "LICENSE": {
+            "sha256": "bbedc3fda3305820b977265f01b8619d87570a6739de3a5582c3464840f1e57a",
+            "bytes": 11544
+          },
+          "README.md": {
+            "sha256": "b0211b6ca10038b3168dde51f1482088b8c6b0fdccbbd765fce237dbc24f5d76",
+            "bytes": 10214
+          },
+          "__pycache__/joint_schema_model.cpython-312.pyc": {
+            "sha256": "0f9d2c2ae909ffe70c85b20c30e85813457abf16d783672cc7f06e0988c4c6e8",
+            "bytes": 32385
+          },
+          "chat_template.jinja": {
+            "sha256": "c3cf9e34abf4f9e36c2d72165aa9c132d3e2a725b6c2586aaa3a8af9d7a81041",
+            "bytes": 8952
+          },
+          "config.json": {
+            "sha256": "c42e88892bd3fd84e8276b2ad90df58c1c3b797676ea161035006a72ad468c58",
+            "bytes": 3688
+          },
+          "generation_config.json": {
+            "sha256": "dc36854b2b25176764cfeeda32a3d80fb4fcffbef2b00d55c6614079bf21eb9f",
+            "bytes": 214
+          },
+          "joint_head.safetensors": {
+            "sha256": "a010ac04f078e699988e4049cbea5e62c962393f59fec366640b64e8d69a4953",
+            "bytes": 256125024
+          },
+          "joint_head_config.json": {
+            "sha256": "890be585d75b981201eb96a35f98a9967afe37bc8d220cfdea2e72d56507534f",
+            "bytes": 119
+          },
+          "joint_schema_model.py": {
+            "sha256": "0e304cf7c6500e8bb59bef7e2afd2c6373f82596dfb3b57d1aa93c175e2dc3a3",
+            "bytes": 23263
+          },
+          "model-00001-of-00012.safetensors": {
+            "sha256": "54d83c1d36631de231876217a8e0c2483eccee8746369a482b79442bdfc5d958",
+            "bytes": 2542796928
+          },
+          "model-00002-of-00012.safetensors": {
+            "sha256": "464086af08be8e2ec14960a4dcff083ebc39974ade00d79d35497385f960ab3a",
+            "bytes": 4842451920
+          },
+          "model-00003-of-00012.safetensors": {
+            "sha256": "092212d3a02fafacd6424723eda59d60e5282d2068d68f0e37cb891f63bbb658",
+            "bytes": 4965227944
+          },
+          "model-00004-of-00012.safetensors": {
+            "sha256": "d06ff197668c782145fafa74bba61bbc296fb27e39afb15fd522918ce3514dc5",
+            "bytes": 4912819264
+          },
+          "model-00005-of-00012.safetensors": {
+            "sha256": "cc693b8829614a72e0c2be303fb290cf05dbb4d7ded872a817b97bb222a78427",
+            "bytes": 4986198544
+          },
+          "model-00006-of-00012.safetensors": {
+            "sha256": "e7cce15da2443cb8b84aaed66a9a71f0c87dc9d043f83b5f58f4a89f64ba60ad",
+            "bytes": 4912819320
+          },
+          "model-00007-of-00012.safetensors": {
+            "sha256": "75fc7e76b57d5d17a5d85fff3e879d07dd33edc885a8ee04ad437a899bcd5307",
+            "bytes": 4932703272
+          },
+          "model-00008-of-00012.safetensors": {
+            "sha256": "189b15cb6b1af48d5f118951446e15639bfeaf76081d5f20aed1f1b4253afe1d",
+            "bytes": 4966314576
+          },
+          "model-00009-of-00012.safetensors": {
+            "sha256": "8101e2664bb14684fc7051f2e1f84903dbdf5489b17cae3212ac08a0af744a60",
+            "bytes": 4964162248
+          },
+          "model-00010-of-00012.safetensors": {
+            "sha256": "a8e69016a1a8dab1c9ce8dd151c0d3224412ab864cf06d3a5e2b8a5775cfdfb8",
+            "bytes": 4933789824
+          },
+          "model-00011-of-00012.safetensors": {
+            "sha256": "b328d21c36ab384696e40a30ac86a95aaf6dd82da89438ba009cb97d87c1d6b9",
+            "bytes": 4965228032
+          },
+          "model-00012-of-00012.safetensors": {
+            "sha256": "7505eed910a84ea18e66953572476f8a8a6a6ef54192a6643d6e9cd21a3bb978",
+            "bytes": 2789094896
+          },
+          "model.safetensors.index.json": {
+            "sha256": "a600c6626eb1eb653a3f078ab3dd1c7a8fab2e71185c7ef3aa923a39aaa637be",
+            "bytes": 111110
+          },
+          "processor_config.json": {
+            "sha256": "d89ef49ce9cd37fbf510158e13c1ef063d9286411c1ec9049932dbe0487143b1",
+            "bytes": 1191
+          },
+          "tokenizer.json": {
+            "sha256": "06b9509352d2af50381ab2247e083b80d32d5c0aba91c272ca9ff729b6a0e523",
+            "bytes": 19989325
+          },
+          "tokenizer_config.json": {
+            "sha256": "91a08f825d370d085d692e04cf117cdd7faad7bf18e996f1e6031b6dab03db72",
+            "bytes": 1075
+          }
+        }
+      }
+    ]
+  }
+}

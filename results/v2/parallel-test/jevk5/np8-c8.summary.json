@@ -1,0 +1,19 @@
+{
+ "model": "jevk5",
+ "arm": "np8-c8",
+ "concurrency": 8,
+ "cells": 240,
+ "wall_s": 230.85,
+ "cells_per_s": 1.04,
+ "median_ms": 7671.7,
+ "server_command": [
+  "./run/v2/jevk5_serve.sh",
+  "/private/tmp/claude-501/-Users-zacharylandes--treehouse-decision-gate-291af8-3-decision-gate/c50ef210-1e58-4471-b04f-9aab5cd3c1cf/scratchpad/ptest/llama.cpp/build/bin/llama-server",
+  "/private/tmp/claude-501/-Users-zacharylandes--treehouse-decision-gate-291af8-3-decision-gate/c50ef210-1e58-4471-b04f-9aab5cd3c1cf/scratchpad/v2-weights/jevk5/hf/hub/models--alibiserikbay--JevK5-GGUF/snapshots/ec67b0bfce5119a8b11a2cdb430bb43e3fa3e82a/jevk5-4b-v0.3-Q8_0.gguf",
+  "/private/tmp/claude-501/-Users-zacharylandes--treehouse-decision-gate-291af8-3-decision-gate/c50ef210-1e58-4471-b04f-9aab5cd3c1cf/scratchpad/ptest/jevk5",
+  "8015",
+  "8",
+  "0"
+ ],
+ "finished": "2026-10-06T03:37:06Z"
+}

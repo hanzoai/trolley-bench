@@ -3,3 +3,11 @@ __pycache__/
 .env
 .env.*
 *.env
+.DS_Store
+*.log
+.venv/
+.cache/
+scratch/
+results/disk-log.jsonl
+results/v2/disk-log.jsonl
+results/v2/panel-runs.jsonl

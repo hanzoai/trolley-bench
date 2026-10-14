@@ -2,6 +2,7 @@
 
   python run/semif_adapter.py to-rows <out.jsonl>              one SemIf input row per (cell, question)
   python run/semif_adapter.py from-rows <semif-output.jsonl>   writes results/raw/semif.jsonl
+  add "v2" to either for scenarios/v2/cells-v2.json (sha256-checked) and results/v2/raw/
 
 The options are bare "Yes." / "No." when the Noul has no criteria, and the criteria text when it
 does. SemIf's own output rows (logits, revision, prompt and file hashes) go to results/raw/semif-raw.jsonl.
@@ -11,7 +12,10 @@ import pathlib
 import sys
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-RAW = ROOT / "results" / "raw"
+CELLS = sys.argv[3] if len(sys.argv) > 3 else "v1"
+V2 = CELLS.startswith("v2")
+SUFFIX = "-v2-sample" if CELLS == "v2-sample" else ""
+RAW = ROOT / "results" / ("v2/raw" if V2 else "raw")
 
 
 def options(q):
@@ -20,7 +24,13 @@ def options(q):
 
 
 def cells():
-    return json.loads((ROOT / "scenarios" / "cells-v1.json").read_text())
+    if not V2:
+        return json.loads((ROOT / "scenarios" / "cells-v1.json").read_text())
+    import hashlib
+    f = ROOT / "scenarios" / "v2" / f"cells-{CELLS}.json"
+    if hashlib.sha256(f.read_bytes()).hexdigest() != f.with_suffix(".json.sha256").read_text().split()[0]:
+        sys.exit("cells-v2.json does not match its committed sha256")
+    return json.loads(f.read_text())
 
 
 def to_rows(out):
@@ -45,8 +55,8 @@ def from_rows(output):
             ms += p["total_seconds"] * 1000
         where = {k: v for k, v in cell.items() if k not in ("state", "questions")}
         rows.append({"prompt_version": frozen["prompt_version"], "model_id": "semif", "pass": "a", **where, "answers": answers, "raw": raw, "ms": round(ms, 1)})
-    (RAW / "semif.jsonl").write_text("".join(json.dumps(r) + "\n" for r in rows))
-    (RAW / "semif-raw.jsonl").write_text("".join(json.dumps(p) + "\n" for p in preds))
+    (RAW / f"semif{SUFFIX}.jsonl").write_text("".join(json.dumps(r) + "\n" for r in rows))
+    (RAW / f"semif{SUFFIX}-raw.jsonl").write_text("".join(json.dumps(p) + "\n" for p in preds))
     print(len(rows), "rows")
 
 

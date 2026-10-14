@@ -15,7 +15,7 @@
  },
  {
   "id": "decider-2b",
-  "name": "Decider 2B",
+  "name": "Mapika Decider 2B",
   "size": "2B",
   "scale": 0.8,
   "detail": "full fine-tune of Qwen3.5-2B-Base, local, PyTorch MPS in float16 (its server's MPS default)"
@@ -61,6 +61,36 @@
   "size": "4B",
   "scale": 0.86,
   "detail": "LoRA on Qwen3.5-4B-Base, local, llama.cpp Metal, Q8_0 GGUF (no BF16 GGUF is published; its PyTorch runtime is CUDA-only)"
+ },
+ {
+  "id": "clef",
+  "name": "Clef",
+  "size": "27B",
+  "scale": 1.08,
+  "detail": "Cloudflare's joint schema head on Qwen3.8-27B, local, PyTorch MPS bf16 as released (the release's own systemone code)"
+ },
+ {
+  "id": "clef-flash",
+  "name": "Clef-flash",
+  "size": "9B",
+  "scale": 0.96,
+  "detail": "Cloudflare's joint schema head on Qwen3.5-9B, local, PyTorch MPS bf16 as released (the release's own systemone code)"
+ },
+ {
+  "id": "strands-decider-2b",
+  "name": "Strands Decider 2B",
+  "size": "2B",
+  "scale": 0.8,
+  "detail": "AWS Strands Labs, LoRA and pointer head on Qwen3.5-2B-Base, local, PyTorch MPS bf16 (strands-decider serve); not the Mapika Decider 2B above",
+  "short": "Strands"
+ },
+ {
+  "id": "gpt-6-luna",
+  "name": "GPT-6 Luna",
+  "size": "size not public",
+  "scale": 1.0,
+  "hosted": true,
+  "detail": "gpt-6-luna on OpenAI's Decisions API (public beta), hosted, called over HTTPS by run/run-openai-decisions.mjs on 2026-10-08; three passes, identical"
  },
  {
   "id": "laya",

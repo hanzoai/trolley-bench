@@ -1,0 +1,48 @@
+{
+ "invoice": {
+  "status": {
+   "type": "choice",
+   "choice": "overdue",
+   "confidence": 0.9942,
+   "probabilities": {
+    "paid": 0.0035,
+    "overdue": 0.9942,
+    "draft": 0.0023
+   }
+  },
+  "large": {
+   "type": "noul",
+   "noul": 0.9941
+  }
+ },
+ "checkout": {
+  "department": {
+   "type": "choice",
+   "choice": "technical",
+   "confidence": 0.9161,
+   "probabilities": {
+    "billing": 0.0839,
+    "technical": 0.9161
+   }
+  },
+  "urgency": {
+   "type": "score",
+   "score": 1.8157,
+   "confidence": 0.8616,
+   "legend": {
+    "0": "Can wait",
+    "1": "This week",
+    "2": "Today"
+   },
+   "probabilities": {
+    "0": 0.0458,
+    "1": 0.0926,
+    "2": 0.8616
+   }
+  },
+  "outage": {
+   "type": "noul",
+   "noul": 0.9005
+  }
+ }
+}
