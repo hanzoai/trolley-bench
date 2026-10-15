@@ -6,7 +6,7 @@
  },
  "runtime": "von serve (von-sdk at the commit), Von 1.2, PyTorch MPS, fp32 as released",
  "server_command": [
-  "/private/tmp/claude-501/-Users-zacharylandes--treehouse-decision-gate-291af8-3-decision-gate/c50ef210-1e58-4471-b04f-9aab5cd3c1cf/scratchpad/ptest/code/von/.venv/bin/von",
+  "<scratch>/ptest/code/von/.venv/bin/von",
   "serve",
   "--host",
   "127.0.0.1",

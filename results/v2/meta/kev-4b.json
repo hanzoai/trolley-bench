@@ -6,7 +6,7 @@
  },
  "runtime": "kev.serve, MLX on Apple Silicon, bfloat16",
  "server_command": [
-  "/private/tmp/claude-501/-Users-zacharylandes--treehouse-decision-gate-291af8-3-decision-gate/c50ef210-1e58-4471-b04f-9aab5cd3c1cf/scratchpad/ptest/code/kev/.venv/bin/python",
+  "<scratch>/ptest/code/kev/.venv/bin/python",
   "-m",
   "kev.serve",
   "--run",

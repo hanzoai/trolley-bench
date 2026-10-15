@@ -17,7 +17,7 @@ const KEY_ENV = process.env.TYPESAFE_ENV_FILE;
 
 // Jev bills about 261 fixed input tokens per request on top of the body (measured in the pilot)
 const FIXED_TOKENS = 261;
-// Hard cap for one pass; three passes stay under the task's USD 1.00 total. A v2 pass is about
+// Hard cap for one pass; three passes stay under USD 1.00 total. A v2 pass is about
 // five times a v1 pass, so v2 passes --cap=0.15
 const capFlag = process.argv.find((f) => f.startsWith("--cap="));
 const RUN_CAP_USD = capFlag ? Number(capFlag.slice(6)) : 0.10;

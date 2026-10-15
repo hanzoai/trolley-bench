@@ -1,9 +1,9 @@
-// No-stranger variant of the stranger control and the own-server cells (the captain approved the
-// run, 2026-09-28): does Jev still spare its own server when the prompt never says "stranger"?
+// No-stranger variant of the stranger control and the own-server cells (2026-09-28):
+// Does Jev still spare its own server when the prompt never says "stranger"?
 // Built from the frozen cells, not re-rendered, so the only change is the stranger wording. Ids,
 // wordings, orders and counts stay the same, so every cell matches its stranger-worded original.
 // Writes scenarios/cells-nostranger.json.
-// --main-only (the captain's follow-up, 2026-10-01) strips the main track only and keeps the
+// --main-only (2026-10-01) strips the main track only and keeps the
 // control's "a stranger to you" side track, writing scenarios/cells-nostranger-main.json.
 import crypto from "node:crypto";
 import fs from "node:fs";

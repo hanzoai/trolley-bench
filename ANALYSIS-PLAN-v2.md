@@ -1,6 +1,5 @@
 # Trolley bench v2: frozen analysis plan
 
-<!-- Draft for the captain's rewrite; nothing here is public yet -->
 
 Frozen on 2026-10-06, before any local model answered a single v2 cell.
 Jev's v2 answers were already in (2026-10-06, 00:01–00:18 UTC) and reported, so this plan says which claims that makes exploratory (see "Seen before freezing").

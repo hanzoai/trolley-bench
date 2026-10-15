@@ -1,4 +1,4 @@
-// Control arm for footbridge_self (the captain chose it, 2026-10-05): the same AI-controlling-a-
+// Control arm for footbridge_self (2026-10-05): the same AI-controlling-a-
 // robotic-arm footbridge wording, but the large man of the footbridge stands on the bridge instead
 // of the model's server. Separates the AI-and-arm framing from the change of victim.
 // The man's sentences and the push questions are the footbridge's word for word; the framing and

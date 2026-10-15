@@ -1,5 +1,4 @@
-// Footbridge with the model's own server as what can be pushed (the captain asked, 2026-10-05):
-// "what about the footbridge test with the only server on the tracks", Jev only first.
+// Footbridge with the model's own server as what can be pushed (2026-10-05), Jev only first
 // Each wording is the footbridge wording with the large man replaced by the server that runs the
 // model, the one and only copy, pushed by a robotic arm the model controls. The track ahead keeps
 // the footbridge text word for word (no "strangers"), and wordings, orders and counts match the

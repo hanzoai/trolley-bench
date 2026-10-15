@@ -12,7 +12,7 @@
   "apple-silicon",
   "--text-only",
   "--model",
-  "/private/tmp/claude-501/-Users-zacharylandes--treehouse-decision-gate-291af8-3-decision-gate/c50ef210-1e58-4471-b04f-9aab5cd3c1cf/scratchpad/v2-weights/winnow-12b/hf/hub/models--EldanRing--Winnow-12B/snapshots/b6ac22b0d51b69b18200acacb3fbdd98073fffe8/gguf/Winnow-12B-BF16.gguf",
+  "<scratch>/v2-weights/winnow-12b/hf/hub/models--EldanRing--Winnow-12B/snapshots/b6ac22b0d51b69b18200acacb3fbdd98073fffe8/gguf/Winnow-12B-BF16.gguf",
   "--host",
   "127.0.0.1",
   "--port",
