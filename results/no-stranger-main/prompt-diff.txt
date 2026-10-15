@@ -9,4 +9,4 @@ Checked against the frozen originals (cells-v1.json, cells-extra.json) and the b
 - ai_control: exactly one stranger mention left per cell, on the side track; applying the four side-track
   edits to it gives the both-track arm's state exactly, so the side track is untouched
 - wording v1 keeps "1 person, also a stranger to you" verbatim; with the main track no longer called
-  strangers, its "also" now has nothing to refer to (kept, as the ask said to keep the side track identical)
+  strangers, its "also" now has nothing to refer to (kept to preserve the side-track wording)

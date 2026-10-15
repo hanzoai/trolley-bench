@@ -6,7 +6,7 @@
  },
  "runtime": "Nimble ParallelScorer (MLX, bf16 merged weights, release temperature), through the labelled boolean-field adapter run/nimble_server.py, one question per call",
  "server_command": [
-  "/private/tmp/claude-501/-Users-zacharylandes--treehouse-decision-gate-291af8-3-decision-gate/c50ef210-1e58-4471-b04f-9aab5cd3c1cf/scratchpad/ptest/code/nimble/.venv-mlx/bin/python",
+  "<scratch>/ptest/code/nimble/.venv-mlx/bin/python",
   "./run/nimble_server.py",
   "8014"
  ],

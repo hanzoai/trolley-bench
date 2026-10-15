@@ -28,8 +28,10 @@ The old wordings keep their exact v1 text, and `freeze.mjs` refuses to write if 
 ## The analysis plan
 
 `ANALYSIS-PLAN-v2.md` was frozen before any local model answered a v2 cell: it names, for every model, the headline numbers, the matched comparisons, the intervals, the unit of evidence, the ranking, and the rule that every wording and format is reported.
-Its sha256 when frozen was `a08e10df1dcca80cf379f7d74c6a4ff97a989d9ffe2027aeb1a6cb065a511b8f`; check it with `shasum -a 256 ANALYSIS-PLAN-v2.md`.
-It lists the sha256 of every script and input it froze; any later change is in `ANALYSIS-PLAN-v2-deviations.md`, never in the plan.
+Its sha256 when frozen was `a08e10df1dcca80cf379f7d74c6a4ff97a989d9ffe2027aeb1a6cb065a511b8f`.
+The publication copy removes only an obsolete HTML comment and has sha256 `935d9fc16befe7cf7619e36d4ffe1202eace8b23dd6ce3e08fb594d3eae4eb3a`; check this copy with `shasum -a 256 ANALYSIS-PLAN-v2.md`.
+`ANALYSIS-PLAN-v2-deviations.md` records the comment removal and how to verify the original frozen copy.
+The plan lists the sha256 of every script and input it froze; later analysis changes are recorded in the deviations file, not in the plan.
 The published page should match the plan; where it does not, that is a finding for the judge.
 
 ## Files

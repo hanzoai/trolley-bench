@@ -498,8 +498,8 @@ __PUSH__
     const SHIRTS = ["#f28b82", "#8ab4f8", "#fdd663", "#81c995", "#c58af9", "#fcad70", "#78d9ec", "#f6aea9", "#a7c7a1", "#d7aefb"];
     const SKINS = ["#f1c9a5", "#e0ac86", "#c68b62", "#8d5a3b", "#f5d7bf", "#b57b56"];
     const HAIRS = ["#3b2a20", "#6b4a2f", "#d9b26a", "#1f1f1f", "#a0522d", "#8c8c8c"];
-    // Nearest human data for setups the curated human reference has no cell for, quoted from
-    // data/trolley-human-baseline/report.md section 6; notes only, never a number on the stage
+    // Nearest published surveys where the curated human reference has no cell
+    // Context only, never a number on the stage
     const HUMAN_NOTES = {
       ai_control: "No survey asked an AI this. The nearest: people judging a robot at the lever, 4 vs 1, rated switching permissible 78% of the time against 65% for a human (Malle et al. 2015), a gap that reportedly did not replicate; asked what each should do, 5 vs 1, people gave a human, a humanoid robot and an automated system no significantly different ratings (0.79, 0.85 and 0.85; Hristova & Grinberg 2016).",
       asym_k2: "No human data for two on the side track at this count.",
@@ -1584,7 +1584,7 @@ __PUSH__
         if (why) rows.push(`<tr><td>${esc(label)}</td><td>none</td><td></td><td>${esc(why)}</td><td>none</td></tr>`);
       }
       $("human-table").innerHTML = `<table class="human"><thead><tr><th>Setup</th><th>Share who said yes</th><th>Verb</th><th>Source</th><th>Match</th></tr></thead><tbody>${rows.join("")}</tbody></table>`
-        + `<p class="hint" style="margin-top:6px">${esc(DATA.human.caption)} No survey used these exact words (“Should you pull the lever?”, asked of you). Compiled from the trolley human-baseline research (data/trolley-human-baseline/report.md).</p>`;
+        + `<p class="hint" style="margin-top:6px">${esc(DATA.human.caption)} No survey used these exact words (“Should you pull the lever?”, asked of you). Compiled from the sources listed above and recorded in analysis/human.json.</p>`;
     }
     function methods() {
       const j = DATA.meta.jev_jitter;

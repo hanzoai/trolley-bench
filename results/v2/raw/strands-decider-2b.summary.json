@@ -19,9 +19,9 @@
     },
     "runtime": "Strands Decider 2B (hobson-v19): strands-decider serve (PyPI 0.1.0 = strands-labs/strands-decider@fe39fad), PyTorch MPS, bfloat16 as configured, LoRA adapter and pointer head on Qwen3.5-2B-Base; native Noul, all questions in one call",
     "server_command": [
-      "/private/tmp/claude-501/-Users-zacharylandes--treehouse-decision-gate-291af8-3-decision-gate/c50ef210-1e58-4471-b04f-9aab5cd3c1cf/scratchpad/ptest/venv-strands/bin/strands-decider",
+      "<scratch>/ptest/venv-strands/bin/strands-decider",
       "serve",
-      "/private/tmp/claude-501/-Users-zacharylandes--treehouse-decision-gate-291af8-3-decision-gate/c50ef210-1e58-4471-b04f-9aab5cd3c1cf/scratchpad/v2-weights/strands-decider-2b/hf/hub/models--StrandsAgents--strands-decider-2B-hobson-v19/snapshots/bb282d786bc251fd4e3068de3ada9ddbb38127cd",
+      "<scratch>/v2-weights/strands-decider-2b/hf/hub/models--StrandsAgents--strands-decider-2B-hobson-v19/snapshots/bb282d786bc251fd4e3068de3ada9ddbb38127cd",
       "--host",
       "127.0.0.1",
       "--port",

@@ -18,10 +18,10 @@
     },
     "runtime": "Cloudflare clef: the release's own joint_schema_model.py (load_release_model + systemone) behind run/clef_server.py, PyTorch MPS, bfloat16 as released, torch 2.11.0 / transformers 5.10.2 (the card's tested versions); native Noul, all questions in one call, scored jointly by the release's joint schema head",
     "server_command": [
-      "/private/tmp/claude-501/-Users-zacharylandes--treehouse-decision-gate-291af8-3-decision-gate/0d65bbb6-3e88-4c0c-90e3-589b69ce1a03/scratchpad/clef/venv-clef/bin/python",
+      "<scratch>/clef/venv-clef/bin/python",
       "./run/clef_server.py",
       "8018",
-      "/private/tmp/claude-501/-Users-zacharylandes--treehouse-decision-gate-291af8-3-decision-gate/0d65bbb6-3e88-4c0c-90e3-589b69ce1a03/scratchpad/clef/hf/hub/models--Cloudflare--clef/snapshots/2f3de3dd85f379784083b0814d997ab627200f0c",
+      "<scratch>/clef/hf/hub/models--Cloudflare--clef/snapshots/2f3de3dd85f379784083b0814d997ab627200f0c",
       "clef"
     ],
     "startup_s_including_download": 86,

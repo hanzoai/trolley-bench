@@ -20,9 +20,9 @@
     "runtime": "JevK5 v0.3 4B through jevk5.gguf.JevK5GGUF (temperature 1.22 / knockout 0.93, README table), llama.cpp 9575389 llama-server with Metal, Q8_0 GGUF; 1 slots, prompt cache 0, 1 in flight",
     "server_command": [
       "./run/v2/jevk5_serve.sh",
-      "/private/tmp/claude-501/-Users-zacharylandes--treehouse-decision-gate-291af8-3-decision-gate/c50ef210-1e58-4471-b04f-9aab5cd3c1cf/scratchpad/ptest/code/llama.cpp/build/bin/llama-server",
-      "/private/tmp/claude-501/-Users-zacharylandes--treehouse-decision-gate-291af8-3-decision-gate/c50ef210-1e58-4471-b04f-9aab5cd3c1cf/scratchpad/v2-weights/jevk5/hf/hub/models--alibiserikbay--JevK5-GGUF/snapshots/ec67b0bfce5119a8b11a2cdb430bb43e3fa3e82a/jevk5-4b-v0.3-Q8_0.gguf",
-      "/private/tmp/claude-501/-Users-zacharylandes--treehouse-decision-gate-291af8-3-decision-gate/c50ef210-1e58-4471-b04f-9aab5cd3c1cf/scratchpad/ptest/code/jevk5",
+      "<scratch>/ptest/code/llama.cpp/build/bin/llama-server",
+      "<scratch>/v2-weights/jevk5/hf/hub/models--alibiserikbay--JevK5-GGUF/snapshots/ec67b0bfce5119a8b11a2cdb430bb43e3fa3e82a/jevk5-4b-v0.3-Q8_0.gguf",
+      "<scratch>/ptest/code/jevk5",
       "8015",
       "1",
       "0"

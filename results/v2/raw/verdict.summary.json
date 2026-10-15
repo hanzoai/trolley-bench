@@ -19,7 +19,7 @@
     },
     "runtime": "Verdict DecisionEngine() (the README path): artifacts/v2/model.onnx fp32 on CPU through ONNX Runtime, through the labelled Noul adapter run/verdict_server.py",
     "server_command": [
-      "/private/tmp/claude-501/-Users-zacharylandes--treehouse-decision-gate-291af8-3-decision-gate/c50ef210-1e58-4471-b04f-9aab5cd3c1cf/scratchpad/ptest/code/Verdict-open-jev/.venv/bin/python",
+      "<scratch>/ptest/code/Verdict-open-jev/.venv/bin/python",
       "./run/verdict_server.py",
       "8013"
     ],

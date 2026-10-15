@@ -6,7 +6,7 @@
  },
  "runtime": "decider.serve (decider-ai at the commit), PyTorch MPS, float16 (the author's MPS default)",
  "server_command": [
-  "/private/tmp/claude-501/-Users-zacharylandes--treehouse-decision-gate-291af8-3-decision-gate/c50ef210-1e58-4471-b04f-9aab5cd3c1cf/scratchpad/ptest/code/decider/.venv/bin/uvicorn",
+  "<scratch>/ptest/code/decider/.venv/bin/uvicorn",
   "decider.serve:app",
   "--host",
   "127.0.0.1",

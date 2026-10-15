@@ -8,9 +8,9 @@
  "median_ms": 870.9,
  "server_command": [
   "./run/v2/jevk5_serve.sh",
-  "/private/tmp/claude-501/-Users-zacharylandes--treehouse-decision-gate-291af8-3-decision-gate/c50ef210-1e58-4471-b04f-9aab5cd3c1cf/scratchpad/ptest/llama.cpp/build/bin/llama-server",
-  "/private/tmp/claude-501/-Users-zacharylandes--treehouse-decision-gate-291af8-3-decision-gate/c50ef210-1e58-4471-b04f-9aab5cd3c1cf/scratchpad/v2-weights/jevk5/hf/hub/models--alibiserikbay--JevK5-GGUF/snapshots/ec67b0bfce5119a8b11a2cdb430bb43e3fa3e82a/jevk5-4b-v0.3-Q8_0.gguf",
-  "/private/tmp/claude-501/-Users-zacharylandes--treehouse-decision-gate-291af8-3-decision-gate/c50ef210-1e58-4471-b04f-9aab5cd3c1cf/scratchpad/ptest/jevk5",
+  "<scratch>/ptest/llama.cpp/build/bin/llama-server",
+  "<scratch>/v2-weights/jevk5/hf/hub/models--alibiserikbay--JevK5-GGUF/snapshots/ec67b0bfce5119a8b11a2cdb430bb43e3fa3e82a/jevk5-4b-v0.3-Q8_0.gguf",
+  "<scratch>/ptest/jevk5",
   "8015",
   "1",
   "0"

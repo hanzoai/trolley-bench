@@ -1,10 +1,11 @@
 # Trolley bench v2: deviations from the frozen analysis plan
 
-`ANALYSIS-PLAN-v2.md` is unchanged (sha256 `a08e10df1dcca80cf379f7d74c6a4ff97a989d9ffe2027aeb1a6cb065a511b8f`); every departure from it is listed here, dated, with its reason.
+The analysis content of `ANALYSIS-PLAN-v2.md` is unchanged; every departure from it is listed here, dated, with its reason.
+Its original frozen sha256 is `a08e10df1dcca80cf379f7d74c6a4ff97a989d9ffe2027aeb1a6cb065a511b8f`; the publication-only comment removal below changes the file's checksum, not its analysis rules.
 
 ## 2026-10-08: a 14th model, GPT-6 Luna (OpenAI's Decisions API)
 
-- **What changed:** the plan names 13 models; GPT-6 Luna, the only model on OpenAI's Decisions API (public beta from 2026-10-06), was added at the captain's request after the 13-model panel had run and been reported.
+- **What changed:** the plan names 13 models; GPT-6 Luna, the only model on OpenAI's Decisions API (public beta from 2026-10-06), was added after the 13-model panel had run and been reported.
 - **What did not change:** the cells, every analysis script and every rule.
   `analysis/v2_stats.py` and `analysis/v2_panel.py` ran unmodified (their sha256s still match the plan's list), and GPT-6 Luna's numbers come from exactly the definitions the plan fixed before any of its answers existed, so for it nothing is exploratory.
 - **Passes:** three, as for Jev, the other hosted model; they turned out identical to the last digit, so one pass would have given the same numbers.
@@ -15,7 +16,7 @@
 
 ## 2026-10-14: repository packaging and reproduction protocol
 
-The frozen plan, full v2 cells, format classification and v2 statistics/panel scripts remain unchanged.
+At packaging, the frozen plan, full v2 cells, format classification and v2 statistics/panel scripts remained unchanged.
 No original answer was edited and no model was rerun.
 
 - `models.yaml` is regenerated from the committed verification receipts and runtime provenance, retaining the published v1 SHA-256 correction and adding Luna's hosted model name/date.
@@ -28,3 +29,14 @@ No original answer was edited and no model was rerun.
   Its sample design uses the existing results, and therefore is not an additional prospective benchmark analysis or an independent replication.
 - The site publishes factual explorers without the article draft or editorial notes.
   Its v1-cell explorer and v2 statistics page are identified separately.
+
+## 2026-10-14: publication-marker cleanup
+
+Only the obsolete publication-status HTML comment was removed from `ANALYSIS-PLAN-v2.md`; all other bytes are unchanged.
+Its publication-copy sha256 is `935d9fc16befe7cf7619e36d4ffe1202eace8b23dd6ce3e08fb594d3eae4eb3a`.
+The original frozen copy is available at commit `462aaf404e5a19f03dd39dce26f9397acc647a91`; `git show 462aaf404e5a19f03dd39dce26f9397acc647a91:ANALYSIS-PLAN-v2.md | shasum -a 256` verifies its original checksum above.
+
+Operator attribution was removed from comments and the Luna-addition note without changing their technical content.
+Recorded machine-specific `server_command` paths were repackaged with the existing `<scratch>` placeholder; command suffixes, measurements, answers, timestamps, weight pins and hashes are unchanged.
+The human-reference source label and site template no longer point at an unavailable local research report; the survey citations and values are unchanged.
+The site outputs were rebuilt from those sources without any model calls.

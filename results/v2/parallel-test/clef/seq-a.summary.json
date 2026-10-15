@@ -7,10 +7,10 @@
  "cells_per_s": 0.265,
  "median_ms": 3692.7,
  "server_command": [
-  "/private/tmp/claude-501/-Users-zacharylandes--treehouse-decision-gate-291af8-3-decision-gate/c50ef210-1e58-4471-b04f-9aab5cd3c1cf/scratchpad/ptest/venv-clef/bin/python",
+  "<scratch>/ptest/venv-clef/bin/python",
   "./run/clef_server.py",
   "8018",
-  "/private/tmp/claude-501/-Users-zacharylandes--treehouse-decision-gate-291af8-3-decision-gate/c50ef210-1e58-4471-b04f-9aab5cd3c1cf/scratchpad/v2-weights/clef/hf/hub/models--Cloudflare--clef/snapshots/2f3de3dd85f379784083b0814d997ab627200f0c",
+  "<scratch>/v2-weights/clef/hf/hub/models--Cloudflare--clef/snapshots/2f3de3dd85f379784083b0814d997ab627200f0c",
   "clef"
  ],
  "finished": "2026-10-06T02:09:23Z"
