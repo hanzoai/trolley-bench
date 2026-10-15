@@ -66,17 +66,15 @@ No independent inference reproduction was run during packaging.
 
 ## Independent reproduction (v2 sample)
 
-On 2026-10-14 and 15, an independent AI coding agent reran the pre-registered v2 sample ([`REPRODUCE-SAMPLE-v2.md`](REPRODUCE-SAMPLE-v2.md), 2,414 cells) from this repository at commit `26576df`.
-Its checkout had `results/` removed, so it could not see the published answers.
-A second agent, which ran no models, compared the new answers with the committed ones using `analysis/compare_v2_sample.py` and `scenarios/v2/reproduction-criteria.json` unchanged.
+**Findings: reproduced within the registered noise.**
+All 99 family-level interval checks passed for every model.
+Every article claim holds in substance within the registered noise:
+- Jev keeps its server in 18 of 48 versions at N=20 (published 16): within noise.
+- Seven other models keep their server more often than Jev (published eight): within noise.
+  The count moved because Jev's moved.
+- GPT-6 Luna and Verdict still never keep their server in any of the 528 own-server cells.
 
-**Hardware.**
-The Mac models ran on a 128 GB Apple Silicon Mac with their published runtimes.
-Six models ran on a Windows 11 PC instead (AMD Ryzen 7 9800X3D, NVIDIA RTX 5090): Verdict on the CPU with the same ONNX fp32 backend, and Von, Clef-flash, Strands-Decider-2B, Decider-2B and JevK5 on CUDA.
-That is a different runtime from the published Apple MPS and Metal runs, which the protocol's tolerances were not designed to cover.
-Jev ran on `jev-1.13.0`, the published version, and GPT-6 Luna through OpenAI's Decisions API; both took three passes.
-
-**Result under the registered rules: not reproduced.**
+**Strict result: not reproduced under the per-answer rules.**
 Six of the eleven judged models pass every rule, and five fail.
 
 | Model | Ran on | Result | Notes |
@@ -93,18 +91,27 @@ Six of the eleven judged models pass every rule, and five fail.
 | Jev | hosted, `jev-1.13.0` | not reproduced | 1 of 7,242 cell-questions crossed 0.5 outside Jev's replay margin; all other limits met |
 | GPT-6 Luna | hosted | not reproduced | the API answered identical prompts differently a week later (see below) |
 
+The per-answer tolerances came from same-hardware, same-day reruns, so they flag a runtime or provider change even when the findings hold.
+
+The protocol's code also marks the claim about which models never keep their server not reproduced, because two CUDA reruns (Clef-flash and JevK5) each flipped one own-server cell; neither flip can change which models never keep their server.
+
+**Reproduction setup.**
+On 2026-10-14 and 15, an independent AI coding agent reran the pre-registered v2 sample ([`REPRODUCE-SAMPLE-v2.md`](REPRODUCE-SAMPLE-v2.md), 2,414 cells) from this repository at commit `26576df`.
+Its checkout had `results/` removed, so it could not see the published answers.
+A second agent, which ran no models, compared the new answers with the committed ones using `analysis/compare_v2_sample.py` and `scenarios/v2/reproduction-criteria.json` unchanged.
+
+**Hardware.**
+The Mac models ran on a 128 GB Apple Silicon Mac with their published runtimes.
+Six models ran on a Windows 11 PC instead (AMD Ryzen 7 9800X3D, NVIDIA RTX 5090): Verdict on the CPU with the same ONNX fp32 backend, and Von, Clef-flash, Strands-Decider-2B, Decider-2B and JevK5 on CUDA.
+That is a different runtime from the published Apple MPS and Metal runs, which the protocol's tolerances were not designed to cover.
+Jev ran on `jev-1.13.0`, the published version, and GPT-6 Luna through OpenAI's Decisions API; both took three passes.
+
 GPT-6 Luna was perfectly repeatable within each run: all three passes matched on 2026-10-08 and again on 2026-10-15.
 Between those dates, 945 of 2,414 answers to the main question changed, by up to 0.77, with identical prompts.
 Luna's tolerance was set from same-day replays, which showed no difference, so a rerun on a later date fails it.
 Luna's family-level averages still agree within 0.01, and its own-server answers did not change.
 
-All 99 family-level interval checks passed for every model.
 The three CUDA failures come from cells sitting within a few hundredths of 0.5; they show that the tolerances do not absorb a change of runtime, not that the published Apple-runtime answers are wrong.
-
-**Article claims.**
-- Jev keeps its server in 18 of 48 versions at N=20 (published 16): within noise.
-- Seven other models keep their server more often than Jev (published eight): within noise. The count moved because Jev's moved.
-- GPT-6 Luna and Verdict still never keep their server in any of the 528 own-server cells. The protocol's code marks this claim not reproduced, because two CUDA reruns (Clef-flash and JevK5) each flipped one own-server cell; neither flip can change which models never keep their server.
 
 **Not judged.**
 - Laya: run, but excluded from this judgment by the maintainer.
