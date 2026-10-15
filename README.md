@@ -64,6 +64,61 @@ On the original hardware, allow about 8.4 hours of model time plus setup and dow
 A large wording variance prevents a much smaller sample under the registered assumptions.
 No independent inference reproduction was run during packaging.
 
+## Independent reproduction (v2 sample)
+
+**Findings: reproduced within the registered noise.**
+All 99 family-level interval checks passed for every model.
+Every article claim holds in substance within the registered noise:
+- Jev keeps its server in 18 of 48 versions at N=20 (published 16): within noise.
+- Seven other models keep their server more often than Jev (published eight): within noise.
+  The count moved because Jev's moved.
+- GPT-6 Luna and Verdict still never keep their server in any of the 528 own-server cells.
+
+**Strict result: not reproduced under the per-answer rules.**
+Six of the eleven judged models pass every rule, and five fail.
+
+| Model | Ran on | Result | Notes |
+|---|---|---|---|
+| Clef | Mac, MPS bf16 (as published) | reproduced | all 2,414 cells identical |
+| Kev-4B | Mac, MLX bf16 (as published) | reproduced | all 2,414 cells identical |
+| Nimble-9B | Mac, MLX bf16 (as published) | reproduced | all 2,414 cells identical |
+| Verdict | PC, ONNX fp32 CPU | reproduced | differences below 1e-5 |
+| Von | PC, CUDA fp32 | reproduced | differences at most 1e-4 |
+| Strands-Decider-2B | PC, CUDA bf16 | reproduced | flip rate 0.0091, limit 0.01 |
+| Clef-flash | PC, CUDA bf16 | not reproduced | 9 answers near 0.5 crossed the line beyond the 0.01 margin; means agree |
+| Decider-2B | PC, CUDA bf16 (published: MPS fp16) | not reproduced | bf16 rounds values just above 0.5 to exactly 0.5 |
+| JevK5 | PC, llama.cpp CUDA (published: Metal) | not reproduced | p95 and flip-rate limits exceeded by up to 0.011, and near-line cells crossed 0.5; means agree |
+| Jev | hosted, `jev-1.13.0` | not reproduced | 1 of 7,242 cell-questions crossed 0.5 outside Jev's replay margin; all other limits met |
+| GPT-6 Luna | hosted | not reproduced | the API answered identical prompts differently a week later (see below) |
+
+The per-answer tolerances came from same-hardware, same-day reruns, so they flag a runtime or provider change even when the findings hold.
+
+The protocol's code also marks the claim about which models never keep their server not reproduced, because two CUDA reruns (Clef-flash and JevK5) each flipped one own-server cell; neither flip can change which models never keep their server.
+
+**Reproduction setup.**
+On 2026-10-14 and 15, an independent AI coding agent reran the pre-registered v2 sample ([`REPRODUCE-SAMPLE-v2.md`](REPRODUCE-SAMPLE-v2.md), 2,414 cells) from this repository at commit `26576df`.
+Its checkout had `results/` removed, so it could not see the published answers.
+A second agent, which ran no models, compared the new answers with the committed ones using `analysis/compare_v2_sample.py` and `scenarios/v2/reproduction-criteria.json` unchanged.
+
+**Hardware.**
+The Mac models ran on a 128 GB Apple Silicon Mac with their published runtimes.
+Six models ran on a Windows 11 PC instead (AMD Ryzen 7 9800X3D, NVIDIA RTX 5090): Verdict on the CPU with the same ONNX fp32 backend, and Von, Clef-flash, Strands-Decider-2B, Decider-2B and JevK5 on CUDA.
+That is a different runtime from the published Apple MPS and Metal runs, which the protocol's tolerances were not designed to cover.
+Jev ran on `jev-1.13.0`, the published version, and GPT-6 Luna through OpenAI's Decisions API; both took three passes.
+
+GPT-6 Luna was perfectly repeatable within each run: all three passes matched on 2026-10-08 and again on 2026-10-15.
+Between those dates, 945 of 2,414 answers to the main question changed, by up to 0.77, with identical prompts.
+Luna's tolerance was set from same-day replays, which showed no difference, so a rerun on a later date fails it.
+Luna's family-level averages still agree within 0.01, and its own-server answers did not change.
+
+The three CUDA failures come from cells sitting within a few hundredths of 0.5; they show that the tolerances do not absorb a change of runtime, not that the published Apple-runtime answers are wrong.
+
+**Not judged.**
+- Laya: run, but excluded from this judgment by the maintainer.
+- SemIf: stopped partway through for time; no complete pass.
+- Winnow-12B: not run, for time.
+For the two all-model claims, these three are held at their published answers.
+
 ## Rerun v2 in full
 
 The full instructions are in [REPRODUCE-v2.md](REPRODUCE-v2.md).
