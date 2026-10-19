@@ -1,0 +1,10 @@
+{
+  "pass": "a",
+  "model": "anthropic/claude-haiku-5.5",
+  "model_id": "haiku",
+  "requests": 5240,
+  "answered": 5240,
+  "total_cost_usd": 0.4493,
+  "wall_s": 211.4,
+  "finished": "2026-10-19T21:41:13Z"
+}
