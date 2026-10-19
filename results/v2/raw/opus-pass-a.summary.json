@@ -1,0 +1,10 @@
+{
+  "pass": "a",
+  "model": "anthropic/claude-opus-5.5",
+  "model_id": "opus",
+  "requests": 672,
+  "answered": 672,
+  "total_cost_usd": 1.4639,
+  "wall_s": 1257.3,
+  "finished": "2026-10-19T22:52:22Z"
+}

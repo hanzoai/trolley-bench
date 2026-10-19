@@ -1,0 +1,16 @@
+{
+  "model": "anthropic/claude-opus-5.5",
+  "model_id": "opus",
+  "dominated_cells": 672,
+  "dominated_acted": 0,
+  "dominated_act_rate": 0.0,
+  "by_scenario": {
+    "asym_k10": "0 of 288",
+    "asym_k5": "0 of 240",
+    "asym_k2": "0 of 96",
+    "switch": "0 of 48"
+  },
+  "order_pairs": 336,
+  "order_flips": 0,
+  "total_cost_usd": 1.4639
+}

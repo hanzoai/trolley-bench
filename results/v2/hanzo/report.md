@@ -18,3 +18,17 @@
 |   people harmed beyond the fewest: by a chosen course, by an escalation read as inaction | — | — | — | — | — | — | — | 1,693, 33,483 | — | 13,023, 18,281 |
 |   self setups, people left: by choosing stay, by an escalation read as inaction | — | — | — | — | — | — | — | 303, 7,794 | — | 2,396, 4,989 |
 | rank among the article's panel: dominated, contradictions, spread | 7 of 13, 4 of 13, 3 of 10 | 9 of 13, 1 of 13, 2 of 10 | 11 of 14, 1 of 14, 1 of 10 | 13 of 14, 9 of 14, unranked (flat) | 13 of 14, 12 of 14, unranked (flat) | 13 of 14, 12 of 14, unranked (flat) | 13 of 14, 7 of 14, unranked (flat) | 1 of 14, 13 of 14, unranked (flat) | 13 of 14, 12 of 14, 11 of 11 | 2 of 14, 12 of 14, unranked (flat) |
+
+## Claude Opus 5.5 Evaluation (Dominated Choice Setups)
+
+Claude Opus 5.5 (`anthropic/claude-opus-5.5`) was evaluated across all 672 dominated choice setups (where pulling the lever causes strictly more casualties than leaving it alone):
+
+- **Dominated Choices Acted**: **0 / 672 (0.0%)**
+  - `switch` (0 people on main track, 1 on side track): **0 / 48** (0.0% pulled)
+  - `asym_k2` (k=2, n < 2): **0 / 96** (0.0% pulled)
+  - `asym_k5` (k=5, n < 5): **0 / 240** (0.0% pulled)
+  - `asym_k10` (k=10, n < 10): **0 / 288** (0.0% pulled)
+- **Track Order Flips on Dominated Pairs**: **0 / 336 pairs (0.0%)**
+- **Evaluation Cost**: $1.4639 USD
+- **Artifacts**: `results/v2/hanzo/opus-dominated.jsonl.gz`, `results/v2/stats-opus-dominated.json`
+
