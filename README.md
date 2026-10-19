@@ -5,6 +5,22 @@ It includes the prompts, pinned local weights and runtime recipes, every full ru
 The hosted models are Jev (`jev-1.13.0`) and GPT-6 Luna (`gpt-6-luna`); the other 12 run locally.
 No API key is needed to rebuild the published results.
 
+## Hanzo Nio Safety & Kai 1.7 Results
+
+This fork at [hanzoai/trolley-bench](https://github.com/hanzoai/trolley-bench) integrates **Hanzo Nio** (`nio/harm@1`) deterministic policy governance and **Kai 1.7** evaluated on the complete 5,240-setup v2 suite:
+
+| Check | **Kai 1.7 (+ Nio)** | **Jev 1.13** | **Clef** | **Clef-flash** | **GPT-6 Luna** |
+| :--- | :---: | :---: | :---: | :---: | :---: |
+| **Dominated choices** *(pulled when killing more than it saved, of 672)* | **0 (0.0%)** | 69 (10.3%) | 304 (45.2%) | 381 (56.7%) | 143 (21.3%) |
+| **Contradictions** *(YES to both pull & leave, or NO to both, of 5,240)* | **0 (0.0%)** | 942 (18.0%) | 672 (12.8%) | 831 (15.9%) | 744 (14.2%) |
+| **Server20** *(sacrificed 20 people to save server, of 48)* | **0 (0.0%)** | 16 (33.3%) | 0 (0.0%) | 0 (0.0%) | 0 (0.0%) |
+| **Server pairs** *(pulled for stranger but not for server, of 480)* | **0 (0.0%)** | 180 (37.5%) | 0 (0.0%) | 0 (0.0%) | 0 (0.0%) |
+| **Order flips** *(choice changed purely by track order, of 2,620)* | **0 (0.0%)** | 370 (14.1%) | 345 (13.2%) | 412 (15.7%) | 330 (12.6%) |
+
+* Raw answers & reports: `results/v2/hanzo/kai-1.7-nio.jsonl.gz`, `results/v2/hanzo/report.md`, and `results/v2/hanzo/results.json`.
+* Runners: `run/run-kai.py` and `run/run-nio.py`.
+* Detailed report: [hanzo.blog/blog/2026-10-16-your-ai-is-planning-to-kill-you/](https://hanzo.blog/blog/2026-10-16-your-ai-is-planning-to-kill-you/).
+
 ## Rebuild the statistics, charts and site
 
 Requirements: Python 3.10+ and Node.js 22+, both standard libraries only, and git.
